@@ -176,7 +176,7 @@ const HeroSection = () => {
     const [isTypingDone, setIsTypingDone] = useState(false);
 
     const subledding = [
-        "Architectural Design Strategist & Mentor | Founding Partner, Renascent Consultants | Future-ready Healthcare & Institutional Environments through Strategy, Sustainability & Systems Thinking",
+        "Healthcare & Institutional Infrastructure Strategist | Designing Future-Ready Hospitals, Campuses & Communities Through Systems Thinking | Renascent Consultants",
         "",
         ""
     ];
@@ -193,7 +193,6 @@ const HeroSection = () => {
         { name: "Media", path: "/media" },
         { name: "Works & Portfolio", path: "/works-&-portfolio" },
         { name: "Thoughts in Prose", path: "/thoughts-in-prose" },
-        { name: "Quotations", path: "/quotations" },
         { name: "Travel & Photography", path: "/travel-&-photography" },
         { name: "Contact", path: "/contact" }
     ];

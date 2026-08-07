@@ -6,10 +6,9 @@ function Media() {
     return (
         <div>
             <PageHeroSection
-                image="/media/media-hero.jpeg"
-                mobileImage="/media/media-hero-mobile.jpeg"
+                image="/6.jpeg"
                 title="Media"
-                clastyle="grayscale-75 object-top "
+                clastyle="grayscale-75 object-top"
             />
             <MediaBody />
             

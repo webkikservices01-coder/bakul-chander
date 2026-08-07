@@ -1,225 +1,153 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useSearchParams, useLocation } from 'react-router-dom';
-import PageHeroSection from '../component/PageHeroSection';
+import React from "react";
+import { motion } from "framer-motion";
+import { Phone, Mail } from "lucide-react";
+import PageHeroSection from "../component/PageHeroSection";
 
-const clean = (v) => (!v || v.trim().toUpperCase() === 'VALUE' ? '' : v.trim());
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.15,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const ContactCard = ({ icon: Icon, label, value, href }) => (
+  <motion.a
+    href={href}
+    variants={itemVariants}
+    whileHover={{ y: -8, scale: 1.03 }}
+    whileTap={{ scale: 0.98 }}
+    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    className="group relative flex flex-col items-center justify-center gap-5 bg-[#0A0A0A] border border-white/10 rounded-3xl px-8 py-12 w-full sm:w-[300px] min-h-[280px] overflow-hidden"
+  >
+    {/* Glow Effect */}
+    <div className="pointer-events-none absolute -inset-20 bg-[radial-gradient(circle_at_center,rgba(159,28,68,0.18),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+    {/* Icon */}
+    <div className="relative z-10 w-16 h-16 rounded-full border border-white/15 bg-white/5 flex items-center justify-center group-hover:border-[#9F1C44]/60 group-hover:bg-[#9F1C44]/10 transition-all duration-500">
+      <Icon
+        className="w-6 h-6 text-zinc-300 group-hover:text-white transition-colors duration-500"
+        strokeWidth={1.5}
+      />
+    </div>
+
+    {/* Label */}
+    <p className="relative z-10 text-[11px] uppercase tracking-[0.25em] text-zinc-500 font-medium">
+      {label}
+    </p>
+
+    {/* Value */}
+    <p className="relative z-10 text-lg font-light text-zinc-200 text-center break-all group-hover:text-white transition-colors duration-300">
+      {value}
+    </p>
+
+    {/* Bottom Line */}
+    <span className="relative z-10 h-px w-10 bg-white/15 group-hover:w-16 group-hover:bg-[#9F1C44]/60 transition-all duration-500" />
+  </motion.a>
+);
 
 function Contact() {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const routerLocation = useLocation();
-    const tabFromUrl = searchParams.get('tab');
-    const [activeTab, setActiveTab] = useState(tabFromUrl === 'call' ? 'call' : 'message');
+  return (
+    <div className="min-h-screen bg-[#050505] text-white font-archivo flex flex-col">
+      <PageHeroSection
+        image="/bakul-sir.jpeg"
+        title="Contact"
+        clastyle="grayscale-75 object-[center_20%]"
+      />
 
-    const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-    const [autoFilled, setAutoFilled] = useState(false);
-    const formRef = useRef(null);
+      <section className="flex-grow py-20 md:py-28 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col items-center">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-light mb-4 tracking-wide">
+              Get in Touch
+            </h2>
 
-    // Read form data from router state (passed by chatbot via navigate('/contact', { state: { formData } }))
-    useEffect(() => {
-        const data = routerLocation.state?.formData;
-        if (!data) return;
-        const filled = {
-            name:    clean(data.name),
-            email:   clean(data.email),
-            subject: clean(data.subject),
-            message: clean(data.message),
-        };
-        if (filled.name || filled.email) {
-            setForm(filled);
-            setAutoFilled(true);
-            setTimeout(() => formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
-        }
-    }, [routerLocation.state]);
+            <p className="text-zinc-500 text-lg font-light">
+              Reach out directly — happy to hear from you.
+            </p>
+          </motion.div>
 
-    useEffect(() => {
-        if (tabFromUrl === 'call' || tabFromUrl === 'message') setActiveTab(tabFromUrl);
-    }, [tabFromUrl]);
-
-    const handleTabChange = (tab) => {
-        setActiveTab(tab);
-        setSearchParams({ tab });
-    };
-
-    const handleChange = (e) => {
-        setAutoFilled(false);
-        setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
-    };
-
-    const tabVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-        exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
-    };
-
-    return (
-        <div className="min-h-screen bg-[#050505] text-white font-archivo flex flex-col">
-
-            <PageHeroSection
-                image="/about/about-hero.png"
-                title="Contact"
-                clastyle="grayscale-75"
+          {/* Contact Cards */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 w-full justify-items-center"
+          >
+            <ContactCard
+              icon={Mail}
+              label="Yahoo Mail"
+              value="bakulchandra@yahoo.com"
+              href="mailto:bakulchandra@yahoo.com"
             />
 
-            <section className="flex-grow py-16 md:py-24 px-6 md:px-12">
-                <div className="max-w-4xl mx-auto">
+            <ContactCard
+              icon={Mail}
+              label="Renascent"
+              value="Bakul@renascent.co.in"
+              href="mailto:Bakul@renascent.co.in"
+            />
 
-                    {/* Toggle */}
-                    <div className="flex justify-center mb-16 md:mb-20">
-                        <div className="flex items-center p-1.5 bg-[#111] rounded-full border border-white/5 shadow-inner relative">
-                            <button
-                                onClick={() => handleTabChange('message')}
-                                className={`relative z-10 px-8 py-3 md:px-10 md:py-3.5 rounded-full text-sm md:text-base font-medium uppercase tracking-widest transition-colors duration-300 ${activeTab === 'message' ? 'text-black' : 'text-zinc-500 hover:text-zinc-300'}`}
-                            >
-                                {activeTab === 'message' && (
-                                    <motion.div layoutId="contactTabBg" className="absolute inset-0 bg-white rounded-full -z-10 shadow-md" transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }} />
-                                )}
-                                Send Message
-                            </button>
-                            <button
-                                onClick={() => handleTabChange('call')}
-                                className={`relative z-10 px-8 py-3 md:px-10 md:py-3.5 rounded-full text-sm md:text-base font-medium uppercase tracking-widest transition-colors duration-300 ${activeTab === 'call' ? 'text-black' : 'text-zinc-500 hover:text-zinc-300'}`}
-                            >
-                                {activeTab === 'call' && (
-                                    <motion.div layoutId="contactTabBg" className="absolute inset-0 bg-white rounded-full -z-10 shadow-md" transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }} />
-                                )}
-                                Book a Call
-                            </button>
-                        </div>
-                    </div>
+            <ContactCard
+              icon={Mail}
+              label="Personal Email"
+              value="Bakul@bakulchandra.com"
+              href="mailto:Bakul@bakulchandra.com"
+            />
 
-                    <div className="min-h-[600px]">
-                        <AnimatePresence mode="wait">
+            <ContactCard
+              icon={Phone}
+              label="Call Us"
+              value="+91 98919 62202"
+              href="tel:+919891962202"
+            />
+          </motion.div>
 
-                            {/* Message Form */}
-                            {activeTab === 'message' && (
-                                <motion.div
-                                    key="message"
-                                    ref={formRef}
-                                    variants={tabVariants}
-                                    initial="hidden"
-                                    animate="visible"
-                                    exit="exit"
-                                    className="bg-[#0A0A0A] p-8 md:p-12 rounded-2xl border border-white/5 shadow-2xl"
-                                >
-                                    <div className="text-center mb-10">
-                                        <h2 className="text-2xl md:text-3xl font-light mb-3">Let's Discuss Your Project</h2>
-                                        <p className="text-zinc-500 font-light">Fill out the form below and our team will get back to you shortly.</p>
-                                    </div>
-
-                                    {/* Auto-fill notice */}
-                                    <AnimatePresence>
-                                        {autoFilled && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: -8 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0 }}
-                                                className="mb-6 flex items-center gap-2.5 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-zinc-300"
-                                            >
-                                                <svg className="w-4 h-4 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                Form filled by AI Assistant — review and send when ready.
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-
-                                    <form className="space-y-6">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                            <div className="space-y-2">
-                                                <label className="text-xs uppercase tracking-widest text-zinc-400 pl-1">Full Name</label>
-                                                <input
-                                                    type="text"
-                                                    name="name"
-                                                    value={form.name}
-                                                    onChange={handleChange}
-                                                    placeholder="John Doe"
-                                                    className={`w-full bg-[#111] border rounded-xl px-4 py-4 text-white font-light placeholder:text-zinc-700 focus:outline-none transition-colors ${autoFilled && form.name ? 'border-white/20' : 'border-white/5 focus:border-white/20'}`}
-                                                />
-                                            </div>
-                                            <div className="space-y-2">
-                                                <label className="text-xs uppercase tracking-widest text-zinc-400 pl-1">Email Address</label>
-                                                <input
-                                                    type="email"
-                                                    name="email"
-                                                    value={form.email}
-                                                    onChange={handleChange}
-                                                    placeholder="john@example.com"
-                                                    className={`w-full bg-[#111] border rounded-xl px-4 py-4 text-white font-light placeholder:text-zinc-700 focus:outline-none transition-colors ${autoFilled && form.email ? 'border-white/20' : 'border-white/5 focus:border-white/20'}`}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="space-y-2">
-                                            <label className="text-xs uppercase tracking-widest text-zinc-400 pl-1">Subject</label>
-                                            <input
-                                                type="text"
-                                                name="subject"
-                                                value={form.subject}
-                                                onChange={handleChange}
-                                                placeholder="Architecture Consultation"
-                                                className={`w-full bg-[#111] border rounded-xl px-4 py-4 text-white font-light placeholder:text-zinc-700 focus:outline-none transition-colors ${autoFilled && form.subject ? 'border-white/20' : 'border-white/5 focus:border-white/20'}`}
-                                            />
-                                        </div>
-
-                                        <div className="space-y-2">
-                                            <label className="text-xs uppercase tracking-widest text-zinc-400 pl-1">Message</label>
-                                            <textarea
-                                                rows="5"
-                                                name="message"
-                                                value={form.message}
-                                                onChange={handleChange}
-                                                placeholder="Tell us about your project..."
-                                                className={`w-full bg-[#111] border rounded-xl px-4 py-4 text-white font-light placeholder:text-zinc-700 focus:outline-none transition-colors resize-none ${autoFilled && form.message ? 'border-white/20' : 'border-white/5 focus:border-white/20'}`}
-                                            />
-                                        </div>
-
-                                        <motion.button
-                                            whileHover={{ scale: 1.02 }}
-                                            whileTap={{ scale: 0.98 }}
-                                            type="button"
-                                            className="w-full bg-white text-black py-4 rounded-xl text-sm uppercase tracking-widest font-semibold hover:bg-zinc-200 transition-colors mt-4"
-                                        >
-                                            Send Message
-                                        </motion.button>
-                                    </form>
-                                </motion.div>
-                            )}
-
-                            {/* Calendly Embed */}
-                            {activeTab === 'call' && (
-                                <motion.div
-                                    key="call"
-                                    variants={tabVariants}
-                                    initial="hidden"
-                                    animate="visible"
-                                    exit="exit"
-                                    className="bg-[#0A0A0A] p-4 md:p-8 rounded-2xl border border-white/5 shadow-2xl flex flex-col items-center"
-                                >
-                                    <div className="text-center mb-6">
-                                        <h2 className="text-2xl md:text-3xl font-light mb-3">Schedule a Meeting</h2>
-                                        <p className="text-zinc-500 font-light">Choose a time that works best for you.</p>
-                                    </div>
-                                    <div className="w-full h-[600px] rounded-xl overflow-hidden bg-white/5 relative">
-                                        <iframe
-                                            src="https://calendly.com/your-calendly-link"
-                                            width="100%"
-                                            height="100%"
-                                            frameBorder="0"
-                                            title="Calendly Scheduling"
-                                            className="absolute inset-0"
-                                        />
-                                    </div>
-                                </motion.div>
-                            )}
-
-                        </AnimatePresence>
-                    </div>
-
-                </div>
-            </section>
+          {/* Credit Line */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+            className="mt-16 text-xs text-zinc-600 font-light tracking-wide"
+          >
+            Website managed by{" "}
+            <a
+              href="https://webkik.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-500 hover:text-white transition-colors underline underline-offset-4"
+            >
+              Webkik Services
+            </a>
+          </motion.p>
         </div>
-    );
+      </section>
+    </div>
+  );
 }
 
 export default Contact;

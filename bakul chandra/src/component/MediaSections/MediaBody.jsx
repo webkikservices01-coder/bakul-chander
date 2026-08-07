@@ -73,11 +73,11 @@ const MediaBody = () => {
     // Note: Removed global padding (px) and max-width from the main wrapper. 
     // Using flex col with gap to maintain the vertical spacing exactly like before.
     <main className="w-full bg-black text-white font-['Archivo'] py-8 md:py-16 selection:bg-white selection:text-black flex flex-col gap-10 md:gap-20">
-        
+
         {/* HONORS SECTION - Fixed Width & Padding */}
-        <motion.section 
-          initial="hidden" 
-          whileInView="visible" 
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
           className="w-full max-w-7xl mx-auto px-6 md:px-0"
@@ -89,9 +89,9 @@ const MediaBody = () => {
           </motion.div>
           <div className="flex flex-col gap-6">
             {honorsData.map((honor) => (
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
-                key={honor.id} 
+                key={honor.id}
                 className="border border-[#222222] bg-[#080808] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8 group transition-all duration-500 hover:border-gray-500 shadow-lg"
               >
                 <div className="max-w-3xl space-y-4 md:space-y-5">

@@ -9,7 +9,7 @@ function About() {
     return (
         <div className="min-h-screen bg-black text-white font-lato">
             <PageHeroSection
-                image="/about/about-hero.jpeg"
+                image="/bakul-office.jpeg"
                 title="Biography"
                 clastyle="grayscale-75"
             />

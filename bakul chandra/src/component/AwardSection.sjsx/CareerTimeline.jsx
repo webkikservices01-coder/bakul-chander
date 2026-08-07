@@ -2,6 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const AwardsRecognition = () => {
+    // --- HONORS DATA ---
+    const honorsData = [
+        {
+            id: 1,
+            title: "Honorary Degree of Doctor of Philosophy (Honoris Causa)",
+            conferredBy: "Mansarovar Global University, Bhopal",
+            description: "Conferred to Bakul Chandra as recognition and celebration of his outstanding contributions to the fields of architecture and design, his innovative strategies, and his unwavering commitment to excellence.",
+            date: "28th June 2024"
+        }
+    ];
+
     // --- AWARDS DATA 1 (Top List) ---
     const awardsList1 = [
         { title: "Excellence in Healthcare Architecture & Design", date: "Nov 2025", badge: "TIMES of India" },
@@ -45,6 +56,45 @@ const AwardsRecognition = () => {
     return (
         <section className="w-full bg-black text-white py-10 md:py-16 px-5 md:px-12 font-archivo overflow-hidden">
             <div className="max-w-7xl mx-auto">
+
+                {/* --- Honors Section --- */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={containerVariants}
+                    className="mb-10 md:mb-20"
+                >
+                    <motion.div variants={itemVariants} className="mb-8 md:mb-12">
+                        <h2 className="text-2xl md:text-4xl font-light tracking-wide text-white">
+                            <span className="text-gray-600 mr-3 md:mr-4">•</span>Honors
+                        </h2>
+                    </motion.div>
+                    <div className="flex flex-col gap-6">
+                        {honorsData.map((honor) => (
+                            <motion.div
+                                variants={itemVariants}
+                                key={honor.id}
+                                className="border border-[#222222] bg-[#080808] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8 group transition-all duration-500 hover:border-gray-500 shadow-lg"
+                            >
+                                <div className="max-w-3xl space-y-4 md:space-y-5">
+                                    <h3 className="text-2xl md:text-3xl font-normal leading-snug text-white">
+                                        {honor.title}
+                                    </h3>
+                                    <p className="text-gray-500 font-medium tracking-wide uppercase text-xs md:text-sm">
+                                        Conferred by <span className="text-gray-300">{honor.conferredBy}</span>
+                                    </p>
+                                    <p className="text-[#999999] leading-relaxed text-sm md:text-base font-light">
+                                        {honor.description}
+                                    </p>
+                                </div>
+                                <div className="shrink-0 border border-[#333333] rounded-full px-6 py-3 text-xs md:text-sm font-medium tracking-widest uppercase text-gray-300 w-full md:w-auto text-center mt-4 md:mt-0 transition-colors group-hover:bg-white group-hover:text-black">
+                                    {honor.date}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
 
                 {/* --- Header Section --- */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-3 md:gap-6 border-b border-white/10 pb-5 md:pb-8">

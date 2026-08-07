@@ -6,7 +6,6 @@ import Navbar from './component/Header';
 import Footer from './component/Footer';
 import GlobalLoader from './component/GlobalLoader';
 import SmoothScroll from './component/SmoothScroll';
-import ChatbotWidget from './component/ChatbotWidget'; // <-- CHATBOT IMPORT KIYA
 import Thoughts from './pages/Thoughts';
 
 // Lazy Pages
@@ -65,10 +64,6 @@ const AppContent = () => {
 
       {/* 2. Footer: Sirf tab dikhega jab path "/" NA HO */}
       {/* {showLayout && <Footer />} */}
-
-      {/* 3. Global Floating Chatbot Widget */}
-      {/* Agar aapko Home page par bhi chatbot nahi chahiye toh isko bhi {showLayout && <ChatbotWidget />} kar sakte hain */}
-      <ChatbotWidget />
 
     </div>
   );

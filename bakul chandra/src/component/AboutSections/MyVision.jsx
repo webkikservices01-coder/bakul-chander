@@ -295,19 +295,6 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                     })}
                 </motion.div>
 
-                {/* <motion.div variants={fadeInUp} className="w-full pb-16 border-b border-white/10">
-                    <div className="text-base md:text-[18px] font-light leading-relaxed text-gray-400 max-w-4xl">
-                        <button 
-                            onClick={() => setActiveModalData(visionFullText)}
-                            className="group flex items-center gap-2 mt-4 text-sm font-medium uppercase tracking-widest text-gray-400 hover:text-white transition-colors"
-                        >
-                            <span className="border-b border-gray-600 group-hover:border-white transition-colors pb-0.5">Read Full Vision</span>
-                            <span>→</span>
-                        </button>
-                    </div>
-                </motion.div> */}
-
-
                 {/* --- 2. WHAT I DO SECTION --- */}
                 <div className="space-y-6">
                     
@@ -315,14 +302,14 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                     <div className="space-y-4">
                         <h2 className="text-3xl md:text-3xl font-normal uppercase flex items-center gap-3 text-gray-200">What I Do</h2>
                         
-                        <div className="text-base md:text-[16px] text-gray-400 font-light leading-relaxed max-w-8xl space-y-4">
+                        <div className="text-base md:text-[16px] text-gray-400 font-light leading-relaxed max-w-full space-y-4">
                             <p>
                                 I work at the intersection of architecture, strategy, and systems thinking.
                             </p>
                             <p>
                                 My work is not limited to designing buildings. I solve spatial, institutional, and operational problems through design—using architecture as a strategic tool rather than a purely visual exercise. I approach every project as a system of decisions, where built form is only one part of a much larger equation.
                             </p>
-                            <p >
+                            <p>
                                 At its core, what I do is simple: I bring clarity to complexity.
                             </p>
                             <p>
@@ -341,13 +328,6 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                             {mentorshipFullText.long.split('\n\n').slice(1).map((paragraph, idx) => (
                                 <p key={idx}>{paragraph}</p>
                             ))}
-                            {/* <button 
-                                onClick={() => setActiveModalData(mentorshipFullText)}
-                                className="group flex items-center gap-2 mt-4 text-sm font-medium uppercase tracking-widest text-gray-500 hover:text-white transition-colors"
-                            >
-                                <span className="border-b border-gray-600 group-hover:border-white transition-colors pb-0.5">Read More</span>
-                                <span>→</span>
-                            </button> */}
                         </div>
 
                         <div className="space-y-4 text-base md:text-[16px] text-gray-400 font-light leading-relaxed">
@@ -358,31 +338,8 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                             {ultimateDeliveryFullText.long.split('\n\n').slice(1).map((paragraph, idx) => (
                                 <p key={idx}>{paragraph}</p>
                             ))}
-                            {/* <button 
-                                onClick={() => setActiveModalData(ultimateDeliveryFullText)}
-                                className="group flex items-center gap-2 mt-4 text-sm font-medium uppercase tracking-widest text-gray-500 hover:text-white transition-colors"
-                            >
-                                <span className="border-b border-gray-600 group-hover:border-white transition-colors pb-0.5">Read More</span>
-                                <span>→</span>
-                            </button> */}
                         </div>
                     </div>
-
-                    {/* C. Interactive Services Cards */}
-                    {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-10 border-t border-white/10">
-                        {services.map((service, idx) => (
-                            <motion.div
-                                key={idx}
-                                whileHover={{ y: -10, borderColor: "rgba(255,255,255,0.3)" }}
-                                onClick={() => setActiveModalData(service)}
-                                className="group p-8 bg-[#0a0a0a] border border-white/10 rounded-2xl cursor-pointer transition-all duration-300 h-full flex flex-col justify-between"
-                            >
-                                <h3 className="text-2xl font-normal text-white mb-4 group-hover:text-blue-300 transition-colors">{service.title}</h3>
-                                <p className="text-gray-400 text-sm font-light leading-relaxed">{service.short}</p>
-                                <span className="mt-8 text-xs uppercase tracking-widest text-gray-600 group-hover:text-white transition-colors">Read Manifesto →</span>
-                            </motion.div>
-                        ))}
-                    </div> */}
 
                 </div>
 
@@ -403,7 +360,7 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                                 onClick={(e) => e.stopPropagation()}
                                 className="bg-[#050505] border border-white/10 p-8 md:p-12 lg:p-16 rounded-3xl max-w-4xl w-full max-h-[85vh] overflow-y-auto shadow-2xl relative"
                             >
-                                <div className=" bg-transparent pb-4 mb-4 border-b border-white/5 z-10">
+                                <div className="bg-transparent pb-4 mb-4 border-b border-white/5 z-10">
                                     <button onClick={() => setActiveModalData(null)} className="text-gray-500 hover:text-white text-sm uppercase tracking-widest transition-colors flex items-center gap-2">
                                         <span>←</span> Close
                                     </button>
@@ -426,12 +383,11 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                         <h2 className="text-3xl md:text-3xl font-normal flex items-center gap-3 text-gray-200">
                             The Guiding Principles
                         </h2>
-                        <p className="text-lg md:text-[16px] text-gray-400 font-light max-w-6xl">
+                        <p className="text-lg md:text-[16px] text-gray-400 font-light max-w-4xl">
                             Professionally, my entire personality and design philosophy is an expression of the profound knowledge imparted by my four gurus.
                         </p>
                     </motion.div>
 
-                    {/* UPDATED GURU CARDS (Now Clickable) */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                         {gurus.map((guru, idx) => (
                             <motion.div
@@ -444,9 +400,9 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                                     <h4 className="text-xl md:text-[20px] font-normal text-white mb-3 group-hover:text-gray-200 transition-colors">{guru.title}</h4>
                                     <p className="text-base md:text-[14px] text-gray-400 font-light leading-relaxed mb-0">{guru.short}</p>
                                 </div>
-                                <div className="space-y-3 mt-0 text-justify">
-                                    {guru.long.split('\n\n').slice(0, 2).map((paragraph, idx) => (
-                                        <p key={idx} className="text-[14px] text-gray-400 font-light leading-relaxed">{paragraph}</p>
+                                <div className="space-y-3 mt-1 text-justify">
+                                    {guru.long.split('\n\n').slice(0, 2).map((paragraph, pIdx) => (
+                                        <p key={pIdx} className="text-[14px] text-gray-400 font-light leading-relaxed">{paragraph}</p>
                                     ))}
                                 </div>
                             </motion.div>
@@ -460,8 +416,7 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                         <h2 className="text-3xl md:text-3xl font-normal flex items-center gap-3 text-gray-200">
                             Inspirations
                         </h2>
-                        <p className="text-lg md:text-[16px] text-gray-400 font-light max-w-7
-                        xl">
+                        <p className="text-lg md:text-[16px] text-gray-400 font-light max-w-4xl leading-relaxed">
                             I operate somewhere between a monk and a strategist. I prefer silence over spectacle but know exactly when to make a statement. Here are the minds that shape my thinking.
                         </p>
                     </motion.div>
@@ -475,7 +430,7 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                             >
                                 <div>
                                     <h4 className="text-xl md:text-[20px] font-normal text-white mb-1">{insp.name}</h4>
-                                    <span className="text-xs md:text-[16px] lowercase tracking-widest text-gray-400 font-bold mb-4 block">
+                                    <span className="text-xs md:text-[14px] lowercase tracking-widest text-gray-400 font-bold mb-4 block">
                                         {insp.title}
                                     </span>
                                     <p className="text-base md:text-[14px] text-gray-400 font-light leading-relaxed text-justify">
@@ -486,54 +441,6 @@ He brought rigor to every decision and never allowed style to outrun substance. 
                         ))}
                     </div>
                 </motion.div>
-
-                {/* --- 6. INNER & OUTER PURPOSE --- */}
-                {/* <motion.div
-                    variants={containerVariants}
-                    className="border-t border-white/10 pt-8 md:pt-16 flex flex-col lg:flex-row gap-12 lg:gap-24"
-                > */}
-                    {/* Outer Purpose */}
-                    {/* <motion.div variants={fadeInUp} className="w-full lg:w-1/2 space-y-6">
-                        <h3 className="text-3xl md:text-[36px] font-normal text-white">Outer Purpose</h3>
-                        <div className="space-y-4 text-base md:text-[18px] text-gray-400 font-light leading-relaxed">
-                            <p>
-                                To be a sacred architect of growth—not just of structures or systems, but of people’s lives, institutions, and shared destinies.
-                            </p>
-                            <ul className="list-none space-y-4 mt-6">
-                                <li className="flex items-start gap-3">
-                                    <span className="text-gray-500 mt-2 text-[10px]">■</span>
-                                    <span>Lead with quiet conviction, rather than authority.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-gray-500 mt-2 text-[10px]">■</span>
-                                    <span>Mentor others in thinking with clarity, speaking with grace, and working with purpose.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-gray-500 mt-2 text-[10px]">■</span>
-                                    <span>Infuse environments with integrity, alignment, and beauty.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </motion.div> */}
-
-                    {/* Inner Purpose */}
-                    {/* <motion.div variants={fadeInUp} className="w-full lg:w-1/2 space-y-6">
-                        <h3 className="text-3xl md:text-[36px] font-normal text-white">Inner Purpose</h3>
-                        <div className="space-y-6 text-base md:text-[18px] text-gray-400 font-light leading-relaxed">
-                            <p>
-                                To live from my inner wholeness—where conviction meets compassion, and solitude births leadership.
-                            </p>
-                            <p>
-                                My growth arises not from chasing the unmanifest, but from embodying the principles that I already am: calm, clear, and constant.
-                            </p>
-                            <div className="p-6 bg-[#0a0a0a] border-l-4 border-gray-500 rounded-r-xl mt-6">
-                                <p className="text-white font-medium italic">
-                                    "My leadership energy is subtle, discerning, and quietly transformative. I do not dominate but make others realign."
-                                </p>
-                            </div>
-                        </div>
-                    </motion.div> */}
-                {/* </motion.div> */}
 
             </motion.div>
         </section>

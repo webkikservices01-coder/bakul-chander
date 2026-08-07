@@ -164,7 +164,6 @@ const menuItems = [
     { name: 'Media', path: '/media' },
     { name: 'Works & Portfolio', path: '/works-&-portfolio' },
     { name: 'Thoughts in Prose', path: '/thoughts-in-prose' },
-    { name: 'Quotations', path: '/quotations' },
     { name: 'Travel & Photography', path: '/travel-&-photography' },
     { name: 'Contact', path: '/contact' },
 ];

@@ -6,10 +6,9 @@ function Thoughts() {
     return (
         <div>
             <PageHeroSection
-                image="/media/media-hero.jpeg"
-                mobileImage="/media/media-hero-mobile.jpeg"
+                image="/bakul.jpeg"
                 title="Thoughts in Prose"
-                clastyle="grayscale-75 object-top "
+                clastyle="grayscale-75 object-[center_15%]"
             />
             <ArticlesSection />
         </div>
