@@ -39,7 +39,7 @@ const ContactCard = ({ icon: Icon, label, value, href }) => (
     <div className="pointer-events-none absolute -inset-20 bg-[radial-gradient(circle_at_center,rgba(159,28,68,0.18),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
     {/* Icon */}
-    <div className="relative z-10 w-16 h-16 rounded-full border border-white/15 bg-white/5 flex items-center justify-center group-hover:border-[#9F1C44]/60 group-hover:bg-[#9F1C44]/10 transition-all duration-500">
+    <div className="relative z-10 w-16 h-16 rounded-full border border-white/15 bg-white/5 flex items-center justify-center group-hover:border-[#9F1C44]/60 group-hover:bg-[#9F1C44]/10 transition-all duration-505">
       <Icon
         className="w-6 h-6 text-zinc-300 group-hover:text-white transition-colors duration-500"
         strokeWidth={1.5}
@@ -95,22 +95,8 @@ function Contact() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 w-full justify-items-center"
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 w-full justify-items-center max-w-5xl mx-auto"
           >
-            <ContactCard
-              icon={Mail}
-              label="Yahoo Mail"
-              value="bakulchandra@yahoo.com"
-              href="mailto:bakulchandra@yahoo.com"
-            />
-
-            <ContactCard
-              icon={Mail}
-              label="Renascent"
-              value="Bakul@renascent.co.in"
-              href="mailto:Bakul@renascent.co.in"
-            />
-
             <ContactCard
               icon={Mail}
               label="Personal Email"
@@ -119,8 +105,15 @@ function Contact() {
             />
 
             <ContactCard
+              icon={Mail}
+              label="Business Email"
+              value="Bakul@renascent.co.in"
+              href="mailto:Bakul@renascent.co.in"
+            />
+
+            <ContactCard
               icon={Phone}
-              label="Call Us"
+              label="Call On"
               value="+91 98919 62202"
               href="tel:+919891962202"
             />

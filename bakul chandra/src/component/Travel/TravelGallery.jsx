@@ -5,11 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 const travelPhotos = [
     {
         id: 1,
-        src: "/home/travel/tra1_result.webp", // Replace with your actual paths
+        src: "/home/travel/tra1_result.webp",
         title: "Symmetry in Concrete",
         location: "New Delhi",
         desc: "Exploring the brutalist geometry and bold concrete lines in modern institutional architecture.",
-        aspectRatio: "aspect-[4/5]" // Tall image
+        aspectRatio: "aspect-[4/5]",
+        category: "Architecture Lab"
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ const travelPhotos = [
         title: "Urban Skyline",
         location: "Mumbai",
         desc: "A breathtaking view of the dense urban fabric merging with the coastal horizon.",
-        aspectRatio: "aspect-[16/9]" // Wide image
+        aspectRatio: "aspect-[16/9]",
+        category: "Travel"
     },
     {
         id: 3,
@@ -25,7 +27,8 @@ const travelPhotos = [
         title: "Heritage Corridors",
         location: "Tamil Nadu",
         desc: "The timeless play of natural light and shadows in traditional temple courtyards.",
-        aspectRatio: "aspect-square" // Square image
+        aspectRatio: "aspect-square",
+        category: "Photography"
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const travelPhotos = [
         title: "Modern Facades",
         location: "Bengaluru",
         desc: "High-tech glass and steel structures reflecting the dynamic nature of the IT capital.",
-        aspectRatio: "aspect-[3/4]" // Tall image
+        aspectRatio: "aspect-[3/4]",
+        category: "Architecture Lab"
     },
     {
         id: 5,
@@ -41,7 +45,8 @@ const travelPhotos = [
         title: "Tropical Retreats",
         location: "Goa",
         desc: "Sustainable hospitality design seamlessly blending into the lush green topography.",
-        aspectRatio: "aspect-[4/3]" // Standard photo
+        aspectRatio: "aspect-[4/3]",
+        category: "Travel"
     },
     {
         id: 6,
@@ -49,71 +54,62 @@ const travelPhotos = [
         title: "Backwater Serenity",
         location: "Kerala",
         desc: "Vernacular architecture meeting the serene waters, prioritizing natural ventilation.",
-        aspectRatio: "aspect-[16/10]" // Wide image
+        aspectRatio: "aspect-[16/10]",
+        category: "Slice of Life"
     },
     {
         id: 7,
-        src: "/home/travel/tra1_result.webp", // Replace with your actual paths
-        title: "Symmetry in Concrete",
+        src: "/home/travel/tra1_result.webp",
+        title: "Street Reflections",
         location: "New Delhi",
-        desc: "Exploring the brutalist geometry and bold concrete lines in modern institutional architecture.",
-        aspectRatio: "aspect-[4/5]" // Tall image
+        desc: "Candid moments captured in the busy commercial arteries of the capital.",
+        aspectRatio: "aspect-[4/5]",
+        category: "Slice of Life"
     },
     {
         id: 8,
         src: "/home/travel/tra2_result.webp",
-        title: "Urban Skyline",
+        title: "Monolith Minimalist",
         location: "Mumbai",
-        desc: "A breathtaking view of the dense urban fabric merging with the coastal horizon.",
-        aspectRatio: "aspect-[16/9]" // Wide image
+        desc: "A poster-worthy composition of stark geometry against an overcast sky.",
+        aspectRatio: "aspect-[16/9]",
+        category: "Posters & Pics"
     },
     {
         id: 9,
         src: "/home/travel/tra3_result.webp",
-        title: "Heritage Corridors",
+        title: "Ancient Textures",
         location: "Tamil Nadu",
-        desc: "The timeless play of natural light and shadows in traditional temple courtyards.",
-        aspectRatio: "aspect-square" // Square image
+        desc: "Close-up study of weathered stone carving details.",
+        aspectRatio: "aspect-square",
+        category: "Photography"
     },
     {
         id: 10,
         src: "/home/travel/tra4_result.webp",
-        title: "Modern Facades",
+        title: "Neon Streets",
         location: "Bengaluru",
-        desc: "High-tech glass and steel structures reflecting the dynamic nature of the IT capital.",
-        aspectRatio: "aspect-[3/4]" // Tall image
+        desc: "The city after dark through a cinematic lens.",
+        aspectRatio: "aspect-[3/4]",
+        category: "Posters & Pics"
     },
     {
         id: 11,
         src: "/home/travel/tra5_result.webp",
-        title: "Tropical Retreats",
+        title: "Coastal Rhythm",
         location: "Goa",
-        desc: "Sustainable hospitality design seamlessly blending into the lush green topography.",
-        aspectRatio: "aspect-[4/3]" // Standard photo
+        desc: "Local life unfolding rhythmically along the shoreline.",
+        aspectRatio: "aspect-[4/3]",
+        category: "Slice of Life"
     },
     {
         id: 12,
         src: "/home/travel/tra6_result.webp",
-        title: "Backwater Serenity",
+        title: "The Horizon Line",
         location: "Kerala",
-        desc: "Vernacular architecture meeting the serene waters, prioritizing natural ventilation.",
-        aspectRatio: "aspect-[16/10]" // Wide image
-    },
-    {
-        id: 13,
-        src: "/home/travel/tra6_result.webp",
-        title: "Backwater Serenity",
-        location: "Kerala",
-        desc: "Vernacular architecture meeting the serene waters, prioritizing natural ventilation.",
-        aspectRatio: "aspect-[16/10]" // Wide image
-    },
-    {
-        id: 14,
-        src: "/home/travel/tra6_result.webp",
-        title: "Backwater Serenity",
-        location: "Kerala",
-        desc: "Vernacular architecture meeting the serene waters, prioritizing natural ventilation.",
-        aspectRatio: "aspect-[16/10]" // Wide image
+        desc: "An expansive landscape visual designed for large-format display.",
+        aspectRatio: "aspect-[16/10]",
+        category: "Posters & Pics"
     }
 ];
 
@@ -129,29 +125,35 @@ const itemVariants = {
 };
 
 const TravelGallery = () => {
+    const tabs = ["Travel", "Photography", "Architecture Lab", "Slice of Life", "Posters & Pics"];
+    
+    const [activeTab, setActiveTab] = useState(tabs[0]);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Filter photos based on active tab
+    const filteredPhotos = travelPhotos.filter(photo => photo.category === activeTab);
 
     // Lightbox Controls
     const openLightbox = (index) => {
         setCurrentIndex(index);
         setLightboxOpen(true);
-        document.body.style.overflow = 'hidden'; // Stop background scrolling
+        document.body.style.overflow = 'hidden';
     };
 
     const closeLightbox = () => {
         setLightboxOpen(false);
-        document.body.style.overflow = 'auto'; // Restore background scrolling
+        document.body.style.overflow = 'auto';
     };
 
     const nextImage = (e) => {
         e?.stopPropagation();
-        setCurrentIndex((prev) => (prev === travelPhotos.length - 1 ? 0 : prev + 1));
+        setCurrentIndex((prev) => (prev === filteredPhotos.length - 1 ? 0 : prev + 1));
     };
 
     const prevImage = (e) => {
         e?.stopPropagation();
-        setCurrentIndex((prev) => (prev === 0 ? travelPhotos.length - 1 : prev - 1));
+        setCurrentIndex((prev) => (prev === 0 ? filteredPhotos.length - 1 : prev - 1));
     };
 
     // Keyboard Navigation for Lightbox
@@ -164,7 +166,7 @@ const TravelGallery = () => {
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [lightboxOpen]);
+    }, [lightboxOpen, filteredPhotos]);
 
     return (
         <main className="w-full bg-black text-white font-['Archivo'] py-12 md:py-24 px-6 md:px-12 selection:bg-white selection:text-black min-h-screen">
@@ -176,7 +178,7 @@ const TravelGallery = () => {
                     whileInView="visible" 
                     viewport={{ once: true }} 
                     variants={itemVariants}
-                    className="mb-12 md:mb-20 text-center md:text-left border-b border-white/10 pb-8"
+                    className="mb-8 text-center md:text-left border-b border-white/10 pb-8"
                 >
                     <h1 className="text-4xl md:text-[56px] font-light tracking-wide mb-4">
                         Travel & <span className="font-normal">Photography</span>
@@ -186,22 +188,48 @@ const TravelGallery = () => {
                     </p>
                 </motion.div>
 
+                {/* SUB-TABS NAVIGATION */}
+                <div className="flex flex-wrap items-center gap-3 mb-12 border-b border-white/10 pb-6">
+                    {tabs.map((tab) => (
+                        <button
+                            key={tab}
+                            onClick={() => setActiveTab(tab)}
+                            className={`px-5 py-2.5 rounded-full text-sm tracking-wider transition-all duration-300 border ${
+                                activeTab === tab 
+                                    ? "bg-white text-black border-white font-medium shadow-md" 
+                                    : "bg-transparent text-gray-400 border-white/10 hover:border-white/40 hover:text-white"
+                            }`}
+                        >
+                            {tab}
+                        </button>
+                    ))}
+                </div>
+
+                {/* COPYRIGHT CREDIT NOTICE (For Architecture Lab or general usage) */}
+                {activeTab === "Architecture Lab" && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mb-8 text-xs tracking-widest text-gray-500 uppercase"
+                    >
+                        * Architecture Lab visual assets &copy; {new Date().getFullYear()} All Rights Reserved.
+                    </motion.div>
+                )}
+
                 {/* MASONRY GALLERY GRID */}
                 <motion.section
+                    key={activeTab}
                     initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
+                    animate="visible"
                     variants={containerVariants}
-                    // CSS Columns trick for perfect Masonry layout
                     className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
                 >
-                    {travelPhotos.map((photo, index) => (
+                    {filteredPhotos.map((photo, index) => (
                         <motion.div
-                            key={photo.id}
+                            key={photo.id + "-" + index}
                             variants={itemVariants}
                             onClick={() => openLightbox(index)}
-                            // break-inside-avoid prevents images from being cut across columns
-                            className={`group relative rounded-3xl overflow-hidden cursor-pointer border border-[#222222] bg-[#0a0a0a] break-inside-avoid shadow-lg transition-all duration-500 hover:border-gray-500`}
+                            className="group relative rounded-3xl overflow-hidden cursor-pointer border border-[#222222] bg-[#0a0a0a] break-inside-avoid shadow-lg transition-all duration-500 hover:border-gray-500"
                         >
                             {/* Image */}
                             <div className={`w-full ${photo.aspectRatio} relative overflow-hidden bg-[#111]`}>
@@ -220,7 +248,7 @@ const TravelGallery = () => {
                                     transition={{ duration: 0.3 }}
                                 >
                                     <p className="text-[12px] md:text-[14px] font-bold tracking-widest text-[#aaaaaa] uppercase mb-1">
-                                        {photo.location}
+                                        {photo.location} • <span className="text-white">{photo.category}</span>
                                     </p>
                                     <h3 className="text-xl md:text-[24px] font-normal text-white drop-shadow-md">
                                         {photo.title}
@@ -275,30 +303,30 @@ const TravelGallery = () => {
 
                         {/* Main Image Container */}
                         <motion.div 
-                            key={currentIndex} // Animate on image change
+                            key={currentIndex}
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.95 }}
                             transition={{ duration: 0.4, ease: "easeOut" }}
-                            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking image
+                            onClick={(e) => e.stopPropagation()}
                             className="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center"
                         >
                             <img 
-                                src={travelPhotos[currentIndex].src} 
-                                alt={travelPhotos[currentIndex].title}
+                                src={filteredPhotos[currentIndex].src} 
+                                alt={filteredPhotos[currentIndex].title}
                                 className="w-full max-h-[70vh] object-contain rounded-xl shadow-2xl"
                             />
                             
                             {/* Caption */}
                             <div className="mt-6 text-center max-w-2xl w-full">
                                 <h3 className="text-2xl md:text-[36px] font-normal text-white mb-2">
-                                    {travelPhotos[currentIndex].title}
+                                    {filteredPhotos[currentIndex].title}
                                 </h3>
                                 <p className="text-sm md:text-[16px] text-gray-400 font-bold uppercase tracking-widest mb-3">
-                                    {travelPhotos[currentIndex].location}
+                                    {filteredPhotos[currentIndex].location} • {filteredPhotos[currentIndex].category}
                                 </p>
                                 <p className="text-[18px] font-light text-gray-300">
-                                    {travelPhotos[currentIndex].desc}
+                                    {filteredPhotos[currentIndex].desc}
                                 </p>
                             </div>
                         </motion.div>

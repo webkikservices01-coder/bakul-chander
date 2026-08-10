@@ -13,25 +13,34 @@ const AwardsRecognition = () => {
         }
     ];
 
-    // --- AWARDS DATA 1 (Top List) ---
+    // --- AWARDS DATA 1 (Top List — Most Recent) ---
     const awardsList1 = [
+        { title: "Top 50 Architects in India 2026", date: "May 2026", badge: "A+D Magazine" },
+        { title: "Best Medical College Architecture Design Firm", date: "Apr 2026", badge: "Six Sigma" },
+        { title: "Most Visionary Sustainable Architecture Consultants", date: "2026", badge: "Prime Insights" },
+        { title: "Top 10 Sustainable Architecture Consultants 2025", date: "2025", badge: "Silicon India" },
         { title: "Excellence in Healthcare Architecture & Design", date: "Nov 2025", badge: "TIMES of India" },
-        { title: "Outstanding Design Leadership", date: "Aug 2025", badge: "India Business" },
+        { title: "Outstanding Design Leadership in Education & Healthcare", date: "Aug 2025", badge: "India Business" },
+        { title: "KUDOS Award — Commercial Spaces", date: "Aug 2025", badge: "IFJ Index Plus" },
+        { title: "Smartex 2025 Award — Healthcare Category", date: "Feb 2025", badge: "Smartex" },
         { title: "Top 50 Healthcare & Medtech Leaders 2024-25", date: "Jan 2025", badge: "Medgate Today" },
-        { title: "Doctor of Philosophy (Honoris Causa)", date: "Jun 2024", badge: "Mansarovar Uni" },
-        { title: "Golden Door Award for Excellence", date: "Jun 2024", badge: "Elite Awards" },
-        { title: "Outstanding Designing of Religious Projects", date: "May 2024", badge: "Architect's WOW" },
+        { title: "Golden Door Award for Excellence in Consultancy", date: "Jun 2024", badge: "Elite Awards" },
+        { title: "Most Prominent & Innovative Architecture Firm 2024", date: "Jun 2024", badge: "Elite Awards" },
     ];
 
-    // --- AWARDS DATA 2 (Bottom List) ---
+    // --- AWARDS DATA 2 (Bottom List — Earlier) ---
     const awardsList2 = [
+        { title: "Outstanding Designing of Religious Projects", date: "May 2024", badge: "Architect's WOW" },
         { title: "Top 50 Healthcare & Medtech Leaders 2023", date: "Jun 2023", badge: "Medgate Today" },
-        { title: "Excellence in Healthcare Design", date: "Apr 2023", badge: "Eldrok India" },
-        { title: "Most Promising Personality in Healthcare", date: "Apr 2023", badge: "Medgate Today" },
-        { title: "Ten Top-notch Versatile Business Leader", date: "Apr 2023", badge: "Business Touch" },
-        { title: "Excellent Healthcare Architect", date: "Aug 2022", badge: "Apex Awards" },
-        { title: "Innovation in Healthcare Architecture", date: "May 2022", badge: "Architect's WOW" },
-        { title: "Innovation in Hospitality Spaces", date: "Apr 2022", badge: "Eldrok India" },
+        { title: "Most Promising Personality in Healthcare Planning", date: "Apr 2023", badge: "Medgate Today" },
+        { title: "Excellence in Healthcare & Institutional Projects", date: "Apr 2023", badge: "Eldrok India" },
+        { title: "10 Most Promising Healthcare Architecture Companies", date: "2022", badge: "Silicon India" },
+        { title: "Excellent Healthcare Architect", date: "2022", badge: "Apex Awards" },
+        { title: "Excellence in Medical College & Teaching Hospital Design", date: "2022", badge: "Apex Awards" },
+        { title: "Promising Company — Indian Achievers' Award", date: "Aug 2022", badge: "Indian Achievers" },
+        { title: "Most Trusted Healthcare Architecture Consultancy Firm", date: "Aug 2022", badge: "National Fame" },
+        { title: "Innovation in Designing Healthcare Architecture", date: "May 2022", badge: "Architect's WOW" },
+        { title: "Innovation in Designing of Hospitality Spaces", date: "Apr 2022", badge: "Eldrok India" },
     ];
 
     // --- ANIMATION VARIANTS ---
@@ -56,6 +65,27 @@ const AwardsRecognition = () => {
     return (
         <section className="w-full bg-black text-white py-10 md:py-16 px-5 md:px-12 font-archivo overflow-hidden">
             <div className="max-w-7xl mx-auto">
+
+                {/* --- Top Banner Photo Section --- */}
+                <motion.div 
+                    variants={imageVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="w-full h-[40vh] md:h-[60vh] rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group mb-12 md:mb-20"
+                >
+                    <img
+                        src="/award/award-banner.jpeg" // Update path if your banner image name differs
+                        alt="Awards & Recognition Ceremony Banner"
+                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80"></div>
+                    <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-10">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-wide text-white drop-shadow-md">
+                            AWARDS & RECOGNITION
+                        </h1>
+                    </div>
+                </motion.div>
 
                 {/* --- Honors Section --- */}
                 <motion.div
@@ -102,7 +132,7 @@ const AwardsRecognition = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-4xl font-light tracking-wide flex items-center gap-3 text-white hidden md:block"
+                        className="text-2xl md:text-4xl font-light tracking-wide flex items-center gap-3 text-white"
                     >
                         Awards & Recognitions
                     </motion.h2>
@@ -137,7 +167,7 @@ const AwardsRecognition = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70"></div>
                     </motion.div>
 
-                    {/* Right: Awards List 1 (No internal scroll, natural height) */}
+                    {/* Right: Awards List 1 */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
@@ -156,7 +186,7 @@ const AwardsRecognition = () => {
                                         <span className="text-gray-500 mt-1 md:mt-1.5 text-[10px] md:text-sm">✦</span>
                                         {award.title}
                                     </h3>
-                                    <p className="text-[10px] md:text-[10px] text-zinc-500 font-medium ml-4 md:ml-6 uppercase tracking-wider">
+                                    <p className="text-[10px] text-zinc-500 font-medium ml-4 md:ml-6 uppercase tracking-wider">
                                         {award.date}
                                     </p>
                                 </div>
@@ -174,7 +204,7 @@ const AwardsRecognition = () => {
                 ========================================= */}
                 <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-16 mb-10">
                     
-                    {/* Image 2 (Mobile me upar aayegi, Desktop me right side) */}
+                    {/* Image 2 (Desktop par right side) */}
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -191,13 +221,13 @@ const AwardsRecognition = () => {
                         <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </motion.div>
 
-                    {/* Awards List 2 (No internal scroll) */}
+                    {/* Awards List 2 */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="w-full lg:w-1/2 flex flex-col justify-center space-y-4 "
+                        className="w-full lg:w-1/2 flex flex-col justify-center space-y-4"
                     >
                         {awardsList2.map((award, index) => (
                             <motion.div
@@ -210,7 +240,7 @@ const AwardsRecognition = () => {
                                         <span className="text-gray-500 mt-1 md:mt-1.5 text-[10px] md:text-sm">✦</span>
                                         {award.title}
                                     </h3>
-                                    <p className="text-[10px] md:text-[10px] text-zinc-500 font-medium ml-4 md:ml-6 uppercase tracking-wider">
+                                    <p className="text-[10px] text-zinc-500 font-medium ml-4 md:ml-6 uppercase tracking-wider">
                                         {award.date}
                                     </p>
                                 </div>

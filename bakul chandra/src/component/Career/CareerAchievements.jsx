@@ -146,22 +146,6 @@ const CareerAchievements = () => {
         <main className="w-full bg-black text-white font-['Archivo'] py-10 md:py-20 px-5 md:px-12 selection:bg-white selection:text-black">
             <div className="max-w-7xl mx-auto space-y-10 md:space-y-16">
 
-                {/* HEADER */}
-                {/* <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={itemVariants}
-                    className="border-b border-white/10 pb-6 md:pb-10"
-                >
-                    <p className="text-sm md:text-[17px] text-gray-400 font-light max-w-4xl leading-relaxed">
-                        A chronological reflection of a 30+ year journey in architectural excellence, leadership, and industry recognition.
-                    </p>
-                </motion.div> */}
-
-                {/* 1. HIGHLIGHTS GRID */}
-                
-
                 {/* 2. DEFINING PARABLES */}
                 <motion.section
                     initial="hidden"
@@ -215,41 +199,7 @@ const CareerAchievements = () => {
                     </div>
                 </motion.section>
 
-                {/* 2.5 PROFESSIONAL MEMBERSHIPS & AFFILIATIONS */}
-                <motion.section
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={containerVariants}
-                >
-                    <div className="mb-8 md:mb-20">
-                        <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
-                            Professional Memberships & Affiliations
-                        </h2>
-                        <p className="text-sm md:text-[17px] text-gray-400 font-light mt-2 md:mt-3 max-w-3xl leading-relaxed">
-                            Affiliations with professional bodies and institutions across planning, architecture, healthcare, and sustainability.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                        {membershipsData.map((membership) => (
-                            <motion.div
-                                key={membership.id}
-                                variants={itemVariants}
-                                className="group border border-[#222222] bg-[#080808] rounded-2xl p-6 md:p-7 flex items-start justify-between gap-4 transition-all duration-500 hover:border-gray-500 shadow-lg"
-                            >
-                                <h3 className="text-base md:text-lg font-normal text-white leading-snug">
-                                    {membership.org}
-                                </h3>
-                                <span className="shrink-0 border border-[#333333] rounded-full px-3 py-1.5 text-[10px] md:text-[11px] font-medium tracking-widest uppercase text-gray-300 text-center whitespace-nowrap transition-colors group-hover:bg-white group-hover:text-black">
-                                    {membership.type}
-                                </span>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.section>
-
-                {/* 3. TIMELINE */}
+                {/* 3. TIMELINE (MY JOURNEY) */}
                 <motion.section
                     initial="hidden"
                     whileInView="visible"
@@ -307,6 +257,40 @@ const CareerAchievements = () => {
                                 </motion.div>
                             );
                         })}
+                    </div>
+                </motion.section>
+
+                {/* 2.5 PROFESSIONAL MEMBERSHIPS & AFFILIATIONS */}
+                <motion.section
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={containerVariants}
+                >
+                    <div className="mb-8 md:mb-20">
+                        <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
+                            Professional Memberships & Affiliations
+                        </h2>
+                        <p className="text-sm md:text-[17px] text-gray-400 font-light mt-2 md:mt-3 max-w-3xl leading-relaxed">
+                            Affiliations with professional bodies and institutions across planning, architecture, healthcare, and sustainability.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        {membershipsData.map((membership) => (
+                            <motion.div
+                                key={membership.id}
+                                variants={itemVariants}
+                                className="group border border-[#222222] bg-[#080808] rounded-2xl p-6 md:p-7 flex items-start justify-between gap-4 transition-all duration-500 hover:border-gray-500 shadow-lg"
+                            >
+                                <h3 className="text-base md:text-lg font-normal text-white leading-snug">
+                                    {membership.org}
+                                </h3>
+                                <span className="shrink-0 border border-[#333333] rounded-full px-3 py-1.5 text-[10px] md:text-[11px] font-medium tracking-widest uppercase text-gray-300 text-center whitespace-nowrap transition-colors group-hover:bg-white group-hover:text-black">
+                                    {membership.type}
+                                </span>
+                            </motion.div>
+                        ))}
                     </div>
                 </motion.section>
 
