@@ -17,8 +17,8 @@ const publicationsData = [
     publication: "Silicon India Magazine", 
     date: "October 2022", 
     title: "Profile Feature for '10 Most Promising Healthcare Architecture Companies'",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_2.jpg"
+    link: "https://www.siliconindia.com/healthcare/ranking/top-10-healthcare-architecture-companies-%C2%AD-2022-rid-1671.html",
+    image: "/media/2.png"
   },
   { 
     id: 3, 
@@ -33,88 +33,88 @@ const publicationsData = [
     publication: "Medgate Today Magazine", 
     date: "June 2023", 
     title: "Profile Feature of 'Bakul Chandra – Renascent Consultants' in 'Top 50 Healthcare & Medtech Leaders 2023'",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_4.jpg"
+    link: "https://fliphtml5.com/esnfh/djam/Aug-Medgatetoday-2023-web-final/",
+    image: "/media/4.png"
   },
   { 
     id: 5, 
     publication: "Medgate Today", 
     date: "July 2023", 
     title: "Profile Feature of 'Renascent Consultants' in E – Coffee Table Book for 'Top Healthcare Infrastructure Companies – Medgate Today’s Survey 2022'",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_5.jpg"
+    link: "https://renascent.co.in/ai-in-healthcare-infrastructure/",
+    image: "/media/5.png"
   },
   { 
     id: 6, 
     publication: "Healthcare Radius", 
     date: "February 2024", 
     title: "Coverage in Vol.12 Issue 5 for their article 'Healing With Sustainability'",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_6.jpg"
+    link: "https://www.healthcareradius.in/projects/24448-sustainability-in-healthcare-by-siddharth-puri",
+    image: "/media/6.png"
   },
   { 
     id: 7, 
     publication: "Commercial Design", 
     date: "30 March 2024", 
     title: "Rapid-fire round with Bakul Chandra: Insights into design, inspiration, and mentoring",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_7.jpg"
+    link: "https://www.commercialdesignindia.com/people/rapid-fire-round-with-bakul-chandra-co-founder-mentor-design-strategist-insights-into-design-inspiration-and-mentoring-2",
+    image: "/media/7.png"
   },
   { 
     id: 8, 
     publication: "WFM Media – Window & Façade Magazine", 
     date: "Mar-Apr 2024", 
     title: "Cutting-edge Cladding Solutions and Smart & Environmentally Friendly Choices",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_8.jpg"
+    link: "https://wfmmedia.com/cutting-edge-cladding-solutions/",
+    image: "/media/8.png"
   },
   { 
     id: 9, 
     publication: "Healthcare Radius Magazine", 
     date: "June 2024", 
     title: "Cover Story on 'Addressing India’s Rural Care Gap'",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_9.jpg"
+    link: "https://www.healthcareradius.in/features/wellness/bridging-indias-urban-rural-healthcare-divide",
+    image: "/media/9.png"
   },
   { 
     id: 10, 
     publication: "Architects & Interiors India", 
     date: "July 2024", 
     title: "Graphic Era Institute of Medical Science – Take a leap into the future of healthcare with 1.5 million sq.ft. ecosystem",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_10.jpg"
+    link: "https://www.architectandinteriorsindia.com/projects/take-a-leap-into-the-future-of-healthcare-with-1-5-million-sq-ft-of-patient-centric-ecosystem-in-uttarakhand",
+    image: "/media/10.png"
   },
   { 
     id: 11, 
     publication: "Ace Update magazine", 
     date: "July 2024", 
     title: "Sustainable Healthcare Design of Graphic Era Hospital",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_11.jpg"
+    link: "https://aceupdate.com/sustainable-healthcare-design-of-graphic-era-hospital/",
+    image: "/media/11.png"
   },
   { 
     id: 12, 
     publication: "Archello", 
     date: "September 2024", 
     title: "Coverage on 'Graphic Era Hospital' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_12.jpg"
+    link: "https://archello.com/project/graphic-era-hospital",
+    image: "/media/12.png"
   },
   { 
     id: 13, 
     publication: "WFM Media – Window & Façade Magazine", 
     date: "September 2024", 
     title: "Cutting-edge Cladding Solutions and Smart, Environmentally Responsible Choices for the Future of Architecture",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_13.jpg"
+    link: "https://wfmmedia.com/cutting-edge-cladding-solutions/",
+    image: "/media/13.png"
   },
   { 
     id: 14, 
     publication: "Design Dekko", 
     date: "October 2024", 
     title: "Coverage on 'Graphic Era Hospital' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_14.jpg"
+    link: "https://www.instagram.com/p/DMxkXG8T84H/",
+    image: "/media/14.png"
   },
   { 
     id: 15, 
@@ -137,8 +137,8 @@ const publicationsData = [
     publication: "Biltrax Media", 
     date: "December 2024", 
     title: "Coverage on 'Graphic Era Hospital' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_17.jpg"
+    link: "https://www.biltraxmedia.com/graphic-era-hospital-renascent-consultants/",
+    image: "/media/17.png"
   },
   { 
     id: 18, 
@@ -153,80 +153,80 @@ const publicationsData = [
     publication: "Interiors & Décor magazine", 
     date: "Dec 2024 – Jan 2025", 
     title: "Signature Spaces featuring Bakul Chandra",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_19.jpg"
+    link: "https://www.instagram.com/p/DRRPFSVDRHQ/",
+    image: "/media/19.png"
   },
   { 
     id: 20, 
     publication: "Times of India", 
     date: "February 2025", 
     title: "Budget 2025 – Can realty catch a tax break featuring Bakul Chandra",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_20.jpg"
+    link: "https://www.instagram.com/p/DFfXooez2wC/?hl=en",
+    image: "/media/20.png"
   },
   { 
     id: 21, 
     publication: "Express Healthcare", 
     date: "February 2025", 
     title: "Key to future-proof hospitals featuring Bakul Chandra",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_21.jpg"
+    link: "https://www.instagram.com/p/DWs4yEdgLB2/",
+    image: "/media/21.png"
   },
   { 
     id: 22, 
     publication: "Reality First Magazine", 
     date: "February 2025", 
     title: "Designing Resilient Outdoor Spaces featuring Bakul Chandra",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_22.jpg"
+    link: "https://www.instagram.com/p/DRRPFSVDRHQ/?img_index=2",
+    image: "/media/22.png"
   },
   { 
     id: 23, 
     publication: "MGS Architecture magazine", 
     date: "February 2025", 
     title: "Shift towards sustainability, technological advancements and human-centric Design",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_23.jpg"
+    link: "https://www.mgsarchitecture.in/",
+    image: "/media/23.png"
   },
   { 
     id: 24, 
     publication: "Hindustan Times", 
     date: "February 2025", 
     title: "The Art of Cosy featuring Bakul Chandra",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_24.jpg"
+    link: "https://www.hindustantimes.com/lifestyle/art-culture/art-of-cosy-interior-decor-experts-reveal-warm-design-trends-that-foster-emotional-well-being-at-home-101738854591290.html",
+    image: "/media/24.png"
   },
   { 
     id: 25, 
     publication: "Love That Design (Dubai)", 
     date: "April 2025", 
     title: "Coverage on 'PIECO India Office' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_25.jpg"
+    link: "https://www.instagram.com/p/DMNLZKUxefn/",
+    image: "/media/25.png"
   },
   { 
     id: 26, 
     publication: "Architect & Interior India", 
     date: "April 2025", 
     title: "Coverage on 'PIECO India Office' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_26.jpg"
+    link: "https://www.architectandinteriorsindia.com/projects/breathe-in-the-calm-of-nature-and-feel-the-inspiration-flow-in-this-7000-sq-ft-office-in-new-delhi",
+    image: "/media/26.png"
   },
   { 
     id: 27, 
     publication: "Ace Design Sense magazine", 
     date: "May 2025", 
     title: "Coverage on 'PIECO India Office' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_27.jpg"
+    link: "https://www.acedesignsense.com/designing-beyond-constraints-at-pieco-office/",
+    image: "/media/27.png"
   },
   { 
     id: 28, 
     publication: "Commercial Design magazine", 
     date: "May 2025", 
     title: "Coverage on 'PIECO India Office' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_28.jpg"
+    link: "https://www.commercialdesignindia.com/projects/where-light-flows-and-space-breathes-pieco-office-by-renascent-consultants-redefines-the-corporate-interior",
+    image: "/media/28.png"
   },
   { 
     id: 29, 
@@ -241,8 +241,8 @@ const publicationsData = [
     publication: "Work Design magazine", 
     date: "June 2025", 
     title: "Coverage on 'PIECO India Office' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_30.jpg"
+    link: "https://www.workdesign.com/2025/06/tour-piecos-new-office-a-harmonious-blend-of-functionality-and-aesthetics/",
+    image: "/media/30.png"
   },
   { 
     id: 31, 
@@ -265,24 +265,24 @@ const publicationsData = [
     publication: "Architectural & Builders", 
     date: "July 2025", 
     title: "Coverage on 'PIECO India Office' featuring Renascent Consultants",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_33.jpg"
+    link: "https://www.instagram.com/p/DKHXrraTGmF/",
+    image: "/media/33.png"
   },
   { 
     id: 34, 
     publication: "Construction Week India", 
     date: "July 2025", 
     title: "Is Maharashtra Government’s 10% additional carpet area incentive enough",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_34.jpg"
+    link: "https://www.constructionweekonline.in/business/is-maharashtra-governments-10-additional-carpet-area-incentive-enough",
+    image: "/media/34.png"
   },
   { 
     id: 35, 
     publication: "Commercial Design India", 
     date: "July 2025", 
     title: "Balance, Beauty & Beyond: An Exclusive Interview with Dr. Bakul Chandra",
-    link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media_images/media_35.jpg"
+    link: "https://www.commercialdesignindia.com/people/balance-beauty-beyond-design-insights-from-dr-bakul-chandra-of-renascent-consultants",
+    image: "/media/35.png"
   },
   { 
     id: 36, 

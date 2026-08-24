@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { architectureLabAssets } from '../../data/architectureLabAssets';
 
 // --- DATA ---
-const travelPhotos = [
+const baseTravelPhotos = [
     {
         id: 1,
         src: "/home/travel/tra1_result.webp",
@@ -110,7 +111,33 @@ const travelPhotos = [
         desc: "An expansive landscape visual designed for large-format display.",
         aspectRatio: "aspect-[16/10]",
         category: "Posters & Pics"
+    },
+    {
+        id: 13,
+        src: "/balu.jpeg",
+        title: "Happy Guru Purnima, Bakul Sir",
+        location: "",
+        desc: "A tribute poster celebrating Bakul Chandra as an architect, mentor and guiding inspiration.",
+        aspectRatio: "aspect-[3/4]",
+        category: "Posters & Pics"
+    },
+    {
+        id: 14,
+        src: "/balu%202.jpeg",
+        title: "Design Philosophy",
+        location: "",
+        desc: "A tribute poster on Bakul Chandra's design philosophy — clarity, function, sustainability and impact.",
+        aspectRatio: "aspect-[3/4]",
+        category: "Posters & Pics"
     }
+];
+
+const travelPhotos = [
+    ...baseTravelPhotos,
+    ...architectureLabAssets.map((asset) => ({
+        ...asset,
+        category: 'ARCHITECTURE LAB'
+    }))
 ];
 
 // --- ANIMATION VARIANTS ---
@@ -125,9 +152,9 @@ const itemVariants = {
 };
 
 const TravelGallery = () => {
-    const tabs = ["Travel", "Photography", "Architecture Lab", "Slice of Life", "Posters & Pics"];
+    const tabs = ["Travel", "Photography", "ARCHITECTURE LAB", "Slice of Life", "Posters & Pics"];
     
-    const [activeTab, setActiveTab] = useState(tabs[0]);
+    const [activeTab, setActiveTab] = useState("ARCHITECTURE LAB");
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -206,13 +233,13 @@ const TravelGallery = () => {
                 </div>
 
                 {/* COPYRIGHT CREDIT NOTICE (For Architecture Lab or general usage) */}
-                {activeTab === "Architecture Lab" && (
+                {activeTab === "ARCHITECTURE LAB" && (
                     <motion.div 
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="mb-8 text-xs tracking-widest text-gray-500 uppercase"
                     >
-                        * Architecture Lab visual assets &copy; {new Date().getFullYear()} All Rights Reserved.
+                        * Visual assets courtesy of Architecture Lab. Curated by Bakul Chandra for reference purposes only, {new Date().getFullYear()}.
                     </motion.div>
                 )}
 
@@ -248,7 +275,7 @@ const TravelGallery = () => {
                                     transition={{ duration: 0.3 }}
                                 >
                                     <p className="text-[12px] md:text-[14px] font-bold tracking-widest text-[#aaaaaa] uppercase mb-1">
-                                        {photo.location} • <span className="text-white">{photo.category}</span>
+                                        {photo.location && `${photo.location} • `}<span className="text-white">{photo.category}</span>
                                     </p>
                                     <h3 className="text-xl md:text-[24px] font-normal text-white drop-shadow-md">
                                         {photo.title}
@@ -323,7 +350,7 @@ const TravelGallery = () => {
                                     {filteredPhotos[currentIndex].title}
                                 </h3>
                                 <p className="text-sm md:text-[16px] text-gray-400 font-bold uppercase tracking-widest mb-3">
-                                    {filteredPhotos[currentIndex].location} • {filteredPhotos[currentIndex].category}
+                                    {filteredPhotos[currentIndex].location && `${filteredPhotos[currentIndex].location} • `}{filteredPhotos[currentIndex].category}
                                 </p>
                                 <p className="text-[18px] font-light text-gray-300">
                                     {filteredPhotos[currentIndex].desc}
