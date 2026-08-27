@@ -182,10 +182,20 @@ const ProjectLightbox = ({ project, categoryLabel, onClose }) => {
     );
 };
 
+const ALL_PROJECTS_CATEGORY = {
+    slug: 'all',
+    label: 'All Projects',
+    projects: portfolioCategories.flatMap((cat) =>
+        cat.projects.map((project) => ({ ...project, categoryLabel: cat.label }))
+    ),
+};
+
+const tabCategories = [ALL_PROJECTS_CATEGORY, ...portfolioCategories];
+
 const PortfolioCategories = () => {
-    const [activeSlug, setActiveSlug] = useState(portfolioCategories[0].slug);
+    const [activeSlug, setActiveSlug] = useState(ALL_PROJECTS_CATEGORY.slug);
     const [openProject, setOpenProject] = useState(null);
-    const activeCategory = portfolioCategories.find(c => c.slug === activeSlug);
+    const activeCategory = tabCategories.find(c => c.slug === activeSlug);
 
     return (
         <section className="w-full bg-black text-white py-8 md:py-12 px-6 md:px-12 font-archivo overflow-hidden">
@@ -213,33 +223,32 @@ const PortfolioCategories = () => {
                     </motion.a>
                 </div>
 
-                {/* Category Tabs */}
-                <div
-                    className="flex gap-2 overflow-x-auto pb-3 mb-8 -mx-1 px-1"
-                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                >
-                    {portfolioCategories.map((cat) => (
-                        <button
-                            key={cat.slug}
-                            onClick={() => setActiveSlug(cat.slug)}
-                            className={`relative shrink-0 px-4 py-2.5 rounded-full text-xs md:text-sm font-light whitespace-nowrap border transition-colors duration-300 ${
-                                activeSlug === cat.slug
-                                    ? 'text-black border-transparent'
-                                    : 'text-zinc-400 border-white/10 hover:text-white hover:border-white/30'
-                            }`}
-                        >
-                            {activeSlug === cat.slug && (
-                                <motion.div
-                                    layoutId="activePortfolioTab"
-                                    className="absolute inset-0 bg-white rounded-full -z-10"
-                                    transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
-                                />
-                            )}
-                            {cat.label}
-                            <span className="ml-2 text-[10px] opacity-60">{cat.projects.length}</span>
-                        </button>
-                    ))}
+                {/* Category Tabs — auto-scrolling marquee */}
+                <div className="relative mb-8 overflow-hidden group [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+                    <div className="flex w-max gap-2 py-1 animate-[portfolio-marquee_35s_linear_infinite] group-hover:[animation-play-state:paused]">
+                        {[...tabCategories, ...tabCategories].map((cat, i) => (
+                            <button
+                                key={`${cat.slug}-${i}`}
+                                onClick={() => setActiveSlug(cat.slug)}
+                                className={`relative shrink-0 px-4 py-2.5 rounded-full text-xs md:text-sm font-light whitespace-nowrap border transition-colors duration-300 ${
+                                    activeSlug === cat.slug
+                                        ? 'bg-white text-black border-transparent'
+                                        : 'text-zinc-400 border-white/10 hover:text-white hover:border-white/30'
+                                }`}
+                            >
+                                {cat.label}
+                                <span className="ml-2 text-[10px] opacity-60">{cat.projects.length}</span>
+                            </button>
+                        ))}
+                    </div>
                 </div>
+
+                <style dangerouslySetInnerHTML={{ __html: `
+                    @keyframes portfolio-marquee {
+                        from { transform: translateX(0); }
+                        to { transform: translateX(-50%); }
+                    }
+                ` }} />
 
                 {/* Grid */}
                 <AnimatePresence mode="wait">
@@ -267,7 +276,7 @@ const PortfolioCategories = () => {
                 {openProject && (
                     <ProjectLightbox
                         project={openProject}
-                        categoryLabel={activeCategory.label}
+                        categoryLabel={openProject.categoryLabel || activeCategory.label}
                         onClose={() => setOpenProject(null)}
                     />
                 )}

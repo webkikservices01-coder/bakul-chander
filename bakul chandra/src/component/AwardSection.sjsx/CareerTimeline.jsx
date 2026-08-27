@@ -66,27 +66,6 @@ const AwardsRecognition = () => {
         <section className="w-full bg-black text-white py-10 md:py-16 px-5 md:px-12 font-archivo overflow-hidden">
             <div className="max-w-7xl mx-auto">
 
-                {/* --- Top Banner Photo Section --- */}
-                <motion.div 
-                    variants={imageVariant}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="w-full h-[40vh] md:h-[60vh] rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group mb-12 md:mb-20"
-                >
-                    <img
-                        src="/award/award-banner.jpeg" // Update path if your banner image name differs
-                        alt="Awards & Recognition Ceremony Banner"
-                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80"></div>
-                    <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-10">
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-wide text-white drop-shadow-md">
-                            AWARDS & RECOGNITION
-                        </h1>
-                    </div>
-                </motion.div>
-
                 {/* --- Honors Section --- */}
                 <motion.div
                     initial="hidden"

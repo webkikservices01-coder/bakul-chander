@@ -92,7 +92,7 @@ I design clarity, structure, and long-term value.`
             title: "Prof. J.H. Ansari",
             short: "Planning is not about maps alone—it is about systems, people, and consequence.",
             paragraphs: [
-                "Prof. J.H. Ansari shaped my understanding of planning long before I understood the profession in full. As a student in the Department of Physical Planning at School of Planning and Architecture, New Delhi from 1990–1994, I learned from him that planning was never about maps alone—it was about systems, people, and consequence.",
+                "Prof. J.H. Ansari shaped my understanding of planning long before I understood the profession in full. As a student in the Department of Physical Planning at School of Planning and Architecture, New Delhi from 1990–1994, I learned from him that planning was never just about maps.",
                 "He taught with clarity, discipline, and uncommon intellectual rigor. What stayed with me most was his insistence that every planning decision carries social weight. He sharpened not just my academic thinking, but my judgment. Prof. Ansari did not merely teach planning; he taught us how to think responsibly, critically, and with long-term civic conviction."
             ]
         },
@@ -100,7 +100,7 @@ I design clarity, structure, and long-term value.`
             title: "Prof. M. Shaheer",
             short: "Landscape is never ornamental—it is structural, civilizational, and deeply tied to memory.",
             paragraphs: [
-                "Prof. M. Shaheer shaped my understanding of landscape as both ecology and culture. As a student in the Department of Landscape Architecture at School of Planning and Architecture, New Delhi from 1994–1996, I learned from him that landscape was never ornamental—it was structural, civilizational, and deeply tied to memory.",
+                "Prof. M. Shaheer shaped my understanding of landscape as both ecology and culture. As a student in the Department of Landscape Architecture at School of Planning and Architecture, New Delhi from 1994–1996, I learned from him that landscape was never merely ornamental.",
                 "He brought rare clarity to the relationship between land, water, vegetation, and human settlement. His teaching was rigorous, quiet, and deeply observant. What stayed with me was his insistence that design must begin with respect for terrain and context. Prof. Shaheer taught me to see landscape not as decoration, but as the enduring framework within which architecture must learn to belong."
             ]
         },
@@ -109,14 +109,14 @@ I design clarity, structure, and long-term value.`
             short: "Urban development is not theory scaled up, but coordination made visible.",
             paragraphs: [
                 "Working with Prof. S.C. Gupta from 1996–1999 as an associate in his urban development consultancy was my first real education in the mechanics of cities. In practice, he was exacting, methodical, and relentlessly clear about the difference between drawings and delivery.",
-                "He taught me that urban development is not theory scaled up, but coordination made visible—land, infrastructure, governance, finance, and timing working in discipline. What shaped me most was his insistence on precision, accountability, and administrative realism. Under him, I learned to think beyond design intent and engage implementation as a serious professional responsibility. Prof. Gupta sharpened my understanding of cities as systems that must function before they can impress."
+                "He taught me that real coordination shows up in the details—land, infrastructure, governance, finance, and timing working in discipline. What shaped me most was his insistence on precision, accountability, and administrative realism. Under him, I learned to think beyond design intent and engage implementation as a serious professional responsibility. Prof. Gupta sharpened my understanding of cities as systems that must function before they can impress."
             ]
         },
         {
             title: "Prof. M.S. Satsangi",
             short: "Design excellence is built on discipline, restraint, and intellectual honesty.",
             paragraphs: [
-                "Prof. M.S. Satsangi shaped my professional life not only as a mentor, but as a partner across two defining chapters—Satsangi Chandra Design Consultants (1999–2006) and SCDC Associates (2006–2011). Working alongside him taught me that design excellence is built on discipline, restraint, and intellectual honesty.",
+                "Prof. M.S. Satsangi shaped my professional life not only as a mentor, but as a partner across two defining chapters—Satsangi Chandra Design Consultants (1999–2006) and SCDC Associates (2006–2011). Working alongside him taught me the standards that would define my own practice.",
                 "He brought rigor to every decision and never allowed style to outrun substance. What influenced me most was his ability to balance conceptual clarity with professional steadiness. From him, I learned that architecture is not sustained by talent alone, but by consistency, judgment, and trust. Prof. Satsangi’s impact on me was enduring—he refined both my practice and my temperament as a professional."
             ]
         }

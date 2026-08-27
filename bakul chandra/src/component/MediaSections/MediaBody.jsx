@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import FeaturedMedia from '../HomeSections/FeaturedMedia';
 
 // --- DATA (Yahan aap apne extracted exact links aur images ke paths dal sakte hain) ---
 const publicationsData = [
@@ -374,11 +373,7 @@ const MediaBody = () => {
 
   return (
     <main className="w-full bg-black text-white font-['Archivo'] py-8 md:py-16 selection:bg-white selection:text-black flex flex-col gap-10 md:gap-20">
-        <div className="w-full">
-            <FeaturedMedia />
-        </div>
-
-        <motion.section 
+        <motion.section
           initial="hidden" 
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }}

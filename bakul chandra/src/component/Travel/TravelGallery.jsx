@@ -249,38 +249,22 @@ const TravelGallery = () => {
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}
-                    className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
                 >
                     {filteredPhotos.map((photo, index) => (
                         <motion.div
                             key={photo.id + "-" + index}
                             variants={itemVariants}
                             onClick={() => openLightbox(index)}
-                            className="group relative rounded-3xl overflow-hidden cursor-pointer border border-[#222222] bg-[#0a0a0a] break-inside-avoid shadow-lg transition-all duration-500 hover:border-gray-500"
+                            className="group relative rounded-3xl overflow-hidden cursor-pointer border border-[#222222] bg-[#0a0a0a] shadow-lg transition-all duration-500 hover:border-gray-500"
                         >
                             {/* Image */}
                             <div className={`w-full ${photo.aspectRatio} relative overflow-hidden bg-[#111]`}>
-                                <img 
-                                    src={photo.src} 
+                                <img
+                                    src={photo.src}
                                     alt={photo.title}
                                     className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
                                 />
-                            </div>
-
-                            {/* Gradient Overlay & Text (Visible on Hover) */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 md:p-8">
-                                <motion.div 
-                                    initial={{ y: 20, opacity: 0 }}
-                                    whileHover={{ y: 0, opacity: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <p className="text-[12px] md:text-[14px] font-bold tracking-widest text-[#aaaaaa] uppercase mb-1">
-                                        {photo.location && `${photo.location} • `}<span className="text-white">{photo.category}</span>
-                                    </p>
-                                    <h3 className="text-xl md:text-[24px] font-normal text-white drop-shadow-md">
-                                        {photo.title}
-                                    </h3>
-                                </motion.div>
                             </div>
                         </motion.div>
                     ))}
@@ -338,24 +322,11 @@ const TravelGallery = () => {
                             onClick={(e) => e.stopPropagation()}
                             className="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center"
                         >
-                            <img 
-                                src={filteredPhotos[currentIndex].src} 
+                            <img
+                                src={filteredPhotos[currentIndex].src}
                                 alt={filteredPhotos[currentIndex].title}
                                 className="w-full max-h-[70vh] object-contain rounded-xl shadow-2xl"
                             />
-                            
-                            {/* Caption */}
-                            <div className="mt-6 text-center max-w-2xl w-full">
-                                <h3 className="text-2xl md:text-[36px] font-normal text-white mb-2">
-                                    {filteredPhotos[currentIndex].title}
-                                </h3>
-                                <p className="text-sm md:text-[16px] text-gray-400 font-bold uppercase tracking-widest mb-3">
-                                    {filteredPhotos[currentIndex].location && `${filteredPhotos[currentIndex].location} • `}{filteredPhotos[currentIndex].category}
-                                </p>
-                                <p className="text-[18px] font-light text-gray-300">
-                                    {filteredPhotos[currentIndex].desc}
-                                </p>
-                            </div>
                         </motion.div>
                     </motion.div>
                 )}
