@@ -9,7 +9,7 @@ const publicationsData = [
     date: "May-June 2022", 
     title: "Profile Feature for 'Healthcare Architects', Vol.1 Issue 2",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_1.jpg" 
+    image: "/media/1.png" 
   },
   { 
     id: 2, 
@@ -25,7 +25,7 @@ const publicationsData = [
     date: "April-May 2023", 
     title: "Profile Feature for '10 Top-notch Versatile Business Leader to Watch 2023 – Bakul Chandra & Varun Agarwal'",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_3.jpg"
+    image: "/media/45.png"
   },
   { 
     id: 4, 
@@ -121,7 +121,7 @@ const publicationsData = [
     date: "October 2024", 
     title: "Coverage on 'Graphic Era Hospital' featuring Renascent Consultants",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_15.jpg"
+    image: "/media/15.png"
   },
   { 
     id: 16, 
@@ -129,7 +129,7 @@ const publicationsData = [
     date: "November 2024", 
     title: "Possession Prep 101 featuring Bakul Chandra",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_16.jpg"
+    image: "/media/16.png"
   },
   { 
     id: 17, 
@@ -145,7 +145,7 @@ const publicationsData = [
     date: "January 2025", 
     title: "Profile Feature of 'Bakul Chandra – Renascent Consultants' in 'Top 50 Healthcare & Medtech Leaders 2024-25'",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_18.jpg"
+    image: "/media/18.png"
   },
   { 
     id: 19, 
@@ -233,7 +233,7 @@ const publicationsData = [
     date: "June 2025", 
     title: "How to prepare homes for summer featuring Bakul Chandra",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_29.jpg"
+    image: "/media/29.png"
   },
   { 
     id: 30, 
@@ -249,7 +249,7 @@ const publicationsData = [
     date: "June 2025", 
     title: "Coverage on 'PIECO India Office' under category 'Design with Constraints'",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_31.jpg"
+    image: "/media/31.png"
   },
   { 
     id: 32, 
@@ -257,7 +257,7 @@ const publicationsData = [
     date: "June 2025", 
     title: "Coverage on 'Graphic Era Hospital' featuring Renascent Consultants",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_32.jpg"
+    image: "/media/32.png"
   },
   { 
     id: 33, 
@@ -289,7 +289,7 @@ const publicationsData = [
     date: "August 2025", 
     title: "Coverage on 'Graphic Era Hospital' featuring Renascent Consultants",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_36.jpg"
+    image: "/media/36.png"
   },
   { 
     id: 37, 
@@ -313,7 +313,7 @@ const publicationsData = [
     date: "13th December 2025", 
     title: "Rethinking Scale in India’s Healthcare featuring Bakul Chandra",
     link: "https://www.thehindu.com/life-and-style/homes-and-gardens/rethinking-scale-in-indias-healthcare/article70384406.ece",
-    image: "/media/media_39.jpg"
+    image: "/media/39.png"
   },
   { 
     id: 40, 
@@ -321,7 +321,7 @@ const publicationsData = [
     date: "January 2026", 
     title: "India Healthcare Outlook featuring Bakul Chandra",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
-    image: "/media/media_40.jpg"
+    image: "/media/40.png"
   },
   { 
     id: 41, 
