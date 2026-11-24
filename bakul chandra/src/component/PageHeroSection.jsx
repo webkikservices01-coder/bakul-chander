@@ -13,19 +13,20 @@ const PageHeroSection = ({
   titleSize = "text-[55px] md:text-[85px]",
   category = "",
   clastyle = "",
-  splitLayout = false, // ✅ Title on the side, photo on the other side (instead of overlaid)
+  splitLayout = true, // Title beside the photo, never on top of it ("no text on images")
+  heightClass = "h-[85vh] md:h-[90vh]", // ✅ Optional override for hero height
 }) => {
   if (splitLayout) {
     return (
-      <section className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden bg-black font-playfair flex flex-col md:flex-row">
+      <section className="relative w-full md:h-[80vh] overflow-hidden bg-black font-playfair flex flex-col md:flex-row">
 
         {/* Text Panel */}
-        <div className="relative z-10 w-full md:w-[42%] shrink-0 flex flex-col justify-center px-6 md:px-16 py-28 md:py-0 bg-black">
+        <div className="relative z-10 w-full md:w-[42%] shrink-0 flex flex-col justify-end md:justify-center px-5 md:px-12 pt-24 pb-6 md:py-0 bg-black">
           <motion.h1
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className={`text-white font-extralight leading-[0.9] tracking-[0.1em] break-words text-[42px] md:text-[64px]`}
+            className={`text-white font-extralight leading-[1] tracking-[0.1em] break-words text-[40px] md:text-[clamp(40px,4.2vw,64px)]`}
           >
             {title}
           </motion.h1>
@@ -43,7 +44,7 @@ const PageHeroSection = ({
         </div>
 
         {/* Photo Panel */}
-        <div className="relative w-full md:w-[58%] h-[45vh] md:h-full overflow-hidden">
+        <div className="relative w-full md:w-[58%] h-[45vh] md:h-full overflow-hidden md:mt-0">
           <motion.img
             src={image}
             alt={title}
@@ -68,14 +69,13 @@ const PageHeroSection = ({
               transition={{ duration: 1.5, ease: "easeOut" }}
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent md:bg-gradient-to-l md:from-black/10" />
         </div>
       </section>
     );
   }
 
   return (
-    <section className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden bg-black font-playfair" >
+    <section className={`relative w-full ${heightClass} overflow-hidden bg-black font-playfair`} >
 
       {/* ✅ Desktop Image (Hides on mobile ONLY IF mobileImage is provided) */}
       <motion.img

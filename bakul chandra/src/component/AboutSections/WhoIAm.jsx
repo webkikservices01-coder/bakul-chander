@@ -25,27 +25,27 @@
 
 //                     {/* Left: Content */}
 //                     <motion.div
-//                         initial="hidden"
+//                         initial="visible"
 //                         whileInView="visible"
 //                         viewport={{ once: true }}
 //                         variants={fadeInUp}
-//                         className="w-full lg:w-1/2 space-y-6"
+//                         className="w-full lg:w-1/2 space-y-4"
 //                     >
-//                         <h2 className="text-3xl md:text-4xl font-light flex items-center gap-3 text-gray-300">
+//                         <h2 className="text-3xl md:text-4xl font-light flex items-center gap-3 text-zinc-300">
 //                             <span className="text-xl">•</span> Who I am
 //                         </h2>
 
 //                         {/* TEXT UPDATED ACCORDING TO NEW CONTENT */}
 //                         <div className="space-y-6 max-w-xl -mb-18">
-//                             <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-//                                 I am a planner-architect by training, a strategist by instinct, and a systems thinker by discipline.
+//                             <p className="text-lg md:text-xl leading-relaxed text-zinc-300">
+//                                 I am a planner and architect by training, a strategist by instinct, and a systems thinker by discipline.
 //                             </p>
                             
-//                             <p className="text-base md:text-lg leading-relaxed text-gray-400 font-light">
-//                                 My work sits at the intersection of design, business, and decision-making—where architecture is not treated as an isolated act of creation, but as a tool to shape outcomes, influence behavior, and build long-term value.
+//                             <p className="text-base md:text-lg leading-relaxed text-zinc-400 font-light">
+//                                 My work sits at the intersection of design, business, and decision making, where architecture is not treated as an isolated act of creation, but as a tool to shape outcomes, influence behavior, and build long term value.
 //                             </p>
                             
-//                             <p className="text-base md:text-lg leading-relaxed text-gray-400 font-light">
+//                             <p className="text-base md:text-lg leading-relaxed text-zinc-400 font-light">
 //                                 Over the years, I have worked across architecture, planning, and advisory, developing a practice rooted in clarity, structure, and strategic intent. I believe design is not decoration. It is <strong className="text-white font-medium">alignment</strong>—between vision and viability, ambition and execution, people and place.
 //                             </p>
 //                         </div>
@@ -70,20 +70,20 @@
 //                 </div>
 //                 <div className="flex flex-col lg:flex-col justify-between items-start gap-12 mb-16">
 //                     <motion.div
-//                         initial="hidden"
+//                         initial="visible"
 //                         whileInView="visible"
 //                         viewport={{ once: true }}
 //                         variants={fadeInUp}
 //                         className="w-full space-y-6">
-//                         <p className="text-base md:text-lg leading-relaxed text-gray-400 font-light">
-//                                 My approach is direct, analytical, and deeply contextual. I am interested in how things work, why they fail, and what makes them endure. Whether I am shaping a building, advising on growth, or solving institutional complexity, I approach every challenge as a design problem first—and a business decision always.
+//                         <p className="text-base md:text-lg leading-relaxed text-zinc-400 font-light">
+//                                 My approach is direct, analytical, and deeply contextual. I am interested in how things work, why they fail, and what makes them endure. Whether I am shaping a building, advising on growth, or solving institutional complexity, I approach every challenge as a design problem first, and a business decision always.
 //                             </p>
                             
-//                             <p className="text-base md:text-lg leading-relaxed text-gray-400 font-light">
+//                             <p className="text-base md:text-lg leading-relaxed text-zinc-400 font-light">
 //                                 I value precision over noise, systems over spectacle, and substance over performance.
 //                             </p>
 
-//                             <p className="text-lg md:text-xl leading-relaxed text-gray-300 pt-2">
+//                             <p className="text-lg md:text-xl leading-relaxed text-zinc-300 pt-2">
 //                                 At its core, my work is about one thing: <br className="hidden md:block" />
 //                                 <strong className="text-white font-medium italic">bringing order to complexity, and turning intent into impact.</strong>
 //                             </p>
@@ -98,7 +98,7 @@
 //                     {stats.map((stat, index) => (
 //                         <motion.div
 //                             key={stat.id}
-//                             initial="hidden"
+//                             initial="visible"
 //                             whileInView="visible"
 //                             viewport={{ once: true }}
 //                             variants={{
@@ -117,7 +117,7 @@
 //                                     <span className="text-5xl md:text-7xl font-normal text-white group-hover:text-black transition-colors">{stat.suffix}</span>
 //                                 </div>
 //                             </div>
-//                             <p className="text-lg md:text-xl font-light text-gray-400 group-hover:text-gray-800 transition-colors">
+//                             <p className="text-lg md:text-xl font-light text-zinc-400 group-hover:text-zinc-800 transition-colors">
 //                                 {stat.label}
 //                             </p>
 //                         </motion.div>
@@ -186,7 +186,7 @@ const WhoIAm = () => {
             subtitle: "The Foundation Within",
             description: (
                 <>
-                    To live from my <strong className="text-white font-medium">inner wholeness</strong> — where conviction meets compassion, and solitude births leadership. My growth arises not from chasing the unmanifest, but from embodying the divine principle that I already am: calm, clear, and constant.
+                    To live from my <strong>inner wholeness</strong>, where conviction meets compassion, and solitude births leadership. My growth arises not from chasing the unmanifest, but from embodying the divine principle that I already am: calm, clear, and constant.
                 </>
             ),
             points: [
@@ -194,22 +194,22 @@ const WhoIAm = () => {
                 "Channel my fierce independence into compassionate presence, not just truthful solitude.",
                 "Ripen into a state where being myself is so powerful, it elevates everyone around me."
             ],
-            footer: "My highest form of inner awakening comes through serving without noise, leading without posture — unmoved, unshaken, but always showing the way."
+            footer: "My highest form of inner awakening comes through serving without noise, leading without posture: unmoved, unshaken, but always showing the way."
         },
         outer: {
             title: "Outer Purpose",
             subtitle: "The Architect of Growth",
             description: (
                 <>
-                    To be a <strong className="text-white font-medium">sacred architect of growth</strong> — not just of structures or systems, but of people’s lives, institutions, and shared destinies. I am meant to build spaces — outer and inner — where truth, elegance, and elevation can happen.
+                    To be a <strong>sacred architect of growth</strong>, not just of structures or systems, but of people’s lives, institutions, and shared destinies. I am meant to build spaces, outer and inner, where truth, elegance, and elevation can happen.
                 </>
             ),
             points: [
                 "Lead with quiet conviction, rather than authority.",
                 "Mentor others in thinking with clarity, speaking with grace, and working with purpose.",
-                "Infuse environments — may they be physical, intellectual, or emotional — with integrity, alignment, and beauty."
+                "Infuse environments, be they physical, intellectual, or emotional, with integrity, alignment, and beauty."
             ],
-            footer: "In my relationship with others — family, colleagues, society — my role is to be the conscience they can lean on, the strategist who sees the full path, and the presence that anchors them when winds shake their certainty."
+            footer: "In my relationship with others, family, colleagues and society, my role is to be the conscience they can lean on, the strategist who sees the full path, and the presence that anchors them when winds shake their certainty."
         }
     };
 
@@ -220,47 +220,49 @@ const WhoIAm = () => {
     };
 
     return (
-        <section className="w-full bg-black text-white py-10 md:py-10 md:pt-16 px-5 md:px-12 overflow-hidden" style={{ fontFamily: '"Archivo", sans-serif' }}>
+        <section className="w-full bg-black text-white py-8 md:py-10 md:pt-16 px-5 md:px-12 overflow-hidden" style={{ fontFamily: '"Archivo", sans-serif' }}>
             <div className="max-w-7xl mx-auto">
 
                 {/* --- Top Section: Text & Image --- */}
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-10 md:gap-12 mb-10 md:mb-0">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-6 md:gap-12 mb-6 md:mb-0">
 
                     {/* Left: Content */}
                     <motion.div
-                        initial="hidden"
+                        initial="visible"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
-                        className="w-full lg:w-1/2 space-y-6"
+                        className="w-full lg:w-1/2 space-y-4"
                     >
-                        <h2 className="text-2xl md:text-3xl font-light flex items-center gap-3 text-gray-300">
-                            WHO I AM
+                        <h2 className="text-2xl md:text-3xl font-light uppercase text-left">
+                            Who I Am
                         </h2>
 
-                        <div className="space-y-4 md:space-y-3 max-w-xl mb-0 md:mb-0 text-justify">
-                            <p className="text-base md:text-[16px] leading-normal text-gray-400 font-light">
-                                I am a planner-architect by training, a strategist by instinct, and a systems thinker by discipline.
+                        <div className="space-y-3 md:space-y-3 max-w-xl mb-0 md:mb-0 text-left">
+                            <p className="text-base md:text-[16px] font-light">
+                                I am a planner and architect by training, a strategist by instinct, and a systems thinker by discipline.
                             </p>
                             
-                            <p className="text-base md:text-[16px] leading-normal text-gray-400 font-light">
-                                My work sits at the intersection of design, business, and decision-making—where architecture is not treated as an isolated act of creation, but as a tool to shape outcomes, influence behavior, and build long-term value.
+                            <p className="text-base md:text-[16px] font-light">
+                                My work sits at the intersection of design, business, and decision making, where architecture is not treated as an isolated act of creation, but as a tool to shape outcomes, influence behavior, and build long term value.
                             </p>
                             
-                            <p className="text-base md:text-[16px] leading-normal text-gray-400 font-light">
-                                Over the years, I have worked across architecture, planning, and advisory, developing a practice rooted in clarity, structure, and strategic intent. I believe design is not decoration. It is alignment — between vision and viability, ambition and execution, people and place.
+                            <p className="text-base md:text-[16px] font-light">
+                                Over the years, I have worked across architecture, planning, and advisory, developing a practice rooted in clarity, structure, and strategic intent. I believe design is not decoration. It is alignment: between vision and viability, ambition and execution, people and place.
                             </p>
-                            <p className="text-base md:text-[16px] leading-normal text-gray-400 font-light">
-                            My approach is direct, analytical, and deeply contextual. I am interested in how things work, why they fail, and what makes them endure. Whether I am shaping a building, advising on growth, or solving institutional complexity, I approach every challenge as a design problem first—and a business decision always.
+                            <p className="text-base md:text-[16px] font-light">
+                            My approach is direct, analytical, and deeply contextual. I am interested in how things work, why they fail, and what makes them endure. Whether I am shaping a building, advising on growth, or solving institutional complexity, I approach every challenge as a design problem first, and a business decision always.
                         </p>
                         
-                        <p className="text-base md:text-[16px] leading-normal text-gray-400 font-light">
+                        <p className="text-base md:text-[16px] font-light">
                             I value precision over noise, systems over spectacle, and substance over performance.
                         </p>
 
-                        <p className="text-lg md:text-[16px] leading-normal text-gray-400 pt-2 font-light">
-                            At its core, my work is about one thing: <br className="hidden md:block" />
-                            <strong className="text-gray-400 uppercase">bringing order to complexity, and turning intent into impact.</strong>
+                        <p className="text-base md:text-[16px] pt-2 font-light">
+                            At its core, my work is about one thing:
+                        </p>
+                        <p className="text-base md:text-[16px] pt-4 font-light">
+                            <strong>Bringing order to complexity, and turning intent into impact.</strong>
                         </p>
                         </div>
                         {/* <div className="pt-10">
@@ -270,37 +272,32 @@ const WhoIAm = () => {
 
                     {/* Right: Profile Image */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={false}
+                        whileInView={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="w-full h-[45vh] md:h-[67vh] lg:w-[50%] rounded-sm mt-6 md:mt-16 overflow-hidden shadow-2xl"
+                        className="w-full h-[45vh] md:h-[67vh] lg:w-[50%] mt-0 lg:mt-14 overflow-hidden"
                     >
                         <img
-                            src="/about/bakulsir.png"
+                            src="/about/bakulsir-clean.jpg"
                             alt="Bakul Chandra"
-                            className="w-full h-full object-cover object-top grayscale"
+                            className="w-full h-full object-cover object-[center_10%]"
                         />
                     </motion.div>
                 </div>
 
-                {/* Middle Section: More Text */}
-                <div className="flex flex-col justify-between items-start gap-8 md:gap-12 mb-4 md:mb-16">
-                    {/* Commented out original text area kept intact as per your request */}
-                </div>
-
                 {/* --- NEW SPLIT PURPOSE SECTION (Replaced Tabs) --- */}
-                <div className="mb-8 md:mb-0">
+                <div className="mt-10 md:mt-12">
                     {/* Top Centered Heading */}
                     <motion.div
-                        initial="hidden"
+                        initial="visible"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
                         className="text-left mb-6 md:mb-6"
                     >
                         {/* <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-[#9F1C44] font-medium mb-3">Core Mission</h2> */}
-                        <h3 className="text-3xl md:text-3xl font-light text-white uppercase">
+                        <h3 className="text-2xl md:text-3xl font-light uppercase">
                             The Core Purpose of My Life
                         </h3>
                     </motion.div>
@@ -310,32 +307,32 @@ const WhoIAm = () => {
                         
                         {/* LEFT SIDE: Inner Purpose */}
                         <motion.div 
-                            initial="hidden"
+                            initial="visible"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
-                            className="flex flex-col h-auto md:h-[60vh] bg-transparent p-0 rounded-xl"
+                            className="flex flex-col h-auto"
                         >
                             <div className="mb-3 pb-3 border-b border-white/10">
-                                <h4 className="text-2xl md:text-[28px] font-light text-white mb-2">{purposeData.inner.title}</h4>
-                                <p className="text-xs tracking-wider uppercase text-gray-500">{purposeData.inner.subtitle}</p>
+                                <h4 className="text-xl md:text-2xl font-light mb-2">{purposeData.inner.title}</h4>
+                                <p className="text-xs tracking-wider uppercase text-zinc-500">{purposeData.inner.subtitle}</p>
                             </div>
                             
-                            <p className="text-base md:text-[16px] text-gray-400 font-light text-justify leading-relaxed mb-3">
+                            <p className="text-base md:text-[16px] font-light mb-3">
                                 {purposeData.inner.description}
                             </p>
 
                             <ul className="space-y-2 mb-2 flex-grow">
                                 {purposeData.inner.points.map((point, index) => (
                                     <li key={index} className="flex gap-4 items-start group">
-                                        <span className="text-gray-400 font-medium text-sm mt-1 opacity-80 group-hover:opacity-100 transition-opacity">0{index + 1}</span>
-                                        <p className="text-gray-300 font-light leading-relaxed text-justify text-sm md:text-[16px]">{point}</p>
+                                        <span className="text-zinc-400 font-medium text-sm mt-1 opacity-80 group-hover:opacity-100 transition-opacity">0{index + 1}</span>
+                                        <p className="font-light text-base md:text-[16px]">{point}</p>
                                     </li>
                                 ))}
                             </ul>
 
-                            <div className="pb-4 border-b border-white/10 mt-4 md:mt-auto">
-                                <p className="text-sm md:text-[16px] text-justify text-gray-500 italic font-light leading-relaxed">
+                            <div className="pb-4 border-b border-white/10 mt-4">
+                                <p className="text-base md:text-[16px] italic font-light">
                                     "{purposeData.inner.footer}"
                                 </p>
                             </div>
@@ -343,32 +340,32 @@ const WhoIAm = () => {
 
                         {/* RIGHT SIDE: Outer Purpose */}
                         <motion.div 
-                            initial="hidden"
+                            initial="visible"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
-                            className="flex flex-col h-auto md:h-[60vh] bg-transparent p-0 rounded-xl"
+                            className="flex flex-col h-auto"
                         >
                             <div className="mb-3 pb-3 border-b border-white/10">
-                                <h4 className="text-2xl md:text-[28px] font-light text-white mb-2">{purposeData.outer.title}</h4>
-                                <p className="text-xs tracking-wider uppercase text-gray-500">{purposeData.outer.subtitle}</p>
+                                <h4 className="text-xl md:text-2xl font-light mb-2">{purposeData.outer.title}</h4>
+                                <p className="text-xs tracking-wider uppercase text-zinc-500">{purposeData.outer.subtitle}</p>
                             </div>
                             
-                            <p className="text-base md:text-[16px] text-gray-400 font-light text-justify leading-relaxed mb-3">
+                            <p className="text-base md:text-[16px] font-light mb-3">
                                 {purposeData.outer.description}
                             </p>
 
                             <ul className="space-y-2 mb-2 flex-grow">
                                 {purposeData.outer.points.map((point, index) => (
                                     <li key={index} className="flex gap-4 items-start group">
-                                        <span className="text-gray-400 font-medium text-sm mt-1 opacity-80 group-hover:opacity-100 transition-opacity">0{index + 1}</span>
-                                        <p className="text-gray-300 font-light leading-relaxed text-justify text-sm md:text-[16px]">{point}</p>
+                                        <span className="text-zinc-400 font-medium text-sm mt-1 opacity-80 group-hover:opacity-100 transition-opacity">0{index + 1}</span>
+                                        <p className="font-light text-base md:text-[16px]">{point}</p>
                                     </li>
                                 ))}
                             </ul>
 
-                            <div className="pb-4 border-b border-white/10 mt-4 md:mt-auto">
-                                <p className="text-sm md:text-[16px] text-gray-500 italic font-light leading-relaxed">
+                            <div className="pb-4 border-b border-white/10 mt-4">
+                                <p className="text-base md:text-[16px] italic font-light">
                                     "{purposeData.outer.footer}"
                                 </p>
                             </div>
@@ -382,7 +379,7 @@ const WhoIAm = () => {
                     {stats.map((stat, index) => (
                         <motion.div
                             key={stat.id}
-                            initial="hidden"
+                            initial="visible"
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={{
@@ -401,7 +398,7 @@ const WhoIAm = () => {
                                     <span className="text-4xl md:text-7xl font-normal text-white group-hover:text-[#9F1C44] transition-colors">{stat.suffix}</span>
                                 </div>
                             </div>
-                            <p className="text-base md:text-xl font-light text-gray-400 group-hover:text-gray-800 transition-colors">
+                            <p className="text-base md:text-xl font-light text-zinc-400 group-hover:text-zinc-800 transition-colors">
                                 {stat.label}
                             </p>
                         </motion.div>

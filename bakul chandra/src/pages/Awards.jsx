@@ -9,7 +9,7 @@ export default function Awards() {
             <PageHeroSection
                 image="/award/award-hero.jpeg"
                 mobileImage="/award/award-hero-mobile.jpeg"
-                title="Awards & Recognition"
+                title="Awards and Accolades"
                 clastyle="grayscale-75 object-top"
             />
             <CareerTimeline />

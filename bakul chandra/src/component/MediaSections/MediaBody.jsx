@@ -6,7 +6,7 @@ const publicationsData = [
   { 
     id: 1, 
     publication: "Hospital Infrabiz", 
-    date: "May-June 2022", 
+    date: "May – June 2022", 
     title: "Profile Feature for 'Healthcare Architects', Vol.1 Issue 2",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
     image: "/media/1.png" 
@@ -22,8 +22,8 @@ const publicationsData = [
   { 
     id: 3, 
     publication: "Business Touch Magazine", 
-    date: "April-May 2023", 
-    title: "Profile Feature for '10 Top-notch Versatile Business Leader to Watch 2023 – Bakul Chandra & Varun Agarwal'",
+    date: "April – May 2023", 
+    title: "Profile Feature for '10 Top Notch Versatile Business Leader to Watch 2023 – Bakul Chandra & Varun Agarwal'",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
     image: "/media/45.png"
   },
@@ -55,15 +55,15 @@ const publicationsData = [
     id: 7, 
     publication: "Commercial Design", 
     date: "30 March 2024", 
-    title: "Rapid-fire round with Bakul Chandra: Insights into design, inspiration, and mentoring",
+    title: "Rapid Fire round with Bakul Chandra: Insights into design, inspiration, and mentoring",
     link: "https://www.commercialdesignindia.com/people/rapid-fire-round-with-bakul-chandra-co-founder-mentor-design-strategist-insights-into-design-inspiration-and-mentoring-2",
     image: "/media/7.png"
   },
   { 
     id: 8, 
     publication: "WFM Media – Window & Façade Magazine", 
-    date: "Mar-Apr 2024", 
-    title: "Cutting-edge Cladding Solutions and Smart & Environmentally Friendly Choices",
+    date: "Mar – Apr 2024", 
+    title: "Cutting Edge Cladding Solutions and Smart & Environmentally Friendly Choices",
     link: "https://wfmmedia.com/cutting-edge-cladding-solutions/",
     image: "/media/8.png"
   },
@@ -103,7 +103,7 @@ const publicationsData = [
     id: 13, 
     publication: "WFM Media – Window & Façade Magazine", 
     date: "September 2024", 
-    title: "Cutting-edge Cladding Solutions and Smart, Environmentally Responsible Choices for the Future of Architecture",
+    title: "Cutting Edge Cladding Solutions and Smart, Environmentally Responsible Choices for the Future of Architecture",
     link: "https://wfmmedia.com/cutting-edge-cladding-solutions/",
     image: "/media/13.png"
   },
@@ -143,7 +143,7 @@ const publicationsData = [
     id: 18, 
     publication: "Medgate Today Magazine", 
     date: "January 2025", 
-    title: "Profile Feature of 'Bakul Chandra – Renascent Consultants' in 'Top 50 Healthcare & Medtech Leaders 2024-25'",
+    title: "Profile Feature of 'Bakul Chandra – Renascent Consultants' in 'Top 50 Healthcare & Medtech Leaders 2024 – 25'",
     link: "YAHAN_APNA_EXACT_LINK_DALO",
     image: "/media/18.png"
   },
@@ -167,7 +167,7 @@ const publicationsData = [
     id: 21, 
     publication: "Express Healthcare", 
     date: "February 2025", 
-    title: "Key to future-proof hospitals featuring Bakul Chandra",
+    title: "Key to future proof hospitals featuring Bakul Chandra",
     link: "https://www.instagram.com/p/DWs4yEdgLB2/",
     image: "/media/21.png"
   },
@@ -183,7 +183,7 @@ const publicationsData = [
     id: 23, 
     publication: "MGS Architecture magazine", 
     date: "February 2025", 
-    title: "Shift towards sustainability, technological advancements and human-centric Design",
+    title: "Shift towards sustainability, technological advancements and human centric Design",
     link: "https://www.mgsarchitecture.in/",
     image: "/media/23.png"
   },
@@ -294,7 +294,7 @@ const publicationsData = [
   { 
     id: 37, 
     publication: "Design Pataki & Design Democracy", 
-    date: "Aug-Sep 2025", 
+    date: "Aug – Sep 2025", 
     title: "Coverage of PIECO Corporate Office under 'Workplace Design'",
     link: "https://www.designpataki.com/three-offices-show-the-future-of-work-is-drenched-in-colour/",
     image: "/media/37.png"
@@ -326,7 +326,7 @@ const publicationsData = [
   { 
     id: 41, 
     publication: "WFM Media", 
-    date: "Nov-Dec 2025", 
+    date: "Nov – Dec 2025", 
     title: "The Intelligent Envelope – Redefining the Future of Façade and Fenestration",
     link: "https://wfmmedia.com/the-intelligent-envelope-redefining-the-future-of-facade-and-fenestration/",
     image: "/media/41.png"
@@ -343,14 +343,14 @@ const publicationsData = [
     id: 43, 
     publication: "Prime Insights Magazine", 
     date: "April 2026", 
-    title: "Redefining Sustainable Architecture with Data-Driven Design and Future-Ready Built Environments",
+    title: "Redefining Sustainable Architecture with Data Driven Design and Future Ready Built Environments",
     link: "https://www.instagram.com/p/DIOXtwmzFw_/?img_index=2",
     image: "/media/43.png"
   },
   { 
     id: 44, 
     publication: "Window & Façade Magazine", 
-    date: "May-June 2026", 
+    date: "May – June 2026", 
     title: "Façades Should Be Timeless Rather Than Fashionable featuring Bakul Chandra",
     link: "https://www.linkedin.com/posts/bakul-chandra-ba1a995_fa%C3%A7ades-should-be-timeless-rather-than-fashionable-ugcPost-7488205326572478464-GzXy/",
     image: "/media/44.png"
@@ -382,7 +382,7 @@ const MediaBody = () => {
         >
           <motion.div variants={itemVariants} className="mb-8 md:mb-12 flex justify-between items-end">
             <h2 className="text-3xl md:text-4xl font-normal tracking-wide text-white">
-              <span className="text-gray-600 mr-3 md:mr-4">•</span>Publications & Media
+              <span className="text-zinc-600 mr-3 md:mr-4">•</span>Publications & Media
             </h2>
           </motion.div>
           
@@ -395,7 +395,7 @@ const MediaBody = () => {
               <motion.div 
                 variants={itemVariants}
                 key={pub.id} 
-                className="flex-none w-[78vw] sm:w-[45vw] md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] snap-center group flex flex-col border border-[#222222] bg-[#080808] rounded-2xl overflow-hidden transition-all duration-500 hover:border-gray-400 hover:bg-[#111]"
+                className="flex-none w-[78vw] sm:w-[45vw] md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] snap-center group flex flex-col border border-[#222222] bg-[#080808] overflow-hidden transition-all duration-500 hover:border-zinc-400 hover:bg-[#111]"
               >
                 {/* Clickable Card Wrapper linking to the publication */}
                 <a 
@@ -412,13 +412,13 @@ const MediaBody = () => {
                         // Fallback agar image load na ho toh default placeholder dikhaye
                         e.target.src = "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=600&auto=format&fit=crop";
                       }}
-                      className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
 
                   <div className="p-5 md:p-6 flex flex-col flex-1 justify-between">
                     <div className="mb-6">
-                      <h3 className="text-base md:text-lg font-normal leading-snug text-gray-200 group-hover:text-white transition-colors duration-300 line-clamp-3">
+                      <h3 className="text-base md:text-lg font-normal leading-snug text-zinc-200 group-hover:text-white transition-colors duration-300 line-clamp-3">
                         {pub.title}
                       </h3>
                     </div>
@@ -429,7 +429,7 @@ const MediaBody = () => {
                   <span className="text-[10px] md:text-xs font-bold tracking-widest text-[#aaaaaa] uppercase group-hover:text-white transition-colors">
                     {pub.publication}
                   </span>
-                  <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#666666] uppercase group-hover:text-gray-400 transition-colors">
+                  <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#666666] uppercase group-hover:text-zinc-400 transition-colors">
                     {pub.date}
                   </span>
                 </div>
@@ -440,7 +440,7 @@ const MediaBody = () => {
           <div className="md:hidden w-full mt-6 flex justify-center">
             <div className="w-full max-w-[150px] h-1 bg-[#222222] rounded-full overflow-hidden">
                 <motion.div 
-                    className="h-full bg-gray-400 rounded-full"
+                    className="h-full bg-zinc-400 rounded-full"
                     style={{ scaleX: scrollXProgress, transformOrigin: "left" }}
                 />
             </div>

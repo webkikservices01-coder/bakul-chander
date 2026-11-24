@@ -34,6 +34,59 @@
   --font-playfair: "AR BONNIE", sans-serif; /* Playfair Font */
 }
 
+/* ------------------------------------------------------------------
+   GLOBAL CONTENT RULES (all pages, mobile and desktop)
+   These are unlayered, so they win over Tailwind utility classes.
+   ------------------------------------------------------------------ */
+:root {
+  --text-body: #c2c2c2;      /* one colour for all running text */
+  --text-heading: #ffffff;   /* one colour for all headings */
+  --line-body: 1.15;         /* one line spacing for all content */
+}
+
 body {
   background-color: black;
+  color: var(--text-body);
+  font-family: "Archivo", sans-serif;
+  line-height: var(--line-body);
+}
+
+/* Running text: same font, colour and line spacing everywhere */
+main p,
+main li,
+main blockquote {
+  font-family: "Archivo", sans-serif;
+  color: var(--text-body);
+  line-height: var(--line-body);
+  text-align: left;
+}
+
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: var(--text-heading);
+}
+
+/* Bold or emphasised words inside text keep the same font, colour and case */
+main p :is(strong, b, em, i),
+main li :is(strong, b, em, i),
+main blockquote :is(strong, b, em, i) {
+  font-family: inherit;
+  color: inherit;
+  font-style: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  font-weight: 500;
+}
+
+/* Images: glossy black and white, square edges */
+main img {
+  filter: grayscale(1) contrast(1.12) brightness(1.04);
+  border-radius: 0;
+}
+
+main :has(> img) {
+  border-radius: 0 !important;
 }

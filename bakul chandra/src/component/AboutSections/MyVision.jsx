@@ -30,17 +30,17 @@ const MyVision = () => {
 
     const visionFullText = {
         title: "My Vision",
-        long: `Every project is a convergence of competing forces—space, structure, climate, cost, regulation, human behavior, institutional ambition, operational logic, and time. Good design does not eliminate this complexity; it organizes it. It gives structure to competing demands, aligns priorities, and transforms friction into coherence. When architecture is done well, it feels inevitable. Not because it is simple, but because complexity has been resolved so thoroughly that it appears effortless.
+        long: `Every project is a convergence of competing forces: space, structure, climate, cost, regulation, human behavior, institutional ambition, operational logic, and time. Good design does not eliminate this complexity; it organizes it. It gives structure to competing demands, aligns priorities, and transforms friction into coherence. When architecture is done well, it feels inevitable. Not because it is simple, but because complexity has been resolved so thoroughly that it appears effortless.
 
 That effortlessness is the real measure of design maturity.
 
-A building should not demand attention to prove its value. It should work—quietly, intelligently, and consistently. It should guide movement without confusion, support use without resistance, adapt without compromise, and endure without constant correction. The best spaces do not perform for applause. They perform for life.
+A building should not demand attention to prove its value. It should work, quietly, intelligently, and consistently. It should guide movement without confusion, support use without resistance, adapt without compromise, and endure without constant correction. The best spaces do not perform for applause. They perform for life.
 
 This is why I strive for relevance over novelty.
 
 Relevance asks harder questions than style ever will. It asks what a place must do, who it must serve, how it must evolve, and what responsibilities it must carry over time. It resists the temptation of trend in favor of usefulness, longevity, and cultural fit. A relevant building does not chase attention. It earns permanence.
 
-I am interested in creating environments that remain valuable long after aesthetic fashions have expired—spaces that continue to serve people, institutions, and cities with quiet competence. Because architecture, at its best, is not frozen expression. It is living infrastructure.
+I am interested in creating environments that remain valuable long after aesthetic fashions have expired: spaces that continue to serve people, institutions, and cities with quiet competence. Because architecture, at its best, is not frozen expression. It is living infrastructure.
 
 That belief also shapes how I mentor young architects.
 
@@ -50,7 +50,7 @@ What I try to teach instead is the discipline beneath design: how to think clear
 
 Young architects are often taught how to draw. Far fewer are taught how to judge. Yet judgment is what determines whether a drawing becomes architecture or merely representation.
 
-I mentor them to understand that design is not only an act of creation, but an act of responsibility. Every line has cost. Every decision has consequence. Every omission becomes someone else’s problem later—on site, in operation, in maintenance, or in public use.
+I mentor them to understand that design is not only an act of creation, but an act of responsibility. Every line has cost. Every decision has consequence. Every omission becomes someone else’s problem later: on site, in operation, in maintenance, or in public use.
 
 To practice architecture well is not simply to design beautifully. It is to think rigorously, decide responsibly, and build with foresight.
 
@@ -59,24 +59,20 @@ That, to me, is the real work.`
 
     const mentorshipFullText = {
         title: "Mentorship and Professional Development",
-        long: `Alongside practice, I actively mentor young architects and design professionals.
+        long: `Alongside practice, I actively mentor young architects and design professionals. Not in software. Not in stylistic imitation. But in judgment.
 
-Not in software.
-Not in stylistic imitation.
-But in judgment.
-
-I focus on the parts of the profession that are harder to teach and easier to overlook: decision-making, critical thinking, professional responsibility, design ethics, and the discipline of understanding consequences.
+I focus on the parts of the profession that are harder to teach and easier to overlook: decision making, critical thinking, professional responsibility, design ethics, and the discipline of understanding consequences.
 
 Tools can be learned.
 Taste can be borrowed.
 Judgment must be built.
 
-I mentor to help young professionals think more clearly, act more responsibly, and understand that design is not just about what can be made—but what should be made, and why.`
+I mentor to help young professionals think more clearly, act more responsibly, and understand that design is not just about what can be made, but what should be made, and why.`
     };
 
     const ultimateDeliveryFullText = {
         title: "What My Work Ultimately Delivers",
-        long: `At every scale, my work is about improving how things function—spatially, strategically, and systemically.
+        long: `At every scale, my work is about improving how things function: spatially, strategically, and systemically.
 
 I help shape environments that are not only designed well, but thought through.
 Projects that are not only visually resolved, but operationally intelligent.
@@ -84,23 +80,23 @@ Decisions that are not only ambitious, but durable.
 
 I do not simply design buildings.
 
-I design clarity, structure, and long-term value.`
+I design clarity, structure, and long term value.`
     };
 
     const gurus = [
         {
             title: "Prof. J.H. Ansari",
-            short: "Planning is not about maps alone—it is about systems, people, and consequence.",
+            short: "Planning is not about maps alone. It is about systems, people, and consequence.",
             paragraphs: [
-                "Prof. J.H. Ansari shaped my understanding of planning long before I understood the profession in full. As a student in the Department of Physical Planning at School of Planning and Architecture, New Delhi from 1990–1994, I learned from him that planning was never just about maps.",
-                "He taught with clarity, discipline, and uncommon intellectual rigor. What stayed with me most was his insistence that every planning decision carries social weight. He sharpened not just my academic thinking, but my judgment. Prof. Ansari did not merely teach planning; he taught us how to think responsibly, critically, and with long-term civic conviction."
+                "Prof. J.H. Ansari shaped my understanding of planning long before I understood the profession in full. As a student in the Department of Physical Planning at School of Planning and Architecture, New Delhi from 1990 to 1994, I learned from him that planning was never just about maps.",
+                "He taught with clarity, discipline, and uncommon intellectual rigor. What stayed with me most was his insistence that every planning decision carries social weight. He sharpened not just my academic thinking, but my judgment. Prof. Ansari did not merely teach planning; he taught us how to think responsibly, critically, and with long term civic conviction."
             ]
         },
         {
             title: "Prof. M. Shaheer",
-            short: "Landscape is never ornamental—it is structural, civilizational, and deeply tied to memory.",
+            short: "Landscape is never ornamental. It is structural, civilizational, and deeply tied to memory.",
             paragraphs: [
-                "Prof. M. Shaheer shaped my understanding of landscape as both ecology and culture. As a student in the Department of Landscape Architecture at School of Planning and Architecture, New Delhi from 1994–1996, I learned from him that landscape was never merely ornamental.",
+                "Prof. M. Shaheer shaped my understanding of landscape as both ecology and culture. As a student in the Department of Landscape Architecture at School of Planning and Architecture, New Delhi from 1994 to 1996, I learned from him that landscape was never merely ornamental.",
                 "He brought rare clarity to the relationship between land, water, vegetation, and human settlement. His teaching was rigorous, quiet, and deeply observant. What stayed with me was his insistence that design must begin with respect for terrain and context. Prof. Shaheer taught me to see landscape not as decoration, but as the enduring framework within which architecture must learn to belong."
             ]
         },
@@ -108,69 +104,26 @@ I design clarity, structure, and long-term value.`
             title: "Prof. S.C. Gupta",
             short: "Urban development is not theory scaled up, but coordination made visible.",
             paragraphs: [
-                "Working with Prof. S.C. Gupta from 1996–1999 as an associate in his urban development consultancy was my first real education in the mechanics of cities. In practice, he was exacting, methodical, and relentlessly clear about the difference between drawings and delivery.",
-                "He taught me that real coordination shows up in the details—land, infrastructure, governance, finance, and timing working in discipline. What shaped me most was his insistence on precision, accountability, and administrative realism. Under him, I learned to think beyond design intent and engage implementation as a serious professional responsibility. Prof. Gupta sharpened my understanding of cities as systems that must function before they can impress."
+                "Working with Prof. S.C. Gupta from 1996 to 1999 as an associate in his urban development consultancy was my first real education in the mechanics of cities. In practice, he was exacting, methodical, and relentlessly clear about the difference between drawings and delivery.",
+                "He taught me that real coordination shows up in the details: land, infrastructure, governance, finance, and timing working in discipline. What shaped me most was his insistence on precision, accountability, and administrative realism. Under him, I learned to think beyond design intent and engage implementation as a serious professional responsibility. Prof. Gupta sharpened my understanding of cities as systems that must function before they can impress."
             ]
         },
         {
             title: "Prof. M.S. Satsangi",
             short: "Design excellence is built on discipline, restraint, and intellectual honesty.",
             paragraphs: [
-                "Prof. M.S. Satsangi shaped my professional life not only as a mentor, but as a partner across two defining chapters—Satsangi Chandra Design Consultants (1999–2006) and SCDC Associates (2006–2011). Working alongside him taught me the standards that would define my own practice.",
-                "He brought rigor to every decision and never allowed style to outrun substance. What influenced me most was his ability to balance conceptual clarity with professional steadiness. From him, I learned that architecture is not sustained by talent alone, but by consistency, judgment, and trust. Prof. Satsangi’s impact on me was enduring—he refined both my practice and my temperament as a professional."
+                "Prof. M.S. Satsangi shaped my professional life not only as a mentor, but as a partner across two defining chapters: Satsangi Chandra Design Consultants (1999 – 2006) and SCDC Associates (2006 – 2011). Working alongside him taught me the standards that would define my own practice.",
+                "He brought rigor to every decision and never allowed style to outrun substance. What influenced me most was his ability to balance conceptual clarity with professional steadiness. From him, I learned that architecture is not sustained by talent alone, but by consistency, judgment, and trust. Prof. Satsangi’s impact on me was enduring. He refined both my practice and my temperament as a professional."
             ]
         }
     ];
 
-    const scribbleVariant = {
-        hidden: {
-            opacity: 0,
-            pathLength: 0
-        },
-        visible: (i) => ({
-            opacity: 1,
-            pathLength: 1,
-            transition: {
-                duration: 1.5,
-                ease: "easeInOut",
-                delay: 0.5 + i * 0.2
-            }
-        })
-    };
-
-    const PencilScribble = ({
-        viewBox,
-        d,
-        className,
-        custom
-    }) => (
-        <svg
-            viewBox={viewBox}
-            className={`absolute pointer-events-none ${className}`}
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <motion.path
-                d={d}
-                fill="none"
-                stroke="#666"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                custom={custom}
-                variants={scribbleVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            />
-        </svg>
-    );
-
     return (
-        <section className="w-full bg-black text-white py-6 md:py-0 md:mb-16 px-6 md:px-12 overflow-hidden font-archivo">
+        <section className="w-full bg-black text-white py-6 md:py-0 md:mb-16 px-5 md:px-12 overflow-hidden font-archivo">
 
             <motion.div
-                className="max-w-7xl mx-auto space-y-10 md:space-y-16"
-                initial="hidden"
+                className="max-w-7xl mx-auto space-y-6 md:space-y-10"
+                initial="visible"
                 whileInView="visible"
                 viewport={{
                     once: true,
@@ -181,31 +134,31 @@ I design clarity, structure, and long-term value.`
 
                 {/* --- 1. MY VISION SECTION --- */}
 
-                <div className="flex flex-col-reverse lg:flex-row justify-between items-start gap-12 lg:gap-16 mb-8 md:mb-0">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-16">
 
                     <motion.div
                         variants={fadeInUp}
                         className="w-full lg:w-[70%] space-y-4"
                     >
-                        <h2 className="text-3xl md:text-3xl font-normal uppercase flex items-center gap-3 text-gray-200">
+                        <h2 className="text-2xl md:text-3xl font-light uppercase">
                             My Vision
                         </h2>
 
-                        <div className="space-y-4 text-base md:text-[16px] text-justify font-light leading-relaxed text-gray-400">
+                        <div className="space-y-4 text-base md:text-[16px] font-light">
 
-                            <p className="text-lg md:text-[16px] text-gray-300">
+                            <p>
                                 My work is rooted in a simple belief:
                             </p>
 
-                            <h3 className="text-lg md:text-[16px] leading-snug font-medium text-white mb-2 border-l-2 border-gray-600 pl-4 md:pl-4">
-                                "Good architecture is not about visual novelty—it is about making complex systems work effortlessly."
-                            </h3>
+                            <p className="font-medium border-l-2 border-zinc-600 pl-4">
+                                "Good architecture is not about visual novelty. It is about making complex systems work effortlessly."
+                            </p>
 
                             <p>
                                 Architecture has always been burdened by image. Too often, it is judged by how quickly it attracts attention rather than how well it performs over time. I have never found that convincing. Buildings are not objects to be admired in isolation; they are systems to be inhabited, operated, maintained, adapted, and relied upon. Their success is not measured by how dramatic they appear on day one, but by how intelligently they continue to function on day ten thousand.
                             </p>
 
-                            <p className="text-gray-400 font-medium">
+                            <p className="font-medium">
                                 For me, architecture is the discipline of resolving complexity with clarity.
                             </p>
 
@@ -218,59 +171,13 @@ I design clarity, structure, and long-term value.`
 
                     <motion.div
                         variants={fadeInUp}
-                        className="w-full lg:w-[40%] flex justify-center items-center relative py-4 mt-0 md:mt-16"
+                        className="w-full sm:w-[70%] lg:w-[35%] mt-0 lg:mt-14 shrink-0"
                     >
-                        <PencilScribble
-                            viewBox="0 0 50 50"
-                            d="M10,25 C15,10 35,10 40,25 C45,40 25,45 20,35 C15,25 25,20 30,25"
-                            className="w-12 h-12 top-0 left-4 md:left-10"
-                            custom={0}
-                        />
-
-                        <PencilScribble
-                            viewBox="0 0 40 40"
-                            d="M20,20 m-1,0 a1,1 0 1,0 2,0 a1,1 0 1,0 -2,0 M20,20 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 M20,20 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"
-                            className="w-10 h-10 top-10 right-0 md:-right-4"
-                            custom={1}
-                        />
-
-                        <PencilScribble
-                            viewBox="0 0 60 40"
-                            d="M5,20 C10,5 25,5 30,15 C35,25 20,35 15,30 C10,25 20,15 30,18 C40,21 45,35 55,25"
-                            className="w-16 h-10 -bottom-2 left-0 md:left-5"
-                            custom={2}
-                        />
-
-                        <PencilScribble
-                            viewBox="0 0 50 50"
-                            d="M5,25 l10,-15 l15,20 l10,-25 l5,15 M5,25 c10,10 20,-10 30,10 c10,20 15,0 15,-10"
-                            className="w-14 h-14 top-1/2 -right-8 -translate-y-1/2"
-                            custom={3}
-                        />
-
-                        <PencilScribble
-                            viewBox="0 0 30 30"
-                            d="M15,5 C5,5 5,25 15,25 C25,25 25,5 15,5 M15,10 C10,10 10,20 15,20 C20,20 20,10 15,10"
-                            className="w-8 h-8 bottom-4 right-8"
-                            custom={4}
-                        />
-
-                        <motion.img
-                            src="/about/about2.png"
-                            alt="Bakul Chandra Sketch"
-                            className="relative z-10 w-auto max-h-[350px] md:max-h-[500px] md:mt-16 object-contain grayscale opacity-90 drop-shadow-[0_20px_50px_rgba(255,255,255,0.05)] cursor-pointer"
-                            animate={{
-                                y: [0, -15, 0]
-                            }}
-                            transition={{
-                                duration: 4,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }}
-                            whileHover={{
-                                scale: 1.05,
-                                opacity: 1
-                            }}
+                        {/* Sketch replaced with a photograph so all photos on the page match */}
+                        <img
+                            src="/3.jpeg"
+                            alt="Bakul Chandra"
+                            className="w-full h-auto block"
                         />
                     </motion.div>
                 </div>
@@ -279,7 +186,7 @@ I design clarity, structure, and long-term value.`
 
                 <motion.div
                     variants={fadeInUp}
-                    className="w-full space-y-3 text-base md:text-[16px] text-justify font-light leading-relaxed text-gray-400"
+                    className="w-full space-y-3 text-base md:text-[16px] font-light"
                 >
                     {visionFullText.long
                         .split('\n\n')
@@ -294,7 +201,7 @@ I design clarity, structure, and long-term value.`
                                     key={i}
                                     className={
                                         isHighlighted
-                                            ? 'text-white font-medium border-l-2 border-gray-600 pl-4'
+                                            ? 'font-medium border-l-2 border-zinc-600 pl-4'
                                             : ''
                                     }
                                 >
@@ -310,18 +217,18 @@ I design clarity, structure, and long-term value.`
 
                     <div className="space-y-4">
 
-                        <h2 className="text-3xl md:text-3xl font-normal uppercase flex items-center gap-3 text-gray-200">
+                        <h2 className="text-2xl md:text-3xl font-light uppercase">
                             What I Do
                         </h2>
 
-                        <div className="text-base md:text-[16px] text-gray-400 font-light leading-relaxed max-w-full space-y-4">
+                        <div className="text-base md:text-[16px] font-light max-w-full space-y-4">
 
                             <p>
                                 I work at the intersection of architecture, strategy, and systems thinking.
                             </p>
 
                             <p>
-                                My work is not limited to designing buildings. I solve spatial, institutional, and operational problems through design—using architecture as a strategic tool rather than a purely visual exercise. I approach every project as a system of decisions, where built form is only one part of a much larger equation.
+                                My work is not limited to designing buildings. I solve spatial, institutional, and operational problems through design, using architecture as a strategic tool rather than a purely visual exercise. I approach every project as a system of decisions, where built form is only one part of a much larger equation.
                             </p>
 
                             <p>
@@ -329,27 +236,22 @@ I design clarity, structure, and long-term value.`
                             </p>
 
                             <p>
-                                Whether I am working on a building, a campus, a masterplan, or an institutional challenge, my role is to identify what truly matters, remove what does not, and create structures—physical and strategic—that perform with intelligence over time.
+                                Whether I am working on a building, a campus, a masterplan, or an institutional challenge, my role is to identify what truly matters, remove what does not, and create structures, physical and strategic, that perform with intelligence over time.
                             </p>
 
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 pt-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 pt-0">
 
-                        <div className="space-y-4 text-base md:text-[16px] text-gray-400 font-light leading-relaxed text-justify">
+                        <div className="space-y-4 text-base md:text-[16px] font-light">
 
-                            <h3 className="text-2xl font-normal text-white mb-2">
+                            <h3 className="text-xl md:text-2xl font-light mb-2">
                                 Mentorship and Professional Development
                             </h3>
 
-                            <p>
-                                Alongside practice, I actively mentor young architects and design professionals. Not in software. Not in stylistic imitation. But in judgment.
-                            </p>
-
                             {mentorshipFullText.long
                                 .split('\n\n')
-                                .slice(1)
                                 .map((paragraph, idx) => (
                                     <p key={idx}>
                                         {paragraph}
@@ -358,14 +260,14 @@ I design clarity, structure, and long-term value.`
 
                         </div>
 
-                        <div className="space-y-4 text-base md:text-[16px] text-gray-400 font-light leading-relaxed">
+                        <div className="space-y-4 text-base md:text-[16px] font-light">
 
-                            <h3 className="text-2xl font-normal text-white mb-2">
+                            <h3 className="text-xl md:text-2xl font-light mb-2">
                                 What My Work Ultimately Delivers
                             </h3>
 
                             <p>
-                                At every scale, my work is about improving how things function—spatially, strategically, and systemically.
+                                At every scale, my work is about improving how things function: spatially, strategically, and systemically.
                             </p>
 
                             {ultimateDeliveryFullText.long
@@ -386,7 +288,7 @@ I design clarity, structure, and long-term value.`
                 <AnimatePresence>
                     {activeModalData && (
                         <motion.div
-                            initial={{ opacity: 0 }}
+                            initial={false}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
@@ -413,7 +315,7 @@ I design clarity, structure, and long-term value.`
 
                                     <button
                                         onClick={() => setActiveModalData(null)}
-                                        className="text-gray-500 hover:text-white text-sm uppercase tracking-widest transition-colors flex items-center gap-2"
+                                        className="text-zinc-500 hover:text-white text-sm uppercase tracking-widest transition-colors flex items-center gap-2"
                                     >
                                         <span>←</span> Close
                                     </button>
@@ -424,7 +326,7 @@ I design clarity, structure, and long-term value.`
                                     {activeModalData.title}
                                 </h2>
 
-                                <div className="text-gray-300 text-base md:text-[17px] leading-relaxed font-light whitespace-pre-line columns-1 md:columns-2 gap-12">
+                                <div className="text-zinc-300 text-base md:text-[17px] leading-relaxed font-light whitespace-pre-line columns-1 md:columns-2 gap-12">
                                     {activeModalData.long}
                                 </div>
 
@@ -445,11 +347,11 @@ I design clarity, structure, and long-term value.`
                         className="space-y-2 pt-0"
                     >
 
-                        <h2 className="text-3xl md:text-3xl font-normal flex items-center gap-3 text-gray-200">
+                        <h2 className="text-2xl md:text-3xl font-light uppercase">
                             The Guiding Principles
                         </h2>
 
-                        <p className="text-lg md:text-[16px] text-gray-400 font-light max-w-4xl">
+                        <p className="text-base md:text-[16px] font-light max-w-4xl">
                             Professionally, my entire personality and design philosophy is an expression of the profound knowledge imparted by my four gurus.
                         </p>
 
@@ -464,42 +366,22 @@ I design clarity, structure, and long-term value.`
                             <motion.div
                                 key={idx}
                                 variants={fadeInUp}
-                                whileHover={{
-                                    y: -5,
-                                    borderColor: "rgba(255,255,255,0.3)"
-                                }}
-                                className="bg-[#080808] border border-[#222] p-5 md:p-8 rounded-2xl hover:border-gray-500 hover:bg-[#111] transition-all duration-500 shadow-lg group cursor-pointer flex flex-col justify-start h-full"
+                                className="bg-[#080808] border border-[#222] p-5 md:p-8 flex flex-col justify-start h-full space-y-3"
                             >
+                                <h4 className="text-xl font-light">
+                                    {guru.title}
+                                </h4>
 
-                                <div>
+                                {/* Key line, highlighted the same way on every card */}
+                                <p className="text-base font-medium italic border-l-2 border-zinc-600 pl-4">
+                                    {guru.short}
+                                </p>
 
-                                    <h4 className="text-xl md:text-[20px] font-normal text-white mb-2 group-hover:text-gray-200 transition-colors">
-                                        {guru.title}
-                                    </h4>
-
-                                    <p className="text-base md:text-[14px] text-gray-400 font-light leading-relaxed mb-2">
-                                        {guru.short}
+                                {guru.paragraphs.map((pText, pIdx) => (
+                                    <p key={pIdx} className="text-base font-light">
+                                        {pText}
                                     </p>
-
-                                </div>
-
-                                {/* REDUCED GAP BETWEEN PARAGRAPHS */}
-
-                                <div className="space-y-2 text-justify">
-
-                                    {guru.paragraphs.map((pText, pIdx) => (
-
-                                        <p
-                                            key={pIdx}
-                                            className="text-[13px] md:text-[14px] text-gray-400 font-light leading-snug"
-                                        >
-                                            {pText}
-                                        </p>
-
-                                    ))}
-
-                                </div>
-
+                                ))}
                             </motion.div>
 
                         ))}

@@ -21,9 +21,9 @@ const AwardsRecognition = () => {
         { title: "Top 10 Sustainable Architecture Consultants 2025", date: "2025", badge: "Silicon India" },
         { title: "Excellence in Healthcare Architecture & Design", date: "Nov 2025", badge: "TIMES of India" },
         { title: "Outstanding Design Leadership in Education & Healthcare", date: "Aug 2025", badge: "India Business" },
-        { title: "KUDOS Award — Commercial Spaces", date: "Aug 2025", badge: "IFJ Index Plus" },
-        { title: "Smartex 2025 Award — Healthcare Category", date: "Feb 2025", badge: "Smartex" },
-        { title: "Top 50 Healthcare & Medtech Leaders 2024-25", date: "Jan 2025", badge: "Medgate Today" },
+        { title: "KUDOS Award, Commercial Spaces", date: "Aug 2025", badge: "IFJ Index Plus" },
+        { title: "Smartex 2025 Award, Healthcare Category", date: "Feb 2025", badge: "Smartex" },
+        { title: "Top 50 Healthcare & Medtech Leaders 2024 – 25", date: "Jan 2025", badge: "Medgate Today" },
         { title: "Golden Door Award for Excellence in Consultancy", date: "Jun 2024", badge: "Elite Awards" },
         { title: "Most Prominent & Innovative Architecture Firm 2024", date: "Jun 2024", badge: "Elite Awards" },
     ];
@@ -37,7 +37,7 @@ const AwardsRecognition = () => {
         { title: "10 Most Promising Healthcare Architecture Companies", date: "2022", badge: "Silicon India" },
         { title: "Excellent Healthcare Architect", date: "2022", badge: "Apex Awards" },
         { title: "Excellence in Medical College & Teaching Hospital Design", date: "2022", badge: "Apex Awards" },
-        { title: "Promising Company — Indian Achievers' Award", date: "Aug 2022", badge: "Indian Achievers" },
+        { title: "Promising Company, Indian Achievers' Award", date: "Aug 2022", badge: "Indian Achievers" },
         { title: "Most Trusted Healthcare Architecture Consultancy Firm", date: "Aug 2022", badge: "National Fame" },
         { title: "Innovation in Designing Healthcare Architecture", date: "May 2022", badge: "Architect's WOW" },
         { title: "Innovation in Designing of Hospitality Spaces", date: "Apr 2022", badge: "Eldrok India" },
@@ -63,20 +63,20 @@ const AwardsRecognition = () => {
     };
 
     return (
-        <section className="w-full bg-black text-white py-10 md:py-16 px-5 md:px-12 font-archivo overflow-hidden">
+        <section className="w-full bg-black text-white py-10 md:py-14 px-5 md:px-12 font-archivo overflow-hidden">
             <div className="max-w-7xl mx-auto">
 
                 {/* --- Honors Section --- */}
                 <motion.div
-                    initial="hidden"
+                    initial="visible"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={containerVariants}
-                    className="mb-10 md:mb-20"
+                    className="mb-10 md:mb-12"
                 >
-                    <motion.div variants={itemVariants} className="mb-8 md:mb-12">
-                        <h2 className="text-2xl md:text-4xl font-light tracking-wide text-white">
-                            <span className="text-gray-600 mr-3 md:mr-4">•</span>Honors
+                    <motion.div variants={itemVariants} className="mb-6">
+                        <h2 className="text-2xl md:text-3xl font-light tracking-wide text-white">
+                            Honors
                         </h2>
                     </motion.div>
                     <div className="flex flex-col gap-6">
@@ -84,20 +84,20 @@ const AwardsRecognition = () => {
                             <motion.div
                                 variants={itemVariants}
                                 key={honor.id}
-                                className="border border-[#222222] bg-[#080808] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8 group transition-all duration-500 hover:border-gray-500 shadow-lg"
+                                className="border border-[#222222] bg-[#080808] p-6 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-8 group transition-all duration-500 hover:border-zinc-500"
                             >
-                                <div className="max-w-3xl space-y-4 md:space-y-5">
-                                    <h3 className="text-2xl md:text-3xl font-normal leading-snug text-white">
+                                <div className="max-w-3xl space-y-3">
+                                    <h3 className="text-xl md:text-2xl font-normal text-white">
                                         {honor.title}
                                     </h3>
-                                    <p className="text-gray-500 font-medium tracking-wide uppercase text-xs md:text-sm">
-                                        Conferred by <span className="text-gray-300">{honor.conferredBy}</span>
+                                    <p className="text-zinc-500 font-medium tracking-wide uppercase text-xs md:text-sm">
+                                        Conferred by <span className="text-zinc-300">{honor.conferredBy}</span>
                                     </p>
-                                    <p className="text-[#999999] leading-relaxed text-sm md:text-base font-light">
+                                    <p className="text-base font-light">
                                         {honor.description}
                                     </p>
                                 </div>
-                                <div className="shrink-0 border border-[#333333] rounded-full px-6 py-3 text-xs md:text-sm font-medium tracking-widest uppercase text-gray-300 w-full md:w-auto text-center mt-4 md:mt-0 transition-colors group-hover:bg-white group-hover:text-black">
+                                <div className="shrink-0 border border-[#333333] rounded-full px-6 py-3 text-xs md:text-sm font-medium tracking-widest uppercase text-zinc-300 w-full md:w-auto text-center transition-colors group-hover:bg-white group-hover:text-black">
                                     {honor.date}
                                 </div>
                             </motion.div>
@@ -106,20 +106,20 @@ const AwardsRecognition = () => {
                 </motion.div>
 
                 {/* --- Header Section --- */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-3 md:gap-6 border-b border-white/10 pb-5 md:pb-8">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-10 gap-3 md:gap-6 border-b border-white/10 pb-5 md:pb-6">
                     <motion.h2
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={false}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-4xl font-light tracking-wide flex items-center gap-3 text-white"
+                        className="text-2xl md:text-3xl font-light tracking-wide text-white"
                     >
-                        Awards & Recognitions
+                        Awards and Accolades
                     </motion.h2>
                     <motion.p
-                        initial={{ opacity: 0, x: 20 }}
+                        initial={false}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-[14px] md:text-[16px] text-zinc-400 max-w-md md:text-right font-light leading-relaxed"
+                        className="text-base max-w-md font-light"
                     >
                         Industry recognition is fortunate, but what matters most is creating environments that serve people long after trends have passed.
                     </motion.p>
@@ -128,49 +128,47 @@ const AwardsRecognition = () => {
                 {/* =========================================
                     BLOCK 1: IMAGE LEFT | AWARDS RIGHT 
                 ========================================= */}
-                <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-16 mb-10 md:mb-20">
+                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12 mb-10 md:mb-12">
                     
                     {/* Left: Image 1 */}
                     <motion.div
                         variants={imageVariant}
-                        initial="hidden"
+                        initial="visible"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="w-full h-[35vh] md:h-[65vh] lg:w-1/2 rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group shrink-0"
+                        className="w-full h-[35vh] md:h-[60vh] lg:w-1/2 overflow-hidden relative shrink-0"
                     >
                         <img
                             src="/award/award1.jpeg" 
                             alt="Awards and Accolades"
-                            className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                            className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70"></div>
                     </motion.div>
 
                     {/* Right: Awards List 1 */}
                     <motion.div
                         variants={containerVariants}
-                        initial="hidden"
+                        initial="visible"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="w-full lg:w-1/2 flex flex-col justify-center space-y-4"
+                        className="w-full lg:w-1/2 flex flex-col justify-start space-y-3"
                     >
                         {awardsList1.map((award, index) => (
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
-                                className="flex justify-between items-start sm:items-center gap-3 group border-b border-white/5 pb-3 md:pb-4"
+                                className="flex justify-between items-center gap-4 border-b border-white/10 pb-3"
                             >
-                                <div className="space-y-1.5 w-[65%] sm:w-[70%]">
-                                    <h3 className="text-[15px] md:text-[17px] font-normal flex items-start gap-2 md:gap-3 text-gray-300 group-hover:text-white transition-colors leading-snug">
-                                        <span className="text-gray-500 mt-1 md:mt-1.5 text-[10px] md:text-sm">✦</span>
+                                <div className="flex-1 min-w-0 space-y-1">
+                                    <h3 className="text-base font-normal text-white">
                                         {award.title}
                                     </h3>
-                                    <p className="text-[10px] text-zinc-500 font-medium ml-4 md:ml-6 uppercase tracking-wider">
+                                    <p className="text-xs font-medium uppercase tracking-wider">
                                         {award.date}
                                     </p>
                                 </div>
 
-                                <div className="shrink-0 px-2.5 py-1.5 md:px-4 md:py-2 bg-[#111] border border-white/10 rounded-lg text-[9px] md:text-[10px] text-zinc-400 group-hover:bg-gray-900 group-hover:text-white group-hover:border-[#9F1C44] transition-all duration-300 min-w-[90px] md:min-w-[120px] text-center uppercase tracking-widest font-bold shadow-lg mt-1 sm:mt-0">
+                                <div className="shrink-0 w-[110px] md:w-[130px] px-2 py-1.5 bg-[#111] border border-white/10 text-[10px] text-zinc-300 text-center uppercase tracking-widest font-semibold">
                                     {award.badge}
                                 </div>
                             </motion.div>
@@ -181,50 +179,47 @@ const AwardsRecognition = () => {
                 {/* =========================================
                     BLOCK 2: AWARDS LEFT | IMAGE RIGHT 
                 ========================================= */}
-                <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-16 mb-10">
+                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12">
                     
                     {/* Image 2 (Desktop par right side) */}
                     <motion.div
-                        initial="hidden"
+                        initial="visible"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={imageVariant}
-                        className="w-full h-[35vh] md:h-[75vh] lg:w-1/2 rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group shrink-0 lg:order-last"
+                        className="w-full h-[35vh] md:h-[60vh] lg:w-1/2 overflow-hidden relative shrink-0 lg:order-last"
                     >
                         <img
                             src="/award/award2.jpeg" 
                             alt="Award Ceremony"
-                            className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                            className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70"></div>
-                        <div className="absolute -inset-4 bg-white/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </motion.div>
 
                     {/* Awards List 2 */}
                     <motion.div
                         variants={containerVariants}
-                        initial="hidden"
+                        initial="visible"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="w-full lg:w-1/2 flex flex-col justify-center space-y-4"
+                        className="w-full lg:w-1/2 flex flex-col justify-start space-y-3"
                     >
                         {awardsList2.map((award, index) => (
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
-                                className="flex justify-between items-start sm:items-center gap-3 group border-b border-white/5 pb-3 md:pb-4"
+                                className="flex justify-between items-center gap-4 border-b border-white/10 pb-3"
                             >
-                                <div className="space-y-1.5 w-[65%] sm:w-[70%]">
-                                    <h3 className="text-[15px] md:text-[17px] font-normal flex items-start gap-2 md:gap-3 text-gray-300 group-hover:text-white transition-colors leading-snug">
-                                        <span className="text-gray-500 mt-1 md:mt-1.5 text-[10px] md:text-sm">✦</span>
+                                <div className="flex-1 min-w-0 space-y-1">
+                                    <h3 className="text-base font-normal text-white">
                                         {award.title}
                                     </h3>
-                                    <p className="text-[10px] text-zinc-500 font-medium ml-4 md:ml-6 uppercase tracking-wider">
+                                    <p className="text-xs font-medium uppercase tracking-wider">
                                         {award.date}
                                     </p>
                                 </div>
 
-                                <div className="shrink-0 px-2.5 py-1.5 md:px-4 md:py-2 bg-[#111] border border-white/10 rounded-lg text-[9px] md:text-[10px] text-zinc-400 group-hover:bg-gray-900 group-hover:text-white group-hover:border-[#9F1C44] transition-all duration-300 min-w-[90px] md:min-w-[120px] text-center uppercase tracking-widest font-bold shadow-lg mt-1 sm:mt-0">
+                                <div className="shrink-0 w-[110px] md:w-[130px] px-2 py-1.5 bg-[#111] border border-white/10 text-[10px] text-zinc-300 text-center uppercase tracking-widest font-semibold">
                                     {award.badge}
                                 </div>
                             </motion.div>

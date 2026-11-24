@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // LinkedIn ke exact row-by-row visual sequence ke mutabiq
 const articlesData = [
@@ -33,7 +33,7 @@ const articlesData = [
     {
         id: 10,
         title: "Judgment Is The Architect's Real Skill",
-        excerpt: "Talent is visible. Judgment is invisible—and far more important. In emerging...",
+        excerpt: "Talent is visible. Judgment is invisible, and far more important. In emerging...",
         author: "Bakul Chandra",
         readTime: "2 min read",
         imageUrl: "/articles/img10_result.webp",
@@ -50,8 +50,8 @@ const articlesData = [
     },
     {
         id: 25,
-        title: "7 Shifts Shaping Architecture in India — 2026",
-        excerpt: "Sustainability in India is no longer a “feature”—it’s the baseline. If your building...",
+        title: "7 Shifts Shaping Architecture in India, 2026",
+        excerpt: "Sustainability in India is no longer a “feature”. It’s the baseline. If your building...",
         author: "Bakul Chandra",
         readTime: "2 min read",
         imageUrl: "/articles/img25_result.webp",
@@ -68,7 +68,7 @@ const articlesData = [
     },
     {
         id: 2,
-        title: "Public-Private Alignment Shapes Outcomes",
+        title: "Public Private Alignment Shapes Outcomes",
         excerpt: "Cities are not built by architects alone. They are shaped by governments,...",
         author: "Bakul Chandra",
         readTime: "2 min read",
@@ -159,7 +159,7 @@ const articlesData = [
     {
         id: 13,
         title: "Hospitals Are Not Buildings. They Are Systems.",
-        excerpt: "Hospitals are often discussed as buildings—square footage,...",
+        excerpt: "Hospitals are often discussed as buildings: square footage,...",
         author: "Bakul Chandra",
         readTime: "2 min read",
         imageUrl: "/articles/img13_result.webp",
@@ -176,7 +176,7 @@ const articlesData = [
     },
     {
         id: 15,
-        title: "ARCHITECTURE IS A SYSTEM BEFORE IT IS A SHAPE: Principl...",
+        title: "Architecture Is a System Before It Is a Shape: Principles from Practice",
         excerpt: "Architecture does not fail because of ambition. It fails because decisions ar...",
         author: "Bakul Chandra",
         readTime: "1 min read",
@@ -185,7 +185,7 @@ const articlesData = [
     },
     {
         id: 16,
-        title: "From Aspiration to Inspiration: MY JOURNEY TO THE COVER O...",
+        title: "From Aspiration to Inspiration: My Journey to the Cover of Design Magazine",
         excerpt: "Some stories take years to unfold. I can't help but think about the journe...",
         author: "Bakul Chandra",
         readTime: "2 min read",
@@ -194,7 +194,7 @@ const articlesData = [
     },
     {
         id: 17,
-        title: "It's Not About You – Arrogance and Fear Keep You from...",
+        title: "It's Not About You: Arrogance and Fear Keep You from Greatness",
         excerpt: "The world is bigger than your ego. Arrogance blinds. Fear binds. And,...",
         author: "Bakul Chandra",
         readTime: "1 min read",
@@ -230,8 +230,8 @@ const articlesData = [
     },
     {
         id: 21,
-        title: "Building More Than Structures: Management, Teamwork, and...",
-        excerpt: "Architecture isn't just about buildings—it's about people. But behind every...",
+        title: "Building More Than Structures: Management and Teamwork",
+        excerpt: "Architecture isn't just about buildings. It's about people. But behind every...",
         author: "Bakul Chandra",
         readTime: "2 min read",
         imageUrl: "/articles/img21_result.webp",
@@ -248,7 +248,7 @@ const articlesData = [
     },
     {
         id: 23,
-        title: "When Good Architecture Goes Bad: The Perils of Non-Technic...",
+        title: "When Good Architecture Goes Bad: The Perils of Non Technical Advisors",
         excerpt: "In architecture, collaboration is everything. A well-executed project is...",
         author: "Bakul Chandra",
         readTime: "2 min read",
@@ -269,86 +269,137 @@ const articlesData = [
 // Single Article Card Component
 const ArticleCard = ({ article }) => {
     return (
-        <motion.a
+        <a
             href={article.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="group flex flex-col bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:border-[#9F1C44]/50 transition-all duration-500 shadow-lg hover:shadow-2xl"
+            className="group snap-start shrink-0 w-[82%] sm:w-[46%] lg:w-[31.5%] flex flex-col bg-[#0a0a0a] border border-white/10 overflow-hidden hover:border-white/40 transition-colors duration-500"
         >
-            {/* Image Section */}
+            {/* Image */}
             <div className="relative aspect-[16/9] overflow-hidden bg-black/50">
                 <img
                     src={article.imageUrl}
                     alt={article.title}
-                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-90" />
             </div>
 
-            {/* Content Section */}
+            {/* Content */}
             <div className="flex flex-col flex-grow p-5 md:p-6 space-y-3">
-                <h3 className="text-lg md:text-[20px] font-normal text-gray-200 group-hover:text-white transition-colors line-clamp-2 leading-snug">
+                <h3 className="text-lg md:text-[20px] font-normal">
                     {article.title}
                 </h3>
 
-                <p className="text-sm text-zinc-500 font-light line-clamp-2 flex-grow leading-relaxed">
+                <p className="text-base font-light flex-grow">
                     {article.excerpt}
                 </p>
 
-                {/* Footer Section */}
-                <div className="flex items-center justify-between pt-5 border-t border-white/5 mt-auto">
-                    <span className="text-[10px] text-zinc-400 uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gray-400 group-hover:shadow-[0_0_8px_#9F1C44] transition-all duration-300"></span>
+                <div className="flex items-center justify-between pt-4 border-t border-white/5 mt-auto">
+                    <span className="text-[11px] uppercase tracking-widest font-semibold text-zinc-300">
                         {article.author}
                     </span>
-                    <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-medium group-hover:text-zinc-300 transition-colors">
+                    <span className="text-[11px] uppercase tracking-widest font-medium text-zinc-300">
                         {article.readTime}
                     </span>
                 </div>
             </div>
-        </motion.a>
+        </a>
     );
 };
 
-// Main Grid Section Component
+// LinkedIn posts slider.
+// Paste the embed link of each post here (on LinkedIn: post menu "..." > "Embed this post" > copy the src URL,
+// e.g. "https://www.linkedin.com/embed/feed/update/urn:li:share:1234567890").
+// The posts slider shows automatically once this list has links.
+const linkedinPosts = [];
+
+const SliderArrows = ({ onPrev, onNext }) => (
+    <div className="flex gap-2">
+        <button
+            type="button"
+            onClick={onPrev}
+            aria-label="Previous"
+            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"
+        >
+            <ChevronLeft className="w-5 h-5" strokeWidth={1.5} />
+        </button>
+        <button
+            type="button"
+            onClick={onNext}
+            aria-label="Next"
+            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"
+        >
+            <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
+        </button>
+    </div>
+);
+
+const slideBy = (ref, direction) => {
+    const el = ref.current;
+    if (el) el.scrollBy({ left: direction * el.clientWidth * 0.9, behavior: 'smooth' });
+};
+
 const ArticlesSection = () => {
+    const articlesRef = useRef(null);
+    const postsRef = useRef(null);
+
     return (
-        <section className="w-full bg-black text-white py-16 md:py-24 px-5 md:px-12 font-archivo overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <section className="w-full bg-black text-white py-10 md:py-14 px-5 md:px-12 font-archivo overflow-hidden">
+            <div className="max-w-7xl mx-auto space-y-12">
 
-                {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-4 border-b border-white/10 pb-6">
-                    <motion.h2
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-light tracking-wide text-white hidden md:block"
+                {/* LinkedIn articles slider */}
+                <div>
+                    <div className="flex items-center justify-between gap-4 mb-6 border-b border-white/10 pb-4">
+                        <a
+                            href="https://www.linkedin.com/in/bakul-chandra-ba1a995/recent-activity/articles/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-base text-zinc-300 hover:text-white transition-colors flex items-center gap-2 font-light"
+                        >
+                            View all on LinkedIn <span aria-hidden="true">↗</span>
+                        </a>
+                        <SliderArrows onPrev={() => slideBy(articlesRef, -1)} onNext={() => slideBy(articlesRef, 1)} />
+                    </div>
+
+                    <div
+                        ref={articlesRef}
+                        className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-2"
+                        style={{ scrollbarWidth: 'none' }}
                     >
-                        Thoughts in Prose
-                    </motion.h2>
-                    <motion.a
-                        href="https://www.linkedin.com/in/bakul-chandra-ba1a995/recent-activity/articles/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="text-[16px] text-gray-400 hover:text-white transition-colors flex items-center gap-2 tracking-wide font-light"
-                    >
-                        View all on LinkedIn <span className="text-lg leading-none mt-[-2px]">↗</span>
-                    </motion.a>
+                        {articlesData.map((article) => (
+                            <ArticleCard key={article.id} article={article} />
+                        ))}
+                    </div>
                 </div>
 
-                {/* Articles Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-8">
-                    {articlesData.map((article) => (
-                        <ArticleCard key={article.id} article={article} />
-                    ))}
-                </div>
+                {/* LinkedIn posts slider (shows once post links are added above) */}
+                {linkedinPosts.length > 0 && (
+                    <div>
+                        <div className="flex items-center justify-between gap-4 mb-6 border-b border-white/10 pb-4">
+                            <h2 className="text-2xl md:text-3xl font-light">LinkedIn Posts</h2>
+                            <SliderArrows onPrev={() => slideBy(postsRef, -1)} onNext={() => slideBy(postsRef, 1)} />
+                        </div>
+                        <div
+                            ref={postsRef}
+                            className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-2"
+                            style={{ scrollbarWidth: 'none' }}
+                        >
+                            {linkedinPosts.map((src) => (
+                                <div key={src} className="snap-start shrink-0 w-[88%] sm:w-[46%] lg:w-[31.5%] bg-white">
+                                    <iframe
+                                        src={src}
+                                        title="LinkedIn post by Bakul Chandra"
+                                        className="w-full h-[560px]"
+                                        frameBorder="0"
+                                        allowFullScreen
+                                        loading="lazy"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
             </div>
         </section>

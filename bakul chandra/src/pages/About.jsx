@@ -12,6 +12,7 @@ function About() {
                 image="/bakul-office.jpeg"
                 title="Biography"
                 clastyle="grayscale-75"
+                heightClass="h-[50vh] md:h-[90vh]"
             />
             <WhoIAm />
             <MyVision />

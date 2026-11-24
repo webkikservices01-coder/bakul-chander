@@ -9,7 +9,7 @@ const CareerAchievements = () => {
             subtitle: "Architecture & Design",
             desc: "Conferred Doctor of Philosophy (Honoris Causa) by Mansarovar Global University for outstanding industry contributions.",
             icon: (
-                <svg className="w-5 h-5 md:w-8 md:h-8 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 md:w-8 md:h-8 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
                 </svg>
             )
@@ -18,9 +18,9 @@ const CareerAchievements = () => {
             id: 2,
             title: "Top 50 Leader",
             subtitle: "Healthcare & Medtech",
-            desc: "Consistently recognized as a top leader in Healthcare Infrastructure by Medgate Today (2023, 2024-25).",
+            desc: "Consistently recognized as a top leader in Healthcare Infrastructure by Medgate Today (2023, 2024 and 2025).",
             icon: (
-                <svg className="w-5 h-5 md:w-8 md:h-8 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 md:w-8 md:h-8 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
             )
@@ -29,9 +29,9 @@ const CareerAchievements = () => {
             id: 3,
             title: "30+ Years",
             subtitle: "Of Excellence",
-            desc: "Delivering massive scale projects, including a 1.5 million sq ft patient-centric healthcare ecosystem.",
+            desc: "Delivering massive scale projects, including a 1.5 million sq ft patient centric healthcare ecosystem.",
             icon: (
-                <svg className="w-5 h-5 md:w-8 md:h-8 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 md:w-8 md:h-8 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
             )
@@ -40,9 +40,9 @@ const CareerAchievements = () => {
             id: 4,
             title: "Times of India",
             subtitle: "Excellence in Design",
-            desc: "Honoured at the TIMES Leaders of Tomorrow – Seaboard Summit for long-term architectural resilience.",
+            desc: "Honoured at the TIMES Leaders of Tomorrow, Seaboard Summit for long term architectural resilience.",
             icon: (
-                <svg className="w-5 h-5 md:w-8 md:h-8 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 md:w-8 md:h-8 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
             )
@@ -61,14 +61,14 @@ const CareerAchievements = () => {
             id: 2,
             title: "The Mechanics of Implementation",
             subtitle: "Urban Development Consultancy",
-            desc: "This interdisciplinary grounding naturally informed my professional evolution. My early years in practice were rooted in urban development consultancy, where I gained direct exposure to the mechanics of implementation—land assembly, infrastructure coordination, regulatory systems, and the realities of execution. These formative experiences built a strong appreciation for cities not merely as designed objects, but as negotiated systems requiring precision, patience, and administrative clarity.",
+            desc: "This interdisciplinary grounding naturally informed my professional evolution. My early years in practice were rooted in urban development consultancy, where I gained direct exposure to the mechanics of implementation: land assembly, infrastructure coordination, regulatory systems, and the realities of execution. These formative experiences built a strong appreciation for cities not merely as designed objects, but as negotiated systems requiring precision, patience, and administrative clarity.",
             image: "/career/urban-development-consultancy.webp"
         },
         {
             id: 3,
-            title: "Systems-Led Design",
+            title: "Systems Led Design",
             subtitle: "Architecture & Institutional Advisory",
-            desc: "Over time, my work expanded into architecture, urban design, and institutional advisory, where I developed a practice defined by strategic thinking, contextual relevance, and systems-led design. My career has steadily evolved from technical specialization to broader leadership—bridging design, planning, governance, and mentorship. Across this progression, my work has remained grounded in a consistent belief: meaningful design is not driven by novelty, but by clarity, purpose, and long-term public relevance.",
+            desc: "Over time, my work expanded into architecture, urban design, and institutional advisory, where I developed a practice defined by strategic thinking, contextual relevance, and systems led design. My career has steadily evolved from technical specialization to broader leadership, bridging design, planning, governance, and mentorship. Across this progression, my work has remained grounded in a consistent belief: meaningful design is not driven by novelty, but by clarity, purpose, and long term public relevance.",
             image: "/career/architecture-institutional-advisory.webp"
         }
     ];
@@ -107,7 +107,7 @@ const CareerAchievements = () => {
             period: "Jul 2006 – Sep 2016",
             role: "Founding Partner",
             company: "SCDC Associates",
-            desc: "Spearheaded architectural innovations and mentored young talent in decision-making and responsible design."
+            desc: "Spearheaded architectural innovations and mentored young talent in decision making and responsible design."
         },
         {
             id: 4,
@@ -148,17 +148,17 @@ const CareerAchievements = () => {
 
                 {/* 2. DEFINING PARABLES */}
                 <motion.section
-                    initial="hidden"
+                    initial="visible"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={containerVariants}
                 >
-                    <div className="mb-8 md:mb-20">
+                    <div className="mb-6 md:mb-10">
                         <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
                             Defining Parables
                         </h2>
-                        <p className="text-sm md:text-[17px] text-gray-400 font-light mt-2 md:mt-3 max-w-3xl leading-relaxed">
-                            The evolution of a practice—from planning and infrastructure to architecture and institutional advisory.
+                        <p className="text-base md:text-[16px] font-light mt-2 md:mt-3 max-w-3xl">
+                            The evolution of a practice, from planning and infrastructure to architecture and institutional advisory.
                         </p>
                     </div>
 
@@ -172,24 +172,23 @@ const CareerAchievements = () => {
                                     className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-6 md:gap-10 lg:gap-20 group`}
                                 >
                                     {/* Image */}
-                                    <div className="w-full lg:w-1/2 h-[38vw] min-h-[180px] md:h-[55vh] overflow-hidden rounded-xl md:rounded-2xl shadow-xl bg-[#111] border border-white/5 relative">
+                                    <div className="w-full lg:w-1/2 h-[38vw] min-h-[180px] md:h-[55vh] overflow-hidden bg-[#111] relative">
                                         <img
                                             src={parable.image}
                                             alt={parable.title}
-                                            className="w-full h-full object-cover object-top grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-102 transition-all duration-700"
+                                            className="w-full h-full object-cover object-top"
                                         />
-                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                                     </div>
 
                                     {/* Text */}
                                     <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                        <span className="text-[10px] md:text-[14px] tracking-widest text-gray-500 font-bold mb-2 md:mb-4 block">
+                                        <span className="text-[10px] md:text-[14px] tracking-widest text-zinc-500 font-bold mb-2 md:mb-4 block">
                                             {parable.subtitle}
                                         </span>
                                         <h3 className="text-xl md:text-3xl font-normal text-white mb-3 md:mb-6 leading-tight">
                                             {parable.title}
                                         </h3>
-                                        <p className="text-sm md:text-[16px] text-[#aaaaaa] text-justify font-light leading-relaxed border-l-2 border-gray-600 pl-4 md:pl-8">
+                                        <p className="text-base md:text-[16px] font-light border-l-2 border-zinc-600 pl-4 md:pl-8">
                                             {parable.desc}
                                         </p>
                                     </div>
@@ -201,56 +200,61 @@ const CareerAchievements = () => {
 
                 {/* 3. TIMELINE (MY JOURNEY) */}
                 <motion.section
-                    initial="hidden"
+                    initial="visible"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={containerVariants}
                 >
-                    <div className="mb-8 md:mb-20">
+                    <div className="mb-6 md:mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-3">
                         <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
-                            My Journey
+                            Experience
                         </h2>
+                        <a
+                            href="https://www.linkedin.com/in/bakul-chandra-ba1a995/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-base text-zinc-300 hover:text-white transition-colors"
+                        >
+                            View full profile on LinkedIn <span aria-hidden="true">↗</span>
+                        </a>
                     </div>
 
-                    <div className="relative max-w-5xl mx-auto pb-6 md:pb-10">
+                    <div className="relative">
                         {/* Vertical line */}
                         <motion.div
-                            initial={{ height: 0 }}
+                            initial={false}
                             whileInView={{ height: "100%" }}
                             viewport={{ once: true }}
                             transition={{ duration: 1.5, ease: "easeInOut" }}
-                            className="absolute left-[14px] md:left-1/2 top-0 w-px bg-[#333333] md:-translate-x-1/2 z-0"
+                            className="absolute left-[14px] top-0 w-px bg-[#333333] z-0"
                         />
 
-                        {timelineData.map((item, index) => {
-                            const isLeft = index % 2 === 0;
+                        {timelineData.map((item) => {
                             return (
                                 <motion.div
                                     key={item.id}
-                                    initial={{ opacity: 0, y: 50 }}
+                                    initial={false}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-80px" }}
+                                    viewport={{ once: true, amount: 0.1 }}
                                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                                    className={`relative flex flex-col md:flex-row items-start md:items-center justify-between pb-8 md:pb-10 w-full group z-10 ${isLeft ? 'md:flex-row-reverse' : ''}`}
+                                    className="relative flex flex-col items-start pb-6 w-full group z-10"
                                 >
-                                    {/* Spacer for alternate side on desktop */}
-                                    <div className="hidden md:block w-5/12" />
 
                                     {/* Dot */}
-                                    <div className="absolute left-[14px] md:left-1/2 top-1 md:top-auto transform -translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-[#111] border-[2px] md:border-[3px] border-gray-500 rounded-full group-hover:border-white group-hover:bg-white transition-colors duration-500 z-20 shadow-[0_0_10px_rgba(255,255,255,0)] group-hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
+                                    <div className="absolute left-[14px] top-1 transform -translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-[#111] border-[2px] md:border-[3px] border-zinc-500 rounded-full group-hover:border-white group-hover:bg-white transition-colors duration-500 z-20 shadow-[0_0_10px_rgba(255,255,255,0)] group-hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
 
                                     {/* Card */}
-                                    <div className={`w-full pl-8 md:pl-0 md:w-5/12 flex flex-col ${isLeft ? 'md:items-end md:text-right' : 'md:items-start md:text-left'}`}>
-                                        <div className="inline-block px-3 py-1 md:px-2 md:py-1 mb-3 md:mb-5 bg-[#111] border border-[#333] rounded-md text-[10px] md:text-[12px] text-gray-300 font-medium tracking-widest uppercase shadow-md">
+                                    <div className="w-full pl-8 md:pl-12 max-w-3xl flex flex-col items-start text-left">
+                                        <div className="inline-block px-3 py-1 mb-2 md:mb-3 bg-[#111] border border-[#333] text-[11px] md:text-[12px] text-zinc-300 font-medium tracking-widest uppercase">
                                             {item.period}
                                         </div>
-                                        <h3 className="text-base md:text-[30px] font-normal text-white mb-1 md:mb-2 group-hover:text-gray-200 transition-colors leading-snug">
+                                        <h3 className="text-lg md:text-2xl font-normal text-white mb-1">
                                             {item.role}
                                         </h3>
-                                        <h4 className="text-sm md:text-[18px] text-gray-400 font-medium mb-2 md:mb-5">
+                                        <h4 className="text-base md:text-lg font-medium mb-2">
                                             {item.company}
                                         </h4>
-                                        <p className="text-xs md:text-[16px] text-[#888888] font-light leading-relaxed">
+                                        <p className="text-base md:text-[16px] font-light">
                                             {item.desc}
                                         </p>
                                     </div>
@@ -262,31 +266,31 @@ const CareerAchievements = () => {
 
                 {/* 2.5 PROFESSIONAL MEMBERSHIPS & AFFILIATIONS */}
                 <motion.section
-                    initial="hidden"
+                    initial="visible"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={containerVariants}
                 >
-                    <div className="mb-8 md:mb-20">
+                    <div className="mb-6 md:mb-10">
                         <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
                             Professional Memberships & Affiliations
                         </h2>
-                        <p className="text-sm md:text-[17px] text-gray-400 font-light mt-2 md:mt-3 max-w-3xl leading-relaxed">
+                        <p className="text-base md:text-[16px] font-light mt-2 md:mt-3 max-w-3xl">
                             Affiliations with professional bodies and institutions across planning, architecture, healthcare, and sustainability.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 md:gap-6">
                         {membershipsData.map((membership) => (
                             <motion.div
                                 key={membership.id}
                                 variants={itemVariants}
-                                className="group border border-[#222222] bg-[#080808] rounded-2xl p-6 md:p-7 flex items-start justify-between gap-4 transition-all duration-500 hover:border-gray-500 shadow-lg"
+                                className="group border border-[#222222] bg-[#080808] p-6 md:p-7 h-full flex items-center justify-between gap-4 transition-all duration-500 hover:border-zinc-500"
                             >
                                 <h3 className="text-base md:text-lg font-normal text-white leading-snug">
                                     {membership.org}
                                 </h3>
-                                <span className="shrink-0 border border-[#333333] rounded-full px-3 py-1.5 text-[10px] md:text-[11px] font-medium tracking-widest uppercase text-gray-300 text-center whitespace-nowrap transition-colors group-hover:bg-white group-hover:text-black">
+                                <span className="shrink-0 min-w-[150px] md:w-[190px] border border-[#333333] rounded-full px-3 py-1.5 text-[10px] md:text-[11px] font-medium tracking-widest uppercase text-zinc-300 text-center whitespace-nowrap transition-colors group-hover:bg-white group-hover:text-black">
                                     {membership.type}
                                 </span>
                             </motion.div>

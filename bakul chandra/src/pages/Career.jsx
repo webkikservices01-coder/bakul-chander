@@ -7,8 +7,8 @@ export default function Career() {
     return (
         <div className="min-h-screen bg-black text-white font-lato">
             <PageHeroSection
-                image="/award/award-hero.png"
-                title="Academic & Career Progression"
+                image="/about/about-hero.jpeg"
+                title="Academic and Career Progression"
                 clastyle="grayscale-75 object-top "
             />
             <CareerTimeline />

@@ -108,7 +108,7 @@
 //                                 animate={{ opacity: 1, y: 0 }}
 //                                 exit={{ opacity: 0, y: -15 }}
 //                                 transition={{ duration: 0.8, ease: "easeInOut" }} 
-//                                 className="text-base sm:text-lg md:text-xl font-light text-gray-300 max-w-3xl italic line-clamp-3 md:line-clamp-none"
+//                                 className="text-base sm:text-lg md:text-xl font-light text-zinc-300 max-w-3xl italic line-clamp-3 md:line-clamp-none"
 //                             >
 //                                 {subheadings[index]}
 //                             </motion.p>
@@ -123,7 +123,7 @@
 //                             <motion.span
 //                                 animate={{ opacity: [1, 0] }}
 //                                 transition={{ repeat: Infinity, duration: 0.9, ease: "linear" }}
-//                                 className="inline-block text-gray-400 font-sans font-light ml-1"
+//                                 className="inline-block text-zinc-400 font-sans font-light ml-1"
 //                             >
 //                                 |
 //                             </motion.span>
@@ -146,7 +146,7 @@
 //                                 <motion.div key={idx} variants={navItemVariants}>
 //                                     <Link
 //                                         to={item.path}
-//                                         className="block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs sm:text-sm md:text-base font-light text-gray-300 transition-all duration-300 hover:bg-white/10 hover:border-white/50 hover:text-white"
+//                                         className="block px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-xs sm:text-sm md:text-base font-light text-zinc-300 transition-all duration-300 hover:bg-white/10 hover:border-white/50 hover:text-white"
 //                                     >
 //                                         {item.name}
 //                                     </Link>
@@ -176,24 +176,25 @@ const HeroSection = () => {
     const [isTypingDone, setIsTypingDone] = useState(false);
 
     const subledding = [
-        "Healthcare & Institutional Infrastructure Strategist | Designing Future-Ready Hospitals, Campuses & Communities Through Systems Thinking | Renascent Consultants",
+        // Short version for review. Bakul sir to confirm or refine the wording.
+        "Healthcare and Institutional Infrastructure Strategist, Renascent Consultants",
         "",
         ""
     ];
 
     const subheadings = [
-        "Design is not decoration. It is decision-making made visible.",
+        "Design is not decoration. It is decision making made visible.",
     ];
     const [index, setIndex] = useState(0);
 
     const menuItems = [
         { name: "Biography", path: "/biography" },
-        { name: "Academic & Career Progression", path: "/academic-&-career-progression" },
-        { name: "Awards & Recognition", path: "/awards-&-recognition" },
+        { name: "Academic and Career Progression", path: "/academic-&-career-progression" },
+        { name: "Awards and Accolades", path: "/awards-&-recognition" },
         { name: "Media", path: "/media" },
-        { name: "Works & Portfolio", path: "/works-&-portfolio" },
+        { name: "Works and Portfolio", path: "/works-&-portfolio" },
         { name: "Thoughts in Prose", path: "/thoughts-in-prose" },
-        { name: "Travel & Photography", path: "/travel-&-photography" },
+        { name: "Travel and Photography", path: "/travel-&-photography" },
         { name: "Contact", path: "/contact" }
     ];
 
@@ -249,37 +250,37 @@ const HeroSection = () => {
 
     return (
         <div
-            className="relative h-[100dvh] w-full bg-black text-white flex flex-col md:flex-row overflow-hidden"
+            className="relative h-[100dvh] w-full bg-black text-white flex flex-col lg:flex-row overflow-hidden"
             style={{ fontFamily: '"Archivo", sans-serif' }}
         >
             {/* --- IMAGE CONTAINER --- */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 1.5, delay: 0.2 } }}
-                className="absolute inset-0 z-0 md:relative md:w-1/2 md:order-2"
+                className="absolute inset-0 z-0 lg:relative lg:w-1/2 lg:order-2"
             >
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20 z-10 md:hidden"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20 z-10 lg:hidden"></div>
                 
-                {/* Mobile Image: Sirf mobile screens par dikhegi (md:hidden) */}
+                {/* Mobile Image: Sirf mobile screens par dikhegi (lg:hidden) */}
                 <img
                     src="/home/hero-banner-mobile.jpeg" // <-- Yahan apni MOBILE image ka path daalein
                     alt="Bakul Chandra Portrait Mobile"
-                    className="block md:hidden w-full h-full object-contain object-top relative z-0"
+                    className="block lg:hidden w-full h-full object-contain object-top relative z-0"
                 />
 
-                {/* Desktop Image: Sirf tablet/desktop screens par dikhegi (hidden md:block) */}
+                {/* Desktop Image: Sirf tablet/desktop screens par dikhegi (hidden lg:block) */}
                 <img
                     src="/home/hero-banner3.png"
                     alt="Bakul Chandra Portrait Desktop"
-                    className="hidden md:block w-full h-full object-cover object-top md:w-[80%] md:ml-35 md:object-right-top relative z-0"
+                    className="hidden lg:block w-full h-full object-cover object-top lg:w-[80%] lg:ml-35 lg:object-right-top relative z-0"
                 />
             </motion.div>
 
             {/* --- TEXT & NAVIGATION CONTAINER --- */}
-            <div className="relative z-10 flex-1 flex flex-col justify-end md:justify-center px-5 sm:px-8 md:px-12 pb-13 sm:pb-10 pt-20 md:py-16 md:w-1/2 md:order-1">
-                <div className="w-full max-w-lg md:max-w-3xl">
+            <div className="relative z-10 flex-1 flex flex-col justify-end lg:justify-center px-5 sm:px-8 lg:px-12 pb-13 sm:pb-10 pt-20 lg:py-16 lg:w-1/2 lg:order-1">
+                <div className="w-full max-w-lg lg:max-w-3xl">
 
-                    <div className="mb-0 md:-mb-2">
+                    <div className="mb-0 lg:-mb-2">
                         <AnimatePresence mode="wait">
                             <motion.p
                                 key={index}
@@ -287,7 +288,7 @@ const HeroSection = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -15 }}
                                 transition={{ duration: 0.8, ease: "easeInOut" }}
-                                className="text-[11px] sm:text-sm md:text-[17px] uppercase tracking-wider font-light text-gray-300 leading-relaxed"
+                                className="whitespace-nowrap text-[clamp(8px,2.45vw,14px)] lg:text-[clamp(10px,1.05vw,17px)] uppercase tracking-wide font-light"
                             >
                                 {subheadings[index]}
                             </motion.p>
@@ -295,20 +296,20 @@ const HeroSection = () => {
                     </div>
 
                     {/* --- MAIN NAME WITH PLAYFAIR FONT --- */}
-                    <h1 className="text-[57px] sm:text-5xl md:text-8xl lg:text-9xl uppercase tracking-[0.08em] md:tracking-wide font-playfair font-light leading-tight text-white">
+                    <h1 className="whitespace-nowrap text-[clamp(40px,14vw,72px)] lg:text-[clamp(64px,7.5vw,128px)] uppercase tracking-[0.06em] lg:tracking-wide font-playfair font-light leading-tight text-white">
                         {typedName}
                         {!isTypingDone && (
                             <motion.span
                                 animate={{ opacity: [1, 0] }}
                                 transition={{ repeat: Infinity, duration: 0.9, ease: "linear" }}
-                                className="inline-block text-gray-400 font-sans font-light"
+                                className="inline-block text-zinc-400 font-sans font-light"
                             >
                                 |
                             </motion.span>
                         )}
                     </h1>
 
-                    <div className="mt-0 mb-4 md:mt-0 md:mb-6">
+                    <div className="mt-0 mb-4 lg:mt-0 lg:mb-6">
                         <AnimatePresence mode="wait">
                             <motion.p
                                 key={index}
@@ -316,7 +317,7 @@ const HeroSection = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -15 }}
                                 transition={{ duration: 0.8, ease: "easeInOut" }}
-                                className="text-[11px] sm:text-sm md:text-[17px] font-light text-gray-400 leading-relaxed"
+                                className="text-[12px] sm:text-sm lg:text-[17px] font-light"
                             >
                                 {subledding[index]}
                             </motion.p>
@@ -335,13 +336,13 @@ const HeroSection = () => {
                             variants={navContainerVariants}
                             initial="hidden"
                             animate="visible"
-                            className="flex flex-wrap gap-2 md:gap-3 pt-1 md:pt-4 max-w-3xl"
+                            className="flex flex-wrap gap-2 lg:gap-3 pt-1 lg:pt-4 max-w-3xl"
                         >
                             {menuItems.map((item, idx) => (
                                 <motion.div key={idx} variants={navItemVariants}>
                                     <Link
                                         to={item.path}
-                                        className="block px-3 py-1.5 sm:px-4 sm:py-2 md:px-4 md:py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-[10px] sm:text-xs md:text-[16px] font-light text-gray-300 transition-all duration-300 hover:bg-white/10 hover:border-white/50 hover:text-white whitespace-nowrap"
+                                        className="block px-3 py-1.5 sm:px-4 sm:py-2 lg:px-4 lg:py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-[10px] sm:text-xs lg:text-[16px] font-light text-zinc-300 transition-all duration-300 hover:bg-white/10 hover:border-white/50 hover:text-white whitespace-nowrap"
                                     >
                                         {item.name}
                                     </Link>

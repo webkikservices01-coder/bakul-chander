@@ -8,7 +8,7 @@ function Work() {
         <div className="min-h-screen bg-black text-white font-lato">
             <PageHeroSection
                 image="/work/work-hero.png"
-                title="My Work Portfolio"
+                title="Works and Portfolio"
                 clastyle="grayscale-75 object-top "
             />
             {/* <SkillsSection /> */}

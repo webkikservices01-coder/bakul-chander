@@ -127,7 +127,7 @@
 //                                                     to={path}
 //                                                     onClick={() => setIsOpen(false)}
 //                                                     className={`block px-4 py-2 md:px-5 md:py-2 transition-colors text-sm md:text-base font-light tracking-wide hover:bg-white/10
-//                                                         ${isActive ? 'text-white bg-white/5' : 'text-gray-300 hover:text-white'}
+//                                                         ${isActive ? 'text-white bg-white/5' : 'text-zinc-300 hover:text-white'}
 //                                                     `}
 //                                                 >
 //                                                     {item}
@@ -159,12 +159,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Menu items ki list
 const menuItems = [
     { name: 'Biography', path: '/biography' },
-    { name: 'Academic & Career Progression', path: '/academic-&-career-progression' },
-    { name: 'Awards & Recognition', path: '/awards-&-recognition' },
+    { name: 'Academic and Career Progression', path: '/academic-&-career-progression' },
+    { name: 'Awards and Accolades', path: '/awards-&-recognition' },
     { name: 'Media', path: '/media' },
-    { name: 'Works & Portfolio', path: '/works-&-portfolio' },
+    { name: 'Works and Portfolio', path: '/works-&-portfolio' },
     { name: 'Thoughts in Prose', path: '/thoughts-in-prose' },
-    { name: 'Travel & Photography', path: '/travel-&-photography' },
+    { name: 'Travel and Photography', path: '/travel-&-photography' },
     { name: 'Contact', path: '/contact' },
 ];
 
@@ -172,9 +172,16 @@ const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
     
-    // Mobile Dropdown States
+    // Mobile Dropdown State
+    // The button always reads "Menu" so the page title is not repeated
+    // (the page title is already shown once, in the banner).
     const [isOpen, setIsOpen] = useState(false);
-    const [currentTitle, setCurrentTitle] = useState('Menu');
+    const currentTitle = 'Menu';
+
+    // Close the mobile menu whenever the page changes
+    useEffect(() => {
+        setIsOpen(false);
+    }, [location.pathname]);
 
     // Home page par Navbar hide rahega
     if (location.pathname === '/') {
@@ -184,18 +191,8 @@ const Navbar = () => {
     // Current page ko list se hatane ka logic (Desktop & Mobile dono list ke liye)
     const filteredMenu = menuItems.filter(item => item.path !== location.pathname);
 
-    // URL change hone par Mobile dropdown ka title update karne ka logic
-    useEffect(() => {
-        const currentItem = menuItems.find(item => item.path === location.pathname);
-        if (currentItem) {
-            setCurrentTitle(currentItem.name);
-        } else {
-            setCurrentTitle('Menu');
-        }
-    }, [location.pathname]);
-
     // Glassmorphism design classes (Taaki pure navbar me consistency rahe)
-    const glassStyle = "bg-black/40 backdrop-blur-md border border-white/20 text-gray-300 transition-all duration-300 shadow-xl";
+    const glassStyle = "bg-black/40 backdrop-blur-md border border-white/20 text-zinc-300 transition-all duration-300 shadow-xl";
     const glassHoverStyle = "hover:bg-white/10 hover:border-white/50 hover:text-white";
 
     // Mobile Dropdown Animation
@@ -299,7 +296,7 @@ const Navbar = () => {
                                         key={index}
                                         to={item.path}
                                         onClick={() => setIsOpen(false)}
-                                        className="block px-4 py-2.5 transition-colors text-sm font-light tracking-wide text-gray-300 hover:text-white hover:bg-white/10"
+                                        className="block px-4 py-2.5 transition-colors text-sm font-light tracking-wide text-zinc-300 hover:text-white hover:bg-white/10"
                                     >
                                         {item.name}
                                     </Link>

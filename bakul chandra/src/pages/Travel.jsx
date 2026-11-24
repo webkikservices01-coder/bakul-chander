@@ -9,7 +9,7 @@ export default function Travel() {
         <div className="min-h-screen bg-black text-white font-lato">
             <PageHeroSection
                 image="/award/award-hero.png"
-                title="Travel & Photography"
+                title="Travel and Photography"
                 clastyle="grayscale-75 object-top "
             />
             <TravelGallery />

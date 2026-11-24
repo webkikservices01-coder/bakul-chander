@@ -6,130 +6,32 @@ import { architectureLabAssets } from '../../data/architectureLabAssets';
 const baseTravelPhotos = [
     {
         id: 1,
-        src: "/home/travel/tra1_result.webp",
+        src: "/home/travel/tra1.jpg",
         title: "Symmetry in Concrete",
-        location: "New Delhi",
-        desc: "Exploring the brutalist geometry and bold concrete lines in modern institutional architecture.",
-        aspectRatio: "aspect-[4/5]",
-        category: "Architecture Lab"
+        location: "",
+        desc: "",
+        aspectRatio: "aspect-[4/3]",
+        category: "Travel"
     },
     {
         id: 2,
-        src: "/home/travel/tra2_result.webp",
+        src: "/home/travel/tra2.jpg",
         title: "Urban Skyline",
-        location: "Mumbai",
-        desc: "A breathtaking view of the dense urban fabric merging with the coastal horizon.",
-        aspectRatio: "aspect-[16/9]",
+        location: "",
+        desc: "",
+        aspectRatio: "aspect-[4/3]",
         category: "Travel"
     },
     {
         id: 3,
-        src: "/home/travel/tra3_result.webp",
+        src: "/home/travel/tra3.jpg",
         title: "Heritage Corridors",
-        location: "Tamil Nadu",
-        desc: "The timeless play of natural light and shadows in traditional temple courtyards.",
-        aspectRatio: "aspect-square",
-        category: "Photography"
-    },
-    {
-        id: 4,
-        src: "/home/travel/tra4_result.webp",
-        title: "Modern Facades",
-        location: "Bengaluru",
-        desc: "High-tech glass and steel structures reflecting the dynamic nature of the IT capital.",
-        aspectRatio: "aspect-[3/4]",
-        category: "Architecture Lab"
-    },
-    {
-        id: 5,
-        src: "/home/travel/tra5_result.webp",
-        title: "Tropical Retreats",
-        location: "Goa",
-        desc: "Sustainable hospitality design seamlessly blending into the lush green topography.",
-        aspectRatio: "aspect-[4/3]",
-        category: "Travel"
-    },
-    {
-        id: 6,
-        src: "/home/travel/tra6_result.webp",
-        title: "Backwater Serenity",
-        location: "Kerala",
-        desc: "Vernacular architecture meeting the serene waters, prioritizing natural ventilation.",
-        aspectRatio: "aspect-[16/10]",
-        category: "Slice of Life"
-    },
-    {
-        id: 7,
-        src: "/home/travel/tra1_result.webp",
-        title: "Street Reflections",
-        location: "New Delhi",
-        desc: "Candid moments captured in the busy commercial arteries of the capital.",
-        aspectRatio: "aspect-[4/5]",
-        category: "Slice of Life"
-    },
-    {
-        id: 8,
-        src: "/home/travel/tra2_result.webp",
-        title: "Monolith Minimalist",
-        location: "Mumbai",
-        desc: "A poster-worthy composition of stark geometry against an overcast sky.",
-        aspectRatio: "aspect-[16/9]",
-        category: "Posters & Pics"
-    },
-    {
-        id: 9,
-        src: "/home/travel/tra3_result.webp",
-        title: "Ancient Textures",
-        location: "Tamil Nadu",
-        desc: "Close-up study of weathered stone carving details.",
-        aspectRatio: "aspect-square",
-        category: "Photography"
-    },
-    {
-        id: 10,
-        src: "/home/travel/tra4_result.webp",
-        title: "Neon Streets",
-        location: "Bengaluru",
-        desc: "The city after dark through a cinematic lens.",
-        aspectRatio: "aspect-[3/4]",
-        category: "Posters & Pics"
-    },
-    {
-        id: 11,
-        src: "/home/travel/tra5_result.webp",
-        title: "Coastal Rhythm",
-        location: "Goa",
-        desc: "Local life unfolding rhythmically along the shoreline.",
-        aspectRatio: "aspect-[4/3]",
-        category: "Slice of Life"
-    },
-    {
-        id: 12,
-        src: "/home/travel/tra6_result.webp",
-        title: "The Horizon Line",
-        location: "Kerala",
-        desc: "An expansive landscape visual designed for large-format display.",
-        aspectRatio: "aspect-[16/10]",
-        category: "Posters & Pics"
-    },
-    {
-        id: 13,
-        src: "/balu.jpeg",
-        title: "Happy Guru Purnima, Bakul Sir",
         location: "",
-        desc: "A tribute poster celebrating Bakul Chandra as an architect, mentor and guiding inspiration.",
-        aspectRatio: "aspect-[3/4]",
-        category: "Posters & Pics"
-    },
-    {
-        id: 14,
-        src: "/balu%202.jpeg",
-        title: "Design Philosophy",
-        location: "",
-        desc: "A tribute poster on Bakul Chandra's design philosophy — clarity, function, sustainability and impact.",
-        aspectRatio: "aspect-[3/4]",
-        category: "Posters & Pics"
+        desc: "",
+        aspectRatio: "aspect-[4/3]",
+        category: "Photography"
     }
+    // Add more photos here. Rule: no text or quotes on the photos.
 ];
 
 const travelPhotos = [
@@ -143,12 +45,12 @@ const travelPhotos = [
 // --- ANIMATION VARIANTS ---
 const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.02 } }
 };
 
 const itemVariants = {
     hidden: { y: 40, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
+    visible: { y: 0, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } }
 };
 
 const TravelGallery = () => {
@@ -196,7 +98,7 @@ const TravelGallery = () => {
     }, [lightboxOpen, filteredPhotos]);
 
     return (
-        <main className="w-full bg-black text-white font-['Archivo'] py-12 md:py-24 px-6 md:px-12 selection:bg-white selection:text-black min-h-screen">
+        <main className="w-full bg-black text-white font-['Archivo'] py-10 md:py-16 px-5 md:px-12 selection:bg-white selection:text-black min-h-screen">
             <div className="max-w-7xl mx-auto">
                 
                 {/* HEADER */}
@@ -205,26 +107,23 @@ const TravelGallery = () => {
                     whileInView="visible" 
                     viewport={{ once: true }} 
                     variants={itemVariants}
-                    className="mb-8 text-center md:text-left border-b border-white/10 pb-8"
+                    className="mb-6 text-left border-b border-white/10 pb-6"
                 >
-                    <h1 className="text-4xl md:text-[56px] font-light tracking-wide mb-4">
-                        Travel & <span className="font-normal">Photography</span>
-                    </h1>
-                    <p className="text-[18px] text-gray-400 font-light max-w-2xl mx-auto md:mx-0">
+                    <p className="text-base font-light max-w-2xl">
                         A curated visual diary capturing the intersection of architecture, urban landscapes, and human experience across India.
                     </p>
                 </motion.div>
 
                 {/* SUB-TABS NAVIGATION */}
-                <div className="flex flex-wrap items-center gap-3 mb-12 border-b border-white/10 pb-6">
+                <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-6 border-b border-white/10 pb-6">
                     {tabs.map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`px-5 py-2.5 rounded-full text-sm tracking-wider transition-all duration-300 border ${
+                            className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-xs md:text-sm tracking-wider transition-all duration-300 border ${
                                 activeTab === tab 
                                     ? "bg-white text-black border-white font-medium shadow-md" 
-                                    : "bg-transparent text-gray-400 border-white/10 hover:border-white/40 hover:text-white"
+                                    : "bg-transparent text-zinc-400 border-white/10 hover:border-white/40 hover:text-white"
                             }`}
                         >
                             {tab}
@@ -237,10 +136,14 @@ const TravelGallery = () => {
                     <motion.div 
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mb-8 text-xs tracking-widest text-gray-500 uppercase"
+                        className="mb-8 text-xs tracking-widest text-zinc-500 uppercase"
                     >
                         * Visual assets courtesy of Architecture Lab. Curated by Bakul Chandra for reference purposes only, {new Date().getFullYear()}.
                     </motion.div>
+                )}
+
+                {filteredPhotos.length === 0 && (
+                    <p className="text-base font-light py-10">Photos coming soon.</p>
                 )}
 
                 {/* MASONRY GALLERY GRID */}
@@ -249,21 +152,21 @@ const TravelGallery = () => {
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4"
                 >
                     {filteredPhotos.map((photo, index) => (
                         <motion.div
                             key={photo.id + "-" + index}
                             variants={itemVariants}
                             onClick={() => openLightbox(index)}
-                            className="group relative rounded-3xl overflow-hidden cursor-pointer border border-[#222222] bg-[#0a0a0a] shadow-lg transition-all duration-500 hover:border-gray-500"
+                            className="group relative overflow-hidden cursor-pointer border border-[#222222] bg-[#0a0a0a] transition-all duration-500 hover:border-zinc-500"
                         >
                             {/* Image */}
                             <div className={`w-full ${photo.aspectRatio} relative overflow-hidden bg-[#111]`}>
                                 <img
                                     src={photo.src}
                                     alt={photo.title}
-                                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                    className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-105"
                                 />
                             </div>
                         </motion.div>
@@ -325,7 +228,7 @@ const TravelGallery = () => {
                             <img
                                 src={filteredPhotos[currentIndex].src}
                                 alt={filteredPhotos[currentIndex].title}
-                                className="w-full max-h-[70vh] object-contain rounded-xl shadow-2xl"
+                                className="w-full max-h-[70vh] object-contain shadow-2xl"
                             />
                         </motion.div>
                     </motion.div>

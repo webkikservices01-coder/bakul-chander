@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, ArrowUpRight, X, ChevronLeft, ChevronRight, Images } from 'lucide-react';
 import { portfolioCategories } from '../../data/portfolioCategories';
@@ -20,39 +20,30 @@ const ProjectCard = ({ project, onOpen }) => {
             type="button"
             onClick={() => onOpen(project)}
             variants={cardVariants}
-            whileHover={{ y: -6 }}
             whileTap={{ scale: 0.98 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-900 border border-white/5 text-left cursor-pointer"
+            className="group snap-start shrink-0 w-[82%] sm:w-[46%] lg:w-[31.5%] xl:w-[23.8%] flex flex-col text-left cursor-pointer"
         >
-            <img
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                className="w-full h-full object-cover grayscale-[60%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-
-            {/* Expand hint */}
-            <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <ArrowUpRight className="w-4 h-4 text-white" strokeWidth={2} />
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-zinc-900">
+                <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
             </div>
-
-            {/* Photo count badge */}
-            {photoCount > 1 && (
-                <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-[10px] text-gray-200 font-light">
-                    <Images className="w-3 h-3" strokeWidth={1.5} />
-                    {photoCount}
-                </div>
-            )}
-
-            <div className="absolute inset-x-0 bottom-0 p-4">
-                <h3 className="text-sm md:text-base font-normal text-white leading-snug line-clamp-2">
+            <div className="pt-3">
+                <h3 className="text-base font-normal text-white">
                     {project.title}
                 </h3>
-                <p className="mt-1.5 flex items-center gap-1.5 text-[11px] text-gray-400 font-light">
-                    <MapPin className="w-3 h-3 shrink-0" strokeWidth={1.5} />
+                <p className="mt-1 flex items-center gap-1.5 text-sm font-light">
+                    <MapPin className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} />
                     {project.location}
+                    {photoCount > 1 && (
+                        <span className="ml-auto flex items-center gap-1 text-xs">
+                            <Images className="w-3.5 h-3.5" strokeWidth={1.5} />
+                            {photoCount}
+                        </span>
+                    )}
                 </p>
             </div>
         </motion.button>
@@ -100,7 +91,7 @@ const ProjectLightbox = ({ project, categoryLabel, onClose }) => {
                 exit={{ opacity: 0, y: 24, scale: 0.96 }}
                 transition={{ type: 'spring', stiffness: 280, damping: 28 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-3xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col"
+                className="relative w-full max-w-3xl bg-[#0a0a0a] border border-white/10 overflow-hidden shadow-2xl max-h-[90vh] flex flex-col"
             >
                 <button
                     onClick={onClose}
@@ -141,7 +132,7 @@ const ProjectLightbox = ({ project, categoryLabel, onClose }) => {
                             >
                                 <ChevronRight className="w-5 h-5" strokeWidth={2} />
                             </button>
-                            <div className="absolute bottom-3 right-3 z-10 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-[11px] text-gray-200 font-light">
+                            <div className="absolute bottom-3 right-3 z-10 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-[11px] text-zinc-200 font-light">
                                 {index + 1} / {images.length}
                             </div>
                         </>
@@ -155,7 +146,7 @@ const ProjectLightbox = ({ project, categoryLabel, onClose }) => {
                             <button
                                 key={img}
                                 onClick={() => setIndex(i)}
-                                className={`relative w-16 h-12 rounded-lg overflow-hidden shrink-0 border-2 transition-colors ${
+                                className={`relative w-16 h-12 overflow-hidden shrink-0 border-2 transition-colors ${
                                     i === index ? 'border-white' : 'border-transparent opacity-60 hover:opacity-100'
                                 }`}
                             >
@@ -193,38 +184,43 @@ const ALL_PROJECTS_CATEGORY = {
 const tabCategories = [ALL_PROJECTS_CATEGORY, ...portfolioCategories];
 
 const PortfolioCategories = () => {
+    const sliderRef = useRef(null);
     const [activeSlug, setActiveSlug] = useState(ALL_PROJECTS_CATEGORY.slug);
     const [openProject, setOpenProject] = useState(null);
     const activeCategory = tabCategories.find(c => c.slug === activeSlug);
 
+    // Slide the project row by one "page" of cards
+    const slide = (direction) => {
+        const el = sliderRef.current;
+        if (!el) return;
+        el.scrollBy({ left: direction * el.clientWidth * 0.9, behavior: 'smooth' });
+    };
+
+    // Start a newly chosen category from its first project
+    useEffect(() => {
+        if (sliderRef.current) sliderRef.current.scrollTo({ left: 0 });
+    }, [activeSlug]);
+
     return (
-        <section className="w-full bg-black text-white py-8 md:py-12 px-6 md:px-12 font-archivo overflow-hidden">
+        <section className="w-full bg-black text-white py-8 md:py-12 px-5 md:px-12 font-archivo overflow-hidden">
             <div className="max-w-7xl mx-auto">
 
-                {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-light flex items-center gap-3">
-                            <span className="text-xl mt-1">•</span> Complete Project Portfolio
-                        </h2>
-                        <p className="text-sm text-zinc-500 font-light mt-2 max-w-xl">
-                            Real, delivered work across Renascent Consultants — organized the way our practice is structured.
-                        </p>
-                    </div>
+                {/* Button comes right after the page heading (banner) */}
+                <div className="mb-6">
                     <motion.a
                         href="https://renascent.co.in/projects/"
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white text-black text-xs md:text-sm font-medium uppercase tracking-widest whitespace-nowrap hover:bg-zinc-200 transition-colors shrink-0"
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white text-black text-xs md:text-sm font-medium uppercase tracking-widest whitespace-nowrap hover:bg-zinc-200 transition-colors"
                     >
                         View Full Portfolio <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
                     </motion.a>
                 </div>
 
                 {/* Category Tabs — auto-scrolling marquee */}
-                <div className="relative mb-8 overflow-hidden group [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+                <div className="relative mb-6 overflow-hidden group [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
                     <div className="flex w-max gap-2 py-1 animate-[portfolio-marquee_35s_linear_infinite] group-hover:[animation-play-state:paused]">
                         {[...tabCategories, ...tabCategories].map((cat, i) => (
                             <button
@@ -250,15 +246,41 @@ const PortfolioCategories = () => {
                     }
                 ` }} />
 
-                {/* Grid */}
+                {/* Projects slider */}
+                <div className="flex items-center justify-between mb-4">
+                    <p className="text-sm font-light">
+                        {activeCategory.label} · {activeCategory.projects.length} projects
+                    </p>
+                    <div className="flex gap-2">
+                        <button
+                            type="button"
+                            onClick={() => slide(-1)}
+                            aria-label="Previous projects"
+                            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"
+                        >
+                            <ChevronLeft className="w-5 h-5" strokeWidth={1.5} />
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => slide(1)}
+                            aria-label="Next projects"
+                            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"
+                        >
+                            <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
+                        </button>
+                    </div>
+                </div>
+
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeSlug}
+                        ref={sliderRef}
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
                         exit={{ opacity: 0 }}
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5"
+                        className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2"
+                        style={{ scrollbarWidth: 'none' }}
                     >
                         {activeCategory.projects.map((project, idx) => (
                             <ProjectCard
