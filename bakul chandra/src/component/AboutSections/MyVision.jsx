@@ -171,7 +171,7 @@ I design clarity, structure, and long term value.`
 
                     <motion.div
                         variants={fadeInUp}
-                        className="w-full sm:w-[70%] lg:w-[35%] mt-0 lg:mt-14 shrink-0"
+                        className="w-[65%] sm:w-[45%] lg:w-[24%] mt-0 lg:mt-14 shrink-0"
                     >
                         {/* Sketch replaced with a photograph so all photos on the page match */}
                         <img
