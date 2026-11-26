@@ -234,7 +234,7 @@ const WhoIAm = () => {
                         variants={fadeInUp}
                         className="w-full lg:w-1/2 space-y-4"
                     >
-                        <h2 className="text-2xl md:text-3xl font-light uppercase text-left">
+                        <h2 className="heading-section">
                             Who I Am
                         </h2>
 
@@ -297,13 +297,13 @@ const WhoIAm = () => {
                         className="text-left mb-6 md:mb-6"
                     >
                         {/* <h2 className="text-xs md:text-sm uppercase tracking-[0.4em] text-[#9F1C44] font-medium mb-3">Core Mission</h2> */}
-                        <h3 className="text-2xl md:text-3xl font-light uppercase">
+                        <h3 className="heading-section">
                             The Core Purpose of My Life
                         </h3>
                     </motion.div>
 
                     {/* Left & Right Columns */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[auto_auto_auto_auto] gap-y-8 lg:gap-y-0 lg:gap-x-12">
                         
                         {/* LEFT SIDE: Inner Purpose */}
                         <motion.div 
@@ -311,18 +311,18 @@ const WhoIAm = () => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
-                            className="flex flex-col h-auto"
+                            className="flex flex-col lg:grid lg:grid-rows-subgrid lg:row-span-4"
                         >
                             <div className="mb-3 pb-3 border-b border-white/10">
-                                <h4 className="text-xl md:text-2xl font-light mb-2">{purposeData.inner.title}</h4>
-                                <p className="text-xs tracking-wider uppercase text-zinc-500">{purposeData.inner.subtitle}</p>
+                                <h4 className="heading-sub mb-2">{purposeData.inner.title}</h4>
+                                <p className="heading-eyebrow">{purposeData.inner.subtitle}</p>
                             </div>
                             
                             <p className="text-base md:text-[16px] font-light mb-3">
                                 {purposeData.inner.description}
                             </p>
 
-                            <ul className="space-y-2 mb-2 flex-grow">
+                            <ul className="space-y-2 mb-2">
                                 {purposeData.inner.points.map((point, index) => (
                                     <li key={index} className="flex gap-4 items-start group">
                                         <span className="text-zinc-400 font-medium text-sm mt-1 opacity-80 group-hover:opacity-100 transition-opacity">0{index + 1}</span>
@@ -344,18 +344,18 @@ const WhoIAm = () => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={fadeInUp}
-                            className="flex flex-col h-auto"
+                            className="flex flex-col lg:grid lg:grid-rows-subgrid lg:row-span-4"
                         >
                             <div className="mb-3 pb-3 border-b border-white/10">
-                                <h4 className="text-xl md:text-2xl font-light mb-2">{purposeData.outer.title}</h4>
-                                <p className="text-xs tracking-wider uppercase text-zinc-500">{purposeData.outer.subtitle}</p>
+                                <h4 className="heading-sub mb-2">{purposeData.outer.title}</h4>
+                                <p className="heading-eyebrow">{purposeData.outer.subtitle}</p>
                             </div>
                             
                             <p className="text-base md:text-[16px] font-light mb-3">
                                 {purposeData.outer.description}
                             </p>
 
-                            <ul className="space-y-2 mb-2 flex-grow">
+                            <ul className="space-y-2 mb-2">
                                 {purposeData.outer.points.map((point, index) => (
                                     <li key={index} className="flex gap-4 items-start group">
                                         <span className="text-zinc-400 font-medium text-sm mt-1 opacity-80 group-hover:opacity-100 transition-opacity">0{index + 1}</span>

@@ -69,6 +69,41 @@ main h6 {
   color: var(--text-heading);
 }
 
+/* One heading system for every page, same on mobile and desktop (sizes only scale) */
+.heading-section {
+  font-family: "Archivo", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: var(--text-heading);
+  text-align: left;
+}
+.heading-sub {
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.2;
+  color: var(--text-heading);
+  text-align: left;
+}
+.heading-eyebrow {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.3;
+  color: #a1a1aa;
+}
+@media (min-width: 768px) {
+  .heading-section { font-size: 30px; }
+  .heading-sub { font-size: 22px; }
+}
+
 /* Bold or emphasised words inside text keep the same font, colour and case */
 main p :is(strong, b, em, i),
 main li :is(strong, b, em, i),

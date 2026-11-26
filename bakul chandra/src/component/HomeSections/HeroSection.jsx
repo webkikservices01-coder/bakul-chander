@@ -22,7 +22,7 @@
 //         { name: "Works & Portfolio", path: "/works-&-portfolio" },
 //         { name: "Media", path: "/media" },
 //         { name: "Career & Achievements", path: "/career-&-achievements" },
-//         { name: "Awards & Recognition", path: "/awards-&-recognition" },
+//         { name: "Awards & Recognition", path: "/awards-and-accolades" },
 //         { name: "Travel & Photography", path: "/travel-&-photography" },
 //         { name: "Quotations", path: "/quotations" },
 //         { name: "Thoughts in Prose", path: "/thoughts-in-prose" },
@@ -190,7 +190,7 @@ const HeroSection = () => {
     const menuItems = [
         { name: "Biography", path: "/biography" },
         { name: "Academic and Career Progression", path: "/academic-&-career-progression" },
-        { name: "Awards and Accolades", path: "/awards-&-recognition" },
+        { name: "Awards and Accolades", path: "/awards-and-accolades" },
         { name: "Media", path: "/media" },
         { name: "Works and Portfolio", path: "/works-&-portfolio" },
         { name: "Thoughts in Prose", path: "/thoughts-in-prose" },

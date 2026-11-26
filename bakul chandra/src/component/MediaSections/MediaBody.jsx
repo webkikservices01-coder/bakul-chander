@@ -381,7 +381,7 @@ const MediaBody = () => {
           className="w-full max-w-7xl mx-auto px-6 md:px-0"
         >
           <motion.div variants={itemVariants} className="mb-8 md:mb-12 flex justify-between items-end">
-            <h2 className="text-3xl md:text-4xl font-normal tracking-wide text-white">
+            <h2 className="heading-section">
               <span className="text-zinc-600 mr-3 md:mr-4">•</span>Publications & Media
             </h2>
           </motion.div>

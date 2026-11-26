@@ -75,7 +75,7 @@ function Contact() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-left mb-8"
           >
-            <h2 className="text-2xl md:text-3xl font-light mb-3 tracking-wide uppercase text-left">
+            <h2 className="heading-section mb-3">
               Get in Touch
             </h2>
 

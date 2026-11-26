@@ -160,7 +160,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const menuItems = [
     { name: 'Biography', path: '/biography' },
     { name: 'Academic and Career Progression', path: '/academic-&-career-progression' },
-    { name: 'Awards and Accolades', path: '/awards-&-recognition' },
+    { name: 'Awards and Accolades', path: '/awards-and-accolades' },
     { name: 'Media', path: '/media' },
     { name: 'Works and Portfolio', path: '/works-&-portfolio' },
     { name: 'Thoughts in Prose', path: '/thoughts-in-prose' },

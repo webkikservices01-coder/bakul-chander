@@ -134,13 +134,13 @@ I design clarity, structure, and long term value.`
 
                 {/* --- 1. MY VISION SECTION --- */}
 
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-16">
+                <div className="mb-4!">
 
                     <motion.div
                         variants={fadeInUp}
-                        className="w-full lg:w-[70%] space-y-4"
+                        className="w-full space-y-4"
                     >
-                        <h2 className="text-2xl md:text-3xl font-light uppercase">
+                        <h2 className="heading-section">
                             My Vision
                         </h2>
 
@@ -169,24 +169,13 @@ I design clarity, structure, and long term value.`
                         </div>
                     </motion.div>
 
-                    <motion.div
-                        variants={fadeInUp}
-                        className="w-[65%] sm:w-[45%] lg:w-[24%] mt-0 lg:mt-14 shrink-0"
-                    >
-                        {/* Sketch replaced with a photograph so all photos on the page match */}
-                        <img
-                            src="/about/vision-portrait.jpg"
-                            alt="Bakul Chandra"
-                            className="w-full h-auto block"
-                        />
-                    </motion.div>
                 </div>
 
                 {/* Remaining vision paragraphs - full width */}
 
                 <motion.div
                     variants={fadeInUp}
-                    className="w-full space-y-3 text-base md:text-[16px] font-light"
+                    className="w-full space-y-4 text-base md:text-[16px] font-light"
                 >
                     {visionFullText.long
                         .split('\n\n')
@@ -217,7 +206,7 @@ I design clarity, structure, and long term value.`
 
                     <div className="space-y-4">
 
-                        <h2 className="text-2xl md:text-3xl font-light uppercase">
+                        <h2 className="heading-section">
                             What I Do
                         </h2>
 
@@ -246,7 +235,7 @@ I design clarity, structure, and long term value.`
 
                         <div className="space-y-4 text-base md:text-[16px] font-light">
 
-                            <h3 className="text-xl md:text-2xl font-light mb-2">
+                            <h3 className="heading-sub mb-2">
                                 Mentorship and Professional Development
                             </h3>
 
@@ -262,7 +251,7 @@ I design clarity, structure, and long term value.`
 
                         <div className="space-y-4 text-base md:text-[16px] font-light">
 
-                            <h3 className="text-xl md:text-2xl font-light mb-2">
+                            <h3 className="heading-sub mb-2">
                                 What My Work Ultimately Delivers
                             </h3>
 
@@ -347,7 +336,7 @@ I design clarity, structure, and long term value.`
                         className="space-y-2 pt-0"
                     >
 
-                        <h2 className="text-2xl md:text-3xl font-light uppercase">
+                        <h2 className="heading-section">
                             The Guiding Principles
                         </h2>
 
@@ -368,7 +357,7 @@ I design clarity, structure, and long term value.`
                                 variants={fadeInUp}
                                 className="bg-[#080808] border border-[#222] p-5 md:p-8 flex flex-col justify-start h-full space-y-3"
                             >
-                                <h4 className="text-xl font-light">
+                                <h4 className="heading-sub">
                                     {guru.title}
                                 </h4>
 

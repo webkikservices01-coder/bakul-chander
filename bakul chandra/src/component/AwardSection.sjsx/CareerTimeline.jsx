@@ -75,7 +75,7 @@ const AwardsRecognition = () => {
                     className="mb-10 md:mb-12"
                 >
                     <motion.div variants={itemVariants} className="mb-6">
-                        <h2 className="text-2xl md:text-3xl font-light tracking-wide text-white">
+                        <h2 className="heading-section">
                             Honors
                         </h2>
                     </motion.div>
@@ -87,10 +87,10 @@ const AwardsRecognition = () => {
                                 className="border border-[#222222] bg-[#080808] p-6 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-8 group transition-all duration-500 hover:border-zinc-500"
                             >
                                 <div className="max-w-3xl space-y-3">
-                                    <h3 className="text-xl md:text-2xl font-normal text-white">
+                                    <h3 className="heading-sub">
                                         {honor.title}
                                     </h3>
-                                    <p className="text-zinc-500 font-medium tracking-wide uppercase text-xs md:text-sm">
+                                    <p className="heading-eyebrow">
                                         Conferred by <span className="text-zinc-300">{honor.conferredBy}</span>
                                     </p>
                                     <p className="text-base font-light">
@@ -111,7 +111,7 @@ const AwardsRecognition = () => {
                         initial={false}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-light tracking-wide text-white"
+                        className="heading-section"
                     >
                         Awards and Accolades
                     </motion.h2>

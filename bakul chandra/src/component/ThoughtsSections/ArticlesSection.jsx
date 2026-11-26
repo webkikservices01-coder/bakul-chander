@@ -287,7 +287,7 @@ const ArticleCard = ({ article }) => {
 
             {/* Content */}
             <div className="flex flex-col flex-grow p-5 md:p-6 space-y-3">
-                <h3 className="text-lg md:text-[20px] font-normal">
+                <h3 className="heading-sub">
                     {article.title}
                 </h3>
 
@@ -377,7 +377,7 @@ const ArticlesSection = () => {
                 {linkedinPosts.length > 0 && (
                     <div>
                         <div className="flex items-center justify-between gap-4 mb-6 border-b border-white/10 pb-4">
-                            <h2 className="text-2xl md:text-3xl font-light">LinkedIn Posts</h2>
+                            <h2 className="heading-section">LinkedIn Posts</h2>
                             <SliderArrows onPrev={() => slideBy(postsRef, -1)} onNext={() => slideBy(postsRef, 1)} />
                         </div>
                         <div

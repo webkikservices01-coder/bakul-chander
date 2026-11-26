@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 // Components
 import Navbar from './component/Header';
@@ -50,7 +50,9 @@ const AppContent = () => {
             <Route path="/biography" element={<About />} />
             <Route path="/works-&-portfolio" element={<Work />} />
             <Route path="/projects/:slug" element={<ProjectDetailPage />} />
-            <Route path="/awards-&-recognition" element={<Awards />} />
+            <Route path="/awards-and-accolades" element={<Awards />} />
+            {/* Old link keeps working */}
+            <Route path="/awards-&-recognition" element={<Navigate to="/awards-and-accolades" replace />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/media" element={<Media />} />
             <Route path="/academic-&-career-progression" element={<Career />} />

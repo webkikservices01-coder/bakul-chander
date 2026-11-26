@@ -154,7 +154,7 @@ const CareerAchievements = () => {
                     variants={containerVariants}
                 >
                     <div className="mb-6 md:mb-10">
-                        <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
+                        <h2 className="heading-section">
                             Defining Parables
                         </h2>
                         <p className="text-base md:text-[16px] font-light mt-2 md:mt-3 max-w-3xl">
@@ -182,10 +182,10 @@ const CareerAchievements = () => {
 
                                     {/* Text */}
                                     <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                        <span className="text-[10px] md:text-[14px] tracking-widest text-zinc-500 font-bold mb-2 md:mb-4 block">
+                                        <span className="heading-eyebrow mb-2 block">
                                             {parable.subtitle}
                                         </span>
-                                        <h3 className="text-xl md:text-3xl font-normal text-white mb-3 md:mb-6 leading-tight">
+                                        <h3 className="heading-sub mb-3">
                                             {parable.title}
                                         </h3>
                                         <p className="text-base md:text-[16px] font-light border-l-2 border-zinc-600 pl-4 md:pl-8">
@@ -206,7 +206,7 @@ const CareerAchievements = () => {
                     variants={containerVariants}
                 >
                     <div className="mb-6 md:mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-                        <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
+                        <h2 className="heading-section">
                             Experience
                         </h2>
                         <a
@@ -248,7 +248,7 @@ const CareerAchievements = () => {
                                         <div className="inline-block px-3 py-1 mb-2 md:mb-3 bg-[#111] border border-[#333] text-[11px] md:text-[12px] text-zinc-300 font-medium tracking-widest uppercase">
                                             {item.period}
                                         </div>
-                                        <h3 className="text-lg md:text-2xl font-normal text-white mb-1">
+                                        <h3 className="heading-sub mb-1">
                                             {item.role}
                                         </h3>
                                         <h4 className="text-base md:text-lg font-medium mb-2">
@@ -272,7 +272,7 @@ const CareerAchievements = () => {
                     variants={containerVariants}
                 >
                     <div className="mb-6 md:mb-10">
-                        <h2 className="text-2xl md:text-3xl font-normal tracking-wide text-white">
+                        <h2 className="heading-section">
                             Professional Memberships & Affiliations
                         </h2>
                         <p className="text-base md:text-[16px] font-light mt-2 md:mt-3 max-w-3xl">
