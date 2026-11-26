@@ -3,35 +3,44 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { architectureLabAssets } from '../../data/architectureLabAssets';
 
 // --- DATA ---
+// Bakul sir's photographs (Kerala), resized copies of /public/imgs.
+// Rule: no text or quotes on the photos.
 const baseTravelPhotos = [
-    {
-        id: 1,
-        src: "/home/travel/tra1.jpg",
-        title: "Symmetry in Concrete",
-        location: "",
-        desc: "",
-        aspectRatio: "aspect-[4/3]",
-        category: "Travel"
-    },
-    {
-        id: 2,
-        src: "/home/travel/tra2.jpg",
-        title: "Urban Skyline",
-        location: "",
-        desc: "",
-        aspectRatio: "aspect-[4/3]",
-        category: "Travel"
-    },
-    {
-        id: 3,
-        src: "/home/travel/tra3.jpg",
-        title: "Heritage Corridors",
-        location: "",
-        desc: "",
-        aspectRatio: "aspect-[4/3]",
-        category: "Photography"
-    }
-    // Add more photos here. Rule: no text or quotes on the photos.
+    { id: 1, src: "/travel/travel-01.jpg", title: "Travel 1", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 2, src: "/travel/travel-02.jpg", title: "Travel 2", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 3, src: "/travel/travel-03.jpg", title: "Travel 3", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 4, src: "/travel/travel-04.jpg", title: "Travel 4", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 5, src: "/travel/travel-05.jpg", title: "Travel 5", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 6, src: "/travel/travel-06.jpg", title: "Travel 6", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 7, src: "/travel/travel-07.jpg", title: "Travel 7", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 8, src: "/travel/travel-08.jpg", title: "Travel 8", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 9, src: "/travel/travel-09.jpg", title: "Travel 9", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 10, src: "/travel/travel-10.jpg", title: "Travel 10", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 11, src: "/travel/travel-11.jpg", title: "Travel 11", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 12, src: "/travel/travel-12.jpg", title: "Travel 12", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 13, src: "/travel/travel-13.jpg", title: "Travel 13", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 14, src: "/travel/travel-14.jpg", title: "Travel 14", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Travel" },
+    { id: 15, src: "/travel/travel-15.jpg", title: "Photography 15", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 16, src: "/travel/travel-16.jpg", title: "Photography 16", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 17, src: "/travel/travel-17.jpg", title: "Photography 17", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 18, src: "/travel/travel-18.jpg", title: "Photography 18", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 19, src: "/travel/travel-19.jpg", title: "Photography 19", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 20, src: "/travel/travel-20.jpg", title: "Photography 20", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 21, src: "/travel/travel-21.jpg", title: "Photography 21", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 22, src: "/travel/travel-22.jpg", title: "Photography 22", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 23, src: "/travel/travel-23.jpg", title: "Photography 23", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 24, src: "/travel/travel-24.jpg", title: "Photography 24", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 25, src: "/travel/travel-25.jpg", title: "Photography 25", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 26, src: "/travel/travel-26.jpg", title: "Photography 26", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 27, src: "/travel/travel-27.jpg", title: "Photography 27", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 28, src: "/travel/travel-28.jpg", title: "Photography 28", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 29, src: "/travel/travel-29.jpg", title: "Photography 29", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Photography" },
+    { id: 30, src: "/travel/travel-30.jpg", title: "Slice of Life 30", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Slice of Life" },
+    { id: 31, src: "/travel/travel-31.jpg", title: "Slice of Life 31", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Slice of Life" },
+    { id: 32, src: "/travel/travel-32.jpg", title: "Slice of Life 32", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Slice of Life" },
+    { id: 33, src: "/travel/travel-33.jpg", title: "Slice of Life 33", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Slice of Life" },
+    { id: 34, src: "/travel/travel-34.jpg", title: "Slice of Life 34", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Slice of Life" },
+    { id: 35, src: "/travel/travel-35.jpg", title: "Slice of Life 35", location: "Kerala", desc: "", aspectRatio: "aspect-[4/3]", category: "Slice of Life" }
 ];
 
 const travelPhotos = [
@@ -56,7 +65,7 @@ const itemVariants = {
 const TravelGallery = () => {
     const tabs = ["Travel", "Photography", "ARCHITECTURE LAB", "Slice of Life", "Posters & Pics"];
     
-    const [activeTab, setActiveTab] = useState("ARCHITECTURE LAB");
+    const [activeTab, setActiveTab] = useState("Travel");
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 

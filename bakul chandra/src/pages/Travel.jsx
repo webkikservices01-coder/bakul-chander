@@ -8,9 +8,9 @@ export default function Travel() {
     return (
         <div className="min-h-screen bg-black text-white font-lato">
             <PageHeroSection
-                image="/award/award-hero.png"
+                image="/travel/travel-11.jpg"
                 title="Travel and Photography"
-                clastyle="grayscale-75 object-top "
+                clastyle="object-center"
             />
             <TravelGallery />
         </div>
