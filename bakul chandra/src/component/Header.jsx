@@ -218,7 +218,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             // Main layout: Flex between taaki Back button left me rahe aur Dropdown right me (mobile par)
-            className="fixed top-4 left-4 right-4 md:top-8 md:left-8 md:right-8 z-50 flex items-center justify-between gap-4 md:gap-8"
+            className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-4 md:gap-8 px-4 py-3 md:px-8 md:py-4 bg-black/90 backdrop-blur-md border-b border-white/10"
             style={{ fontFamily: '"Archivo", sans-serif' }}
         >
             {/* --- BACK BUTTON (Mobile & Desktop dono par dikhega) --- */}

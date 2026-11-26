@@ -18,7 +18,7 @@ const PageHeroSection = ({
 }) => {
   if (splitLayout) {
     return (
-      <section className="relative w-full md:h-[80vh] overflow-hidden bg-black font-playfair flex flex-col md:flex-row">
+      <section className="relative w-full md:h-[80vh] md:pt-[76px] overflow-hidden bg-black font-playfair flex flex-col md:flex-row">
 
         {/* Text Panel */}
         <div className="relative z-10 w-full md:w-[42%] shrink-0 flex flex-col justify-end md:justify-center px-5 md:px-12 pt-24 pb-6 md:py-0 bg-black">

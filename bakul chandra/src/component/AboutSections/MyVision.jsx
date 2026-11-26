@@ -175,7 +175,7 @@ I design clarity, structure, and long term value.`
                     >
                         {/* Sketch replaced with a photograph so all photos on the page match */}
                         <img
-                            src="/3.jpeg"
+                            src="/about/vision-portrait.jpg"
                             alt="Bakul Chandra"
                             className="w-full h-auto block"
                         />
