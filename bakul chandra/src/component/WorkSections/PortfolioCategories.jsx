@@ -1,54 +1,8 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import AutoSlider, { SliderCard } from '../AutoSlider';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, ArrowUpRight, X, ChevronLeft, ChevronRight, Images } from 'lucide-react';
 import { portfolioCategories } from '../../data/portfolioCategories';
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.04 } },
-};
-
-const cardVariants = {
-    hidden: { opacity: 0, y: 18 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-};
-
-const ProjectCard = ({ project, onOpen }) => {
-    const photoCount = project.gallery?.length || 1;
-    return (
-        <motion.button
-            type="button"
-            onClick={() => onOpen(project)}
-            variants={cardVariants}
-            whileTap={{ scale: 0.98 }}
-            className="group snap-start shrink-0 w-[82%] sm:w-[46%] lg:w-[31.5%] xl:w-[23.8%] flex flex-col text-left cursor-pointer"
-        >
-            <div className="relative w-full aspect-[4/3] overflow-hidden bg-zinc-900">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-            </div>
-            <div className="pt-3">
-                <h3 className="text-base font-normal text-white">
-                    {project.title}
-                </h3>
-                <p className="mt-1 flex items-center gap-1.5 text-sm font-light">
-                    <MapPin className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} />
-                    {project.location}
-                    {photoCount > 1 && (
-                        <span className="ml-auto flex items-center gap-1 text-xs">
-                            <Images className="w-3.5 h-3.5" strokeWidth={1.5} />
-                            {photoCount}
-                        </span>
-                    )}
-                </p>
-            </div>
-        </motion.button>
-    );
-};
 
 const ProjectLightbox = ({ project, categoryLabel, onClose }) => {
     const images = useMemo(
@@ -184,22 +138,10 @@ const ALL_PROJECTS_CATEGORY = {
 const tabCategories = [ALL_PROJECTS_CATEGORY, ...portfolioCategories];
 
 const PortfolioCategories = () => {
-    const sliderRef = useRef(null);
     const [activeSlug, setActiveSlug] = useState(ALL_PROJECTS_CATEGORY.slug);
     const [openProject, setOpenProject] = useState(null);
     const activeCategory = tabCategories.find(c => c.slug === activeSlug);
 
-    // Slide the project row by one "page" of cards
-    const slide = (direction) => {
-        const el = sliderRef.current;
-        if (!el) return;
-        el.scrollBy({ left: direction * el.clientWidth * 0.9, behavior: 'smooth' });
-    };
-
-    // Start a newly chosen category from its first project
-    useEffect(() => {
-        if (sliderRef.current) sliderRef.current.scrollTo({ left: 0 });
-    }, [activeSlug]);
 
     return (
         <section className="w-full bg-black text-white py-8 md:py-12 px-5 md:px-12 font-archivo overflow-hidden">
@@ -246,51 +188,23 @@ const PortfolioCategories = () => {
                     }
                 ` }} />
 
-                {/* Projects slider */}
-                <div className="flex items-center justify-between mb-4">
-                    <p className="text-sm font-light">
-                        {activeCategory.label} · {activeCategory.projects.length} projects
-                    </p>
-                    <div className="flex gap-2">
-                        <button
-                            type="button"
-                            onClick={() => slide(-1)}
-                            aria-label="Previous projects"
-                            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"
-                        >
-                            <ChevronLeft className="w-5 h-5" strokeWidth={1.5} />
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => slide(1)}
-                            aria-label="Next projects"
-                            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"
-                        >
-                            <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
-                        </button>
-                    </div>
-                </div>
-
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeSlug}
-                        ref={sliderRef}
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit={{ opacity: 0 }}
-                        className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2"
-                        style={{ scrollbarWidth: 'none' }}
-                    >
-                        {activeCategory.projects.map((project, idx) => (
-                            <ProjectCard
-                                key={`${activeSlug}-${idx}`}
-                                project={project}
-                                onOpen={setOpenProject}
-                            />
-                        ))}
-                    </motion.div>
-                </AnimatePresence>
+                {/* Projects: auto-sliding cards */}
+                <p className="text-sm font-light mb-3">
+                    {activeCategory.label} · {activeCategory.projects.length} projects
+                </p>
+                <AutoSlider
+                    key={activeSlug}
+                    items={activeCategory.projects}
+                    getKey={(project, idx) => `${activeSlug}-${idx}`}
+                    renderItem={(project) => (
+                        <SliderCard
+                            image={project.image}
+                            title={project.title}
+                            meta={project.location}
+                            onClick={() => setOpenProject(project)}
+                        />
+                    )}
+                />
 
             </div>
 

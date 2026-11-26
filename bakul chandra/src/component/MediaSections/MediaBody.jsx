@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import React from 'react';
+import AutoSlider, { SliderCard } from '../AutoSlider';
 
 // --- DATA (Yahan aap apne extracted exact links aur images ke paths dal sakte hain) ---
 const publicationsData = [
@@ -357,99 +357,24 @@ const publicationsData = [
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
-};
-
-const itemVariants = {
-  hidden: { y: 40, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
-};
-
 const MediaBody = () => {
-  const carouselRef = useRef(null);
-  const { scrollXProgress } = useScroll({ container: carouselRef });
-
   return (
-    <main className="w-full bg-black text-white font-['Archivo'] py-8 md:py-16 selection:bg-white selection:text-black flex flex-col gap-10 md:gap-20">
-        <motion.section
-          initial="hidden" 
-          whileInView="visible" 
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="w-full max-w-7xl mx-auto px-6 md:px-0"
-        >
-          <motion.div variants={itemVariants} className="mb-8 md:mb-12 flex justify-between items-end">
-            <h2 className="heading-section">
-              <span className="text-zinc-600 mr-3 md:mr-4">•</span>Publications & Media
-            </h2>
-          </motion.div>
-          
-          <div 
-             ref={carouselRef}
-             className="flex flex-nowrap md:flex-wrap justify-start md:justify-center items-stretch gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory touch-pan-x scrollbar-hide"
-             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            
-            {publicationsData.map((pub) => (
-              <motion.div 
-                variants={itemVariants}
-                key={pub.id} 
-                className="flex-none w-[78vw] sm:w-[45vw] md:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] snap-center group flex flex-col border border-[#222222] bg-[#080808] overflow-hidden transition-all duration-500 hover:border-zinc-400 hover:bg-[#111]"
-              >
-                {/* Clickable Card Wrapper linking to the publication */}
-                <a 
-                  href={pub.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex flex-col flex-1 cursor-pointer"
-                >
-                  <div className="w-full h-40 md:h-48 bg-[#111] relative overflow-hidden border-b border-[#222222]">
-                    <img 
-                      src={pub.image} 
-                      alt={pub.title}
-                      onError={(e) => {
-                        // Fallback agar image load na ho toh default placeholder dikhaye
-                        e.target.src = "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=600&auto=format&fit=crop";
-                      }}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-
-                  <div className="p-5 md:p-6 flex flex-col flex-1 justify-between">
-                    <div className="mb-6">
-                      <h3 className="text-base md:text-lg font-normal leading-snug text-zinc-200 group-hover:text-white transition-colors duration-300 line-clamp-3">
-                        {pub.title}
-                      </h3>
-                    </div>
-                  </div>
-                </a>
-                
-                <div className="px-5 pb-5 md:px-6 md:pb-6 pt-4 border-t border-[#333333] flex items-center justify-between mt-auto">
-                  <span className="text-[10px] md:text-xs font-bold tracking-widest text-[#aaaaaa] uppercase group-hover:text-white transition-colors">
-                    {pub.publication}
-                  </span>
-                  <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#666666] uppercase group-hover:text-zinc-400 transition-colors">
-                    {pub.date}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="md:hidden w-full mt-6 flex justify-center">
-            <div className="w-full max-w-[150px] h-1 bg-[#222222] rounded-full overflow-hidden">
-                <motion.div 
-                    className="h-full bg-zinc-400 rounded-full"
-                    style={{ scaleX: scrollXProgress, transformOrigin: "left" }}
-                />
-            </div>
-          </div>
-        </motion.section>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-      `}} />
+    <main className="w-full bg-black text-white font-['Archivo'] py-10 md:py-14 px-5 md:px-12">
+      <section className="w-full max-w-7xl mx-auto">
+        <h2 className="heading-section mb-6">Publications and Media</h2>
+        <AutoSlider
+          items={publicationsData}
+          getKey={(pub) => pub.id}
+          renderItem={(pub) => (
+            <SliderCard
+              image={pub.image}
+              title={pub.title}
+              meta={[pub.publication, pub.date].filter(Boolean).join(' · ')}
+              href={pub.link}
+            />
+          )}
+        />
+      </section>
     </main>
   );
 };

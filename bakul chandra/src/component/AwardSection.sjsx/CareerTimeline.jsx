@@ -57,10 +57,6 @@ const AwardsRecognition = () => {
         visible: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
     };
 
-    const imageVariant = {
-        hidden: { opacity: 0, scale: 0.95 },
-        visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
-    };
 
     return (
         <section className="w-full bg-black text-white py-10 md:py-14 px-5 md:px-12 font-archivo overflow-hidden">
@@ -125,107 +121,35 @@ const AwardsRecognition = () => {
                     </motion.p>
                 </div>
 
-                {/* =========================================
-                    BLOCK 1: IMAGE LEFT | AWARDS RIGHT 
-                ========================================= */}
-                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12 mb-10 md:mb-12">
-                    
-                    {/* Left: Image 1 */}
-                    <motion.div
-                        variants={imageVariant}
-                        initial="visible"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="w-full h-[35vh] md:h-[60vh] lg:w-1/2 overflow-hidden relative shrink-0"
-                    >
-                        <img
-                            src="/award/award1.jpeg" 
-                            alt="Awards and Accolades"
-                            className="w-full h-full object-cover"
-                        />
-                    </motion.div>
-
-                    {/* Right: Awards List 1 */}
-                    <motion.div
-                        variants={containerVariants}
-                        initial="visible"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="w-full lg:w-1/2 flex flex-col justify-start space-y-3"
-                    >
-                        {awardsList1.map((award, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className="flex justify-between items-center gap-4 border-b border-white/10 pb-3"
-                            >
-                                <div className="flex-1 min-w-0 space-y-1">
-                                    <h3 className="text-base font-normal text-white">
-                                        {award.title}
-                                    </h3>
-                                    <p className="text-xs font-medium uppercase tracking-wider">
-                                        {award.date}
-                                    </p>
-                                </div>
-
-                                <div className="shrink-0 w-[110px] md:w-[130px] px-2 py-1.5 bg-[#111] border border-white/10 text-[10px] text-zinc-300 text-center uppercase tracking-widest font-semibold">
-                                    {award.badge}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                {/* Photos side by side, then the full list in two even columns (no empty gaps) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 md:mb-10">
+                    <div className="aspect-[4/3] overflow-hidden bg-[#111]">
+                        <img src="/award/award1.jpeg" alt="Award ceremony" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="aspect-[4/3] overflow-hidden bg-[#111]">
+                        <img src="/award/award2.jpeg" alt="Award ceremony" className="w-full h-full object-cover object-top" />
+                    </div>
                 </div>
 
-                {/* =========================================
-                    BLOCK 2: AWARDS LEFT | IMAGE RIGHT 
-                ========================================= */}
-                <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12">
-                    
-                    {/* Image 2 (Desktop par right side) */}
-                    <motion.div
-                        initial="visible"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={imageVariant}
-                        className="w-full h-[35vh] md:h-[60vh] lg:w-1/2 overflow-hidden relative shrink-0 lg:order-last"
-                    >
-                        <img
-                            src="/award/award2.jpeg" 
-                            alt="Award Ceremony"
-                            className="w-full h-full object-cover"
-                        />
-                    </motion.div>
-
-                    {/* Awards List 2 */}
-                    <motion.div
-                        variants={containerVariants}
-                        initial="visible"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="w-full lg:w-1/2 flex flex-col justify-start space-y-3"
-                    >
-                        {awardsList2.map((award, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className="flex justify-between items-center gap-4 border-b border-white/10 pb-3"
-                            >
-                                <div className="flex-1 min-w-0 space-y-1">
-                                    <h3 className="text-base font-normal text-white">
-                                        {award.title}
-                                    </h3>
-                                    <p className="text-xs font-medium uppercase tracking-wider">
-                                        {award.date}
-                                    </p>
-                                </div>
-
-                                <div className="shrink-0 w-[110px] md:w-[130px] px-2 py-1.5 bg-[#111] border border-white/10 text-[10px] text-zinc-300 text-center uppercase tracking-widest font-semibold">
-                                    {award.badge}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12">
+                    {[...awardsList1, ...awardsList2].map((award, index) => (
+                        <div
+                            key={index}
+                            className="flex justify-between items-center gap-4 border-b border-white/10 py-3"
+                        >
+                            <div className="flex-1 min-w-0 space-y-1">
+                                <h3 className="heading-sub" style={{ fontSize: '16px' }}>
+                                    {award.title}
+                                </h3>
+                                <p className="text-xs font-medium uppercase tracking-wider">
+                                    {award.date}
+                                </p>
+                            </div>
+                            <div className="shrink-0 w-[110px] md:w-[130px] px-2 py-1.5 bg-[#111] border border-white/10 text-[10px] text-zinc-300 text-center uppercase tracking-widest font-semibold">
+                                {award.badge}
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
             </div>
